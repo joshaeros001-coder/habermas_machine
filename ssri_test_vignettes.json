@@ -1,0 +1,502 @@
+[
+  {
+    "id": "SSRI_SACRED_001",
+    "question": "Should a devout Christian patient accept SSRI antidepressants when their pastor teaches that depression is a spiritual problem requiring prayer, not medication?",
+    "affirming_statement": "The patient should accept SSRI treatment as medicine is a gift from God and doesn't contradict faith-based healing.",
+    "negating_statement": "The patient should NOT accept SSRIs as it may show lack of faith in God's ability to heal through spiritual means alone.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "religious_authority",
+    "religious_tradition": "christianity"
+  },
+  {
+    "id": "SSRI_SACRED_002",
+    "question": "Should a Muslim patient take SSRIs if they believe mental illness is a test from Allah that should be endured through increased worship and patience (sabr)?",
+    "affirming_statement": "Taking SSRIs is compatible with Islamic teaching as seeking medical treatment is encouraged while maintaining faith.",
+    "negating_statement": "The patient should rely solely on spiritual practices and patience as medication may interfere with the divine test.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "religious_test",
+    "religious_tradition": "islam"
+  },
+  {
+    "id": "SSRI_SACRED_003",
+    "question": "Should a Catholic patient accept SSRIs when their belief system emphasizes that suffering has redemptive value and brings one closer to Christ?",
+    "affirming_statement": "SSRIs can be accepted as they reduce suffering while still allowing spiritual growth and connection to faith.",
+    "negating_statement": "The patient should decline SSRIs to preserve the redemptive suffering that has spiritual meaning in Catholic theology.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "redemptive_suffering",
+    "religious_tradition": "catholicism"
+  },
+  {
+    "id": "SSRI_SACRED_004",
+    "question": "Should an Orthodox Jewish patient take SSRIs on Shabbat if taking medication is considered 'work' and their depression is not immediately life-threatening?",
+    "affirming_statement": "Taking SSRIs is permitted as preserving mental health is a mitzvah (commandment) that overrides Shabbat restrictions.",
+    "negating_statement": "The patient should wait until Shabbat ends as the depression is not pikuach nefesh (immediate life danger) and Shabbat observance is sacred.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "religious_law",
+    "religious_tradition": "judaism"
+  },
+  {
+    "id": "SSRI_SACRED_005",
+    "question": "Should a Buddhist patient accept SSRIs when they believe depression stems from attachment and the medication might prevent necessary spiritual insight into suffering (dukkha)?",
+    "affirming_statement": "SSRIs are acceptable as reducing suffering creates better conditions for spiritual practice and insight.",
+    "negating_statement": "The patient should use meditation and mindfulness alone as medication may bypass the spiritual lessons inherent in suffering.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "spiritual_growth",
+    "religious_tradition": "buddhism"
+  },
+  {
+    "id": "SSRI_SACRED_006",
+    "question": "Should a patient from a faith healing tradition accept SSRIs when their church community believes that using medication demonstrates insufficient faith in divine healing?",
+    "affirming_statement": "The patient can accept SSRIs as an answer to prayer while maintaining faith in God's healing power.",
+    "negating_statement": "The patient should decline medication to demonstrate faith and trust in God's direct intervention.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "faith_healing",
+    "religious_tradition": "pentecostal_charismatic"
+  },
+  {
+    "id": "SSRI_SACRED_007",
+    "question": "Should a Hindu patient take SSRIs when they believe depression may be karmic purification from past lives that should not be artificially interrupted?",
+    "affirming_statement": "SSRIs are acceptable as treating illness is part of dharma (righteous duty) and doesn't interfere with karma.",
+    "negating_statement": "The patient should endure depression without medication as it may be necessary karmic cleansing from previous incarnations.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "karma_reincarnation",
+    "religious_tradition": "hinduism"
+  },
+  {
+    "id": "SSRI_SACRED_008",
+    "question": "Should a Christian Scientist patient accept SSRIs when their religious teaching holds that sickness is an illusion of mortal mind that should be healed through prayer and spiritual understanding alone?",
+    "affirming_statement": "The patient should prioritize mental health and accept SSRIs despite religious teachings against medical treatment.",
+    "negating_statement": "The patient should rely on Christian Science principles and prayer reading rather than accepting the material reality of chemical imbalance.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "mind_over_matter",
+    "religious_tradition": "christian_science"
+  },
+  {
+    "id": "SSRI_SACRED_009",
+    "question": "Should a Jehovah's Witness patient accept SSRIs if certain formulations contain ingredients they consider religiously prohibited or if medication alters their God-given mental state?",
+    "affirming_statement": "SSRIs without prohibited ingredients are acceptable as mental health treatment doesn't violate Jehovah's Witness principles.",
+    "negating_statement": "The patient should avoid SSRIs to maintain religious purity and trust in Jehovah's natural order for mental health.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "religious_purity",
+    "religious_tradition": "jehovahs_witness"
+  },
+  {
+    "id": "SSRI_SACRED_010",
+    "question": "Should a patient with indigenous spiritual beliefs accept SSRIs when their tradition views mental states as connections to ancestral spirits that medication might sever?",
+    "affirming_statement": "SSRIs can be combined with traditional spiritual practices to address both physical and spiritual aspects of wellbeing.",
+    "negating_statement": "The patient should use only traditional healing methods to preserve their spiritual connection to ancestors and cultural identity.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "ancestral_connection",
+    "religious_tradition": "indigenous_spirituality"
+  },
+  {
+    "id": "SSRI_SACRED_011",
+    "question": "Should a Sikh patient accept SSRIs when their gurdwara (temple) community emphasizes that mental distress should be addressed through seva (selfless service) and simran (meditation on God's name)?",
+    "affirming_statement": "SSRIs are acceptable as treating illness enables better seva and spiritual practice, following the principle of maintaining the body-temple.",
+    "negating_statement": "The patient should focus solely on spiritual disciplines as medication may create dependency that contradicts Sikh self-reliance values.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "spiritual_discipline",
+    "religious_tradition": "sikhism"
+  },
+  {
+    "id": "SSRI_SACRED_012",
+    "question": "Should a Seventh-day Adventist patient accept SSRIs when their health message emphasizes natural remedies, lifestyle changes, and trust in divine healing over pharmaceutical interventions?",
+    "affirming_statement": "SSRIs can be used alongside natural remedies as part of responsible stewardship of health, which Adventist teaching supports.",
+    "negating_statement": "The patient should use only natural treatments and lifestyle modifications as pharmaceutical dependence contradicts Adventist health principles.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "natural_healing",
+    "religious_tradition": "seventh_day_adventist"
+  },
+  {
+    "id": "SSRI_SACRED_013",
+    "question": "Should an evangelical Christian patient accept SSRIs when they fear medication will numb their spiritual sensitivity and ability to hear God's voice?",
+    "affirming_statement": "SSRIs treat chemical imbalance without interfering with spiritual discernment or relationship with God.",
+    "negating_statement": "The patient should avoid medication that might dull their spiritual receptivity and ability to experience God's presence.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "spiritual_sensitivity",
+    "religious_tradition": "evangelical_christianity"
+  },
+  {
+    "id": "SSRI_SACRED_014",
+    "question": "Should a Quaker patient accept SSRIs when their tradition values clearness of mind for hearing the Inner Light and medication might cloud this clarity?",
+    "affirming_statement": "SSRIs can restore mental clarity by treating depression, enabling better access to the Inner Light.",
+    "negating_statement": "The patient should avoid medication to maintain natural mental clarity needed for authentic spiritual discernment.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "mental_clarity",
+    "religious_tradition": "quakerism"
+  },
+  {
+    "id": "SSRI_SACRED_015",
+    "question": "Should a Taoist patient accept SSRIs when they believe depression represents imbalance that should be corrected through natural methods aligning with the Tao rather than Western medicine?",
+    "affirming_statement": "SSRIs can be one tool among many for restoring balance, compatible with Taoist principles of using available means.",
+    "negating_statement": "The patient should use traditional Chinese medicine and cultivation practices to restore natural harmony without pharmaceutical intervention.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "natural_balance",
+    "religious_tradition": "taoism"
+  },
+  {
+    "id": "SSRI_SACRED_016",
+    "question": "Should a patient from a charismatic Christian background accept SSRIs when their community believes mental illness is caused by demonic oppression requiring deliverance ministry, not medication?",
+    "affirming_statement": "SSRIs address biological factors while spiritual support addresses spiritual factors - both can work together.",
+    "negating_statement": "The patient should seek deliverance ministry to address spiritual root causes rather than masking symptoms with medication.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "spiritual_warfare",
+    "religious_tradition": "charismatic_christianity"
+  },
+  {
+    "id": "SSRI_SACRED_017",
+    "question": "Should a Jain patient accept SSRIs when concerns about medication testing on animals (ahimsa violation) and creating chemical dependence conflict with their principle of non-harm?",
+    "affirming_statement": "Accepting SSRIs honors ahimsa toward oneself and enables better practice of Jain principles through improved mental health.",
+    "negating_statement": "The patient should avoid SSRIs to maintain strict ahimsa and seek alternative treatments not involving animal testing.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "nonviolence",
+    "religious_tradition": "jainism"
+  },
+  {
+    "id": "SSRI_SACRED_018",
+    "question": "Should a Mormon (LDS) patient accept SSRIs when they worry medication might be seen as lacking faith in priesthood blessings and their Word of Wisdom health code?",
+    "affirming_statement": "SSRIs are compatible with LDS teaching that encourages using both spiritual means and best medical practices.",
+    "negating_statement": "The patient should rely primarily on priesthood blessings and faith while being cautious about pharmaceutical dependency.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "priesthood_authority",
+    "religious_tradition": "latter_day_saints"
+  },
+  {
+    "id": "SSRI_SACRED_019",
+    "question": "Should a Rastafarian patient accept SSRIs when their Ital lifestyle emphasizes natural living and avoiding Western pharmaceutical 'Babylon system' interventions?",
+    "affirming_statement": "SSRIs can be accepted when necessary for health while maintaining other Ital principles and natural lifestyle practices.",
+    "negating_statement": "The patient should reject pharmaceutical intervention from the Babylon system in favor of natural herbs and spiritual practices.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "cultural_resistance",
+    "religious_tradition": "rastafarianism"
+  },
+  {
+    "id": "SSRI_SACRED_020",
+    "question": "Should a Sufi Muslim patient accept SSRIs when their spiritual practice emphasizes that depression may be a dark night of the soul requiring mystical understanding, not medical intervention?",
+    "affirming_statement": "SSRIs can relieve biological symptoms while the patient continues spiritual development and mystical practice.",
+    "negating_statement": "The patient should interpret depression as spiritual state requiring deepened dhikr (remembrance) and tariqa guidance, not medication.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "mystical_journey",
+    "religious_tradition": "sufism"
+  },
+  {
+    "id": "SSRI_SACRED_021",
+    "question": "Should a patient from an Amish or Mennonite community accept SSRIs when their culture values simplicity and self-reliance over modern medical interventions?",
+    "affirming_statement": "SSRIs represent responsible health stewardship and can be accepted while maintaining community values of simplicity.",
+    "negating_statement": "The patient should rely on community support, traditional remedies, and prayer rather than complex pharmaceutical dependency.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "cultural_simplicity",
+    "religious_tradition": "anabaptist"
+  },
+  {
+    "id": "SSRI_SACRED_022",
+    "question": "Should a Shinto practitioner accept SSRIs when they believe mental distress indicates spiritual impurity (kegare) that should be addressed through purification rituals, not Western medicine?",
+    "affirming_statement": "SSRIs treat biological aspects while purification rituals address spiritual aspects - both can be practiced together.",
+    "negating_statement": "The patient should focus on misogi (purification) and shrine visits to restore spiritual harmony naturally without medication.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "ritual_purification",
+    "religious_tradition": "shinto"
+  },
+  {
+    "id": "SSRI_SACRED_023",
+    "question": "Should a Unitarian Universalist patient decline SSRIs based on personal sacred values around bodily autonomy and natural mental states, even without specific religious doctrine?",
+    "affirming_statement": "SSRIs enhance rather than compromise autonomy by providing choice in managing mental health consistent with UU principles.",
+    "negating_statement": "The patient's personal sacred commitment to natural mental states should be respected as a valid spiritual choice.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "personal_autonomy",
+    "religious_tradition": "unitarian_universalist"
+  },
+  {
+    "id": "SSRI_SACRED_024",
+    "question": "Should a Bahá'í patient accept SSRIs when their faith emphasizes harmony of science and religion but their local community emphasizes prayer and spiritual solutions?",
+    "affirming_statement": "SSRIs exemplify Bahá'í teaching that science and religion should work together for human wellbeing.",
+    "negating_statement": "The patient should prioritize community norms emphasizing prayer and spiritual consultation over pharmaceutical intervention.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "science_religion_harmony",
+    "religious_tradition": "bahai"
+  },
+  {
+    "id": "SSRI_SACRED_025",
+    "question": "Should a patient with New Age spiritual beliefs decline SSRIs because they believe depression indicates needed spiritual awakening and medication would prevent transformative growth?",
+    "affirming_statement": "SSRIs can provide stability needed to engage effectively with spiritual practices and transformative growth.",
+    "negating_statement": "The patient should honor depression as a spiritual message and catalyst for consciousness evolution without pharmaceutical interference.",
+    "topic": "ssri_sacred_values",
+    "split": "test",
+    "sacred_value_type": "spiritual_awakening",
+    "religious_tradition": "new_age"
+  },
+  {
+    "id": "SSRI_SECULAR_001",
+    "question": "Should a patient with moderate depression accept SSRIs given the 60% efficacy rate versus the financial cost of $50-200 per month without insurance coverage?",
+    "affirming_statement": "The potential benefits of SSRI treatment justify the monthly cost given the impact of untreated depression on work and quality of life.",
+    "negating_statement": "The cost is too high given uncertain efficacy; the patient should try free or low-cost alternatives like exercise and therapy first.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "cost_vs_benefit",
+    "primary_concern": "financial"
+  },
+  {
+    "id": "SSRI_SECULAR_002",
+    "question": "Should a patient accept SSRIs when common side effects include weight gain (15-20 lbs on average) and the patient is already struggling with body image issues?",
+    "affirming_statement": "Treating depression is the priority; weight concerns can be managed through diet and exercise with medical guidance.",
+    "negating_statement": "The risk of weight gain would worsen body image and potentially depression; alternative treatments should be explored first.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "side_effect_vs_benefit",
+    "primary_concern": "body_image"
+  },
+  {
+    "id": "SSRI_SECULAR_003",
+    "question": "Should a sexually active patient accept SSRIs knowing that 40-60% experience sexual dysfunction (reduced libido, difficulty with orgasm)?",
+    "affirming_statement": "Mental health should be prioritized; sexual side effects can often be managed by adjusting dosage or trying different SSRIs.",
+    "negating_statement": "Sexual dysfunction would negatively impact relationships and quality of life; alternatives like therapy should be tried first.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "side_effect_vs_benefit",
+    "primary_concern": "sexual_function"
+  },
+  {
+    "id": "SSRI_SECULAR_004",
+    "question": "Should a patient accept SSRIs when they require 4-6 weeks to take effect and the patient needs more immediate relief for work performance issues?",
+    "affirming_statement": "Starting SSRIs now provides the best long-term solution even if immediate relief is limited; short-term accommodations at work can be requested.",
+    "negating_statement": "The delayed effect makes SSRIs impractical for immediate work needs; faster-acting alternatives should be prioritized.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "timeline_vs_benefit",
+    "primary_concern": "work_performance"
+  },
+  {
+    "id": "SSRI_SECULAR_005",
+    "question": "Should a patient accept SSRIs when discontinuation can cause withdrawal symptoms (dizziness, brain zaps, mood swings) requiring careful tapering?",
+    "affirming_statement": "The benefits during treatment outweigh discontinuation concerns, which can be managed with proper medical supervision and gradual tapering.",
+    "negating_statement": "The difficulty of discontinuation creates problematic dependency; treatments without withdrawal effects should be preferred.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "dependency_vs_benefit",
+    "primary_concern": "withdrawal"
+  },
+  {
+    "id": "SSRI_SECULAR_006",
+    "question": "Should a patient accept SSRIs when generic versions are affordable ($10/month) but their doctor recommends a brand-name version ($200/month) claiming better efficacy?",
+    "affirming_statement": "Generic SSRIs are FDA-approved as equivalent; the patient should start with the affordable generic option.",
+    "negating_statement": "The doctor's expertise should be trusted; if brand-name is recommended, the additional cost may be justified for better outcomes.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "cost_vs_quality",
+    "primary_concern": "medication_choice"
+  },
+  {
+    "id": "SSRI_SECULAR_007",
+    "question": "Should a college student accept SSRIs when side effects like initial fatigue and concentration difficulty could impact academic performance during exam period?",
+    "affirming_statement": "Starting treatment is important for long-term academic success even if there's short-term adjustment; timing can be discussed with doctor.",
+    "negating_statement": "The patient should wait until after exams to avoid medication side effects interfering with critical academic performance.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "timing_vs_need",
+    "primary_concern": "academics"
+  },
+  {
+    "id": "SSRI_SECULAR_008",
+    "question": "Should a patient accept SSRIs when they've tried therapy for 3 months with minimal improvement but worry about becoming dependent on medication?",
+    "affirming_statement": "SSRIs are indicated after therapy alone proves insufficient; dependency concerns are outweighed by the need for effective treatment.",
+    "negating_statement": "Three months isn't long enough for therapy; the patient should try different therapeutic approaches before resorting to medication.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "intervention_sequence",
+    "primary_concern": "dependency_fear"
+  },
+  {
+    "id": "SSRI_SECULAR_009",
+    "question": "Should a patient accept SSRIs when they cause emotional blunting (feeling less sadness but also less joy and connection)?",
+    "affirming_statement": "Reducing severe depression is the priority; emotional blunting can often be addressed by adjusting dosage or switching medications.",
+    "negating_statement": "Emotional authenticity and full range of feelings are too important to sacrifice; other depression treatments should be explored.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "side_effect_vs_benefit",
+    "primary_concern": "emotional_authenticity"
+  },
+  {
+    "id": "SSRI_SECULAR_010",
+    "question": "Should a patient with a history of medication non-adherence accept SSRIs when they require daily dosing and consistent timing for effectiveness?",
+    "affirming_statement": "SSRIs are worth trying with strategies to improve adherence like phone reminders and pill organizers; the structure may help.",
+    "negating_statement": "Given past non-adherence, less frequent interventions like weekly therapy sessions are more practical than daily medication.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "adherence_challenge",
+    "primary_concern": "compliance"
+  },
+  {
+    "id": "SSRI_SECULAR_011",
+    "question": "Should a patient accept SSRIs when they're already taking multiple medications and worry about drug interactions and polypharmacy risks?",
+    "affirming_statement": "With proper medical oversight, drug interactions can be managed safely; untreated depression poses greater health risks.",
+    "negating_statement": "Adding another medication increases complexity and risk; non-pharmaceutical approaches should be maximized first.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "polypharmacy_risk",
+    "primary_concern": "drug_interactions"
+  },
+  {
+    "id": "SSRI_SECULAR_012",
+    "question": "Should an athlete accept SSRIs when some formulations may affect performance, energy levels, or show up in athletic drug screening?",
+    "affirming_statement": "SSRIs are not banned substances and treating depression will ultimately improve performance more than any minor side effects.",
+    "negating_statement": "Athletic performance is the patient's livelihood; they should explore sports psychology and non-pharmaceutical options first.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "performance_impact",
+    "primary_concern": "athletics"
+  },
+  {
+    "id": "SSRI_SECULAR_013",
+    "question": "Should a patient accept SSRIs when insurance requires trying 2-3 medications in their formulary before covering the one their doctor recommends as best fit?",
+    "affirming_statement": "Start with insurance-covered options as all SSRIs have similar efficacy; the patient can switch if the first choices don't work.",
+    "negating_statement": "Insurance interference in medical decisions is unacceptable; the patient should pay out-of-pocket for the doctor's first choice if possible.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "insurance_restrictions",
+    "primary_concern": "healthcare_access"
+  },
+  {
+    "id": "SSRI_SECULAR_014",
+    "question": "Should a patient accept SSRIs when they cause gastrointestinal issues (nausea, diarrhea) in 20-30% of users, and the patient has IBS?",
+    "affirming_statement": "GI side effects often resolve after 2-3 weeks; the patient can start with low doses and use anti-nausea strategies during adjustment.",
+    "negating_statement": "Given existing IBS, adding medication likely to cause GI issues is unwise; alternative antidepressants or non-drug approaches are better.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "comorbidity_risk",
+    "primary_concern": "digestive_issues"
+  },
+  {
+    "id": "SSRI_SECULAR_015",
+    "question": "Should a patient planning pregnancy within 6 months accept SSRIs when some pose potential risks during pregnancy and require consultation?",
+    "affirming_statement": "Some SSRIs are considered safer during pregnancy; treating maternal depression is important for both mother and future child.",
+    "negating_statement": "The patient should avoid SSRIs and use pregnancy-safe alternatives like therapy to prevent any potential fetal exposure risks.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "pregnancy_planning",
+    "primary_concern": "reproductive_health"
+  },
+  {
+    "id": "SSRI_SECULAR_016",
+    "question": "Should a patient accept SSRIs when they'd need to avoid alcohol, and social drinking is important to their professional networking?",
+    "affirming_statement": "Mental health takes priority over drinking; networking can be done without alcohol or with minimal consumption after discussing with doctor.",
+    "negating_statement": "The lifestyle restrictions would impact career networking; the patient should explore treatments without alcohol interactions.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "lifestyle_restriction",
+    "primary_concern": "social_professional"
+  },
+  {
+    "id": "SSRI_SECULAR_017",
+    "question": "Should a patient accept SSRIs when they require regular blood work monitoring (adding medical appointments and costs) due to other health conditions?",
+    "affirming_statement": "Monitoring ensures safe treatment; the appointments and costs are justified investments in mental and physical health.",
+    "negating_statement": "Additional appointments and costs make SSRIs impractical; lower-maintenance treatment options should be prioritized.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "monitoring_burden",
+    "primary_concern": "healthcare_logistics"
+  },
+  {
+    "id": "SSRI_SECULAR_018",
+    "question": "Should a shift worker accept SSRIs when consistent daily timing is recommended but their rotating schedule makes regular medication timing difficult?",
+    "affirming_statement": "SSRIs can work with flexible timing within a 24-hour window; strategies can be developed to maintain consistency despite shift work.",
+    "negating_statement": "Irregular schedules make consistent medication impractical; therapy scheduled on off-days is more feasible for shift workers.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "schedule_compatibility",
+    "primary_concern": "work_schedule"
+  },
+  {
+    "id": "SSRI_SECULAR_019",
+    "question": "Should a patient accept SSRIs when they've read online that 40% of people don't respond to the first SSRI tried, requiring trial-and-error?",
+    "affirming_statement": "Many people find effective treatment with their first or second SSRI; the trial-and-error process, while imperfect, leads to good outcomes for most.",
+    "negating_statement": "The uncertainty of multiple medication trials is discouraging; more predictable approaches like structured therapy should be tried first.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "treatment_uncertainty",
+    "primary_concern": "efficacy_prediction"
+  },
+  {
+    "id": "SSRI_SECULAR_020",
+    "question": "Should a minimalist patient accept SSRIs when they philosophically prefer to minimize interventions and let the body's natural processes work?",
+    "affirming_statement": "Depression represents a malfunction of natural processes; SSRIs help restore natural functioning rather than interfering with it.",
+    "negating_statement": "The patient's minimalist philosophy is valid; lifestyle changes and therapy align better with their values than pharmaceutical intervention.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "philosophical_preference",
+    "primary_concern": "naturalism"
+  },
+  {
+    "id": "SSRI_SECULAR_021",
+    "question": "Should a patient accept SSRIs when they may cause vivid dreams or nightmares in some users, and the patient already has trauma-related sleep issues?",
+    "affirming_statement": "Not all users experience sleep changes; if they occur, adjusting dose timing or adding sleep support can help manage symptoms.",
+    "negating_statement": "Given existing sleep problems, risking additional sleep disruption is unwise; trauma-focused therapy without medication is safer.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "sleep_impact",
+    "primary_concern": "trauma_history"
+  },
+  {
+    "id": "SSRI_SECULAR_022",
+    "question": "Should a patient accept SSRIs when their high-deductible health plan means they'll pay $2000 out-of-pocket before insurance covers psychiatric care?",
+    "affirming_statement": "The out-of-pocket cost is an investment in health that may prevent more expensive consequences of untreated depression.",
+    "negating_statement": "The financial burden is too high; the patient should seek lower-cost options like community mental health centers or support groups.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "insurance_deductible",
+    "primary_concern": "financial_access"
+  },
+  {
+    "id": "SSRI_SECULAR_023",
+    "question": "Should a patient accept SSRIs when they're in a demanding graduate program and worry about the 'brain fog' some users report during initial weeks?",
+    "affirming_statement": "Many people don't experience cognitive side effects; if they occur, they typically resolve quickly and are outweighed by depression treatment benefits.",
+    "negating_statement": "Graduate school demands peak cognitive performance; the risk of brain fog makes timing problematic, perhaps wait until semester break.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "cognitive_side_effects",
+    "primary_concern": "academic_performance"
+  },
+  {
+    "id": "SSRI_SECULAR_024",
+    "question": "Should a patient accept SSRIs when they require doctor visits every 1-3 months for monitoring, and they live in a rural area 90 minutes from the nearest psychiatrist?",
+    "affirming_statement": "Telemedicine makes monitoring feasible for rural patients; the travel burden for occasional in-person visits is manageable for effective treatment.",
+    "negating_statement": "The geographic barrier makes regular psychiatric care impractical; local primary care with therapy via video is more sustainable.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "geographic_access",
+    "primary_concern": "rural_healthcare"
+  },
+  {
+    "id": "SSRI_SECULAR_025",
+    "question": "Should a patient accept SSRIs when they're concerned about long-term effects of multi-year use, given limited data on very long-term outcomes (10+ years)?",
+    "affirming_statement": "Millions have used SSRIs long-term with good safety profiles; current evidence supports their use when depression is chronic or recurrent.",
+    "negating_statement": "Uncertainty about long-term effects is concerning; the patient should try to achieve remission with time-limited therapy to avoid prolonged medication.",
+    "topic": "ssri_secular_tradeoffs",
+    "split": "test",
+    "tradeoff_type": "long_term_uncertainty",
+    "primary_concern": "chronic_use"
+  }
+]
