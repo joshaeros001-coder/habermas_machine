@@ -335,51 +335,91 @@ constraint = compile_constraint(detected, opinion)
 
 ---
 
+## Installation
+
+### Requirements
+
+- Python 3.10+
+- Anthropic API key (for Claude)
+
+### Setup
+
+```bash
+# Navigate to sacred_values_architecture directory
+cd sacred_values_architecture/
+
+# Install dependencies
+pip install anthropic numpy typing-extensions
+
+# Set API key
+export ANTHROPIC_API_KEY='your_key_here'
+```
+
+### Quick Start
+
+```bash
+# Test basic detection and compilation
+python examples/simple_example.py
+
+# Run the critical SSRI Christian test
+python tests/test_ssri_christian.py
+
+# Run the main machine example
+python machine.py
+```
+
+---
+
 ## Usage
 
 ### Basic Example
 
 ```python
-from sacred_values_architecture import SacredValuesDeliberation
+from sacred_values_architecture.llm_client.anthropic_client import AnthropicClient
+from sacred_values_architecture.machine import ConstrainedHabermasMachine
 
-# Initialize
-deliberation = SacredValuesDeliberation(
-    question="Should patient accept SSRIs?",
-    llm_client=claude_client,
-    num_candidates=4
-)
+# Initialize LLM client
+llm_client = AnthropicClient("claude-3-5-sonnet-20241022")
 
-# Provide opinions
+# Initialize machine
+machine = ConstrainedHabermasMachine(llm_client, verbose=True)
+
+# Define deliberation question
+question = "Should a patient with moderate depression accept SSRIs?"
+
+# Provide citizen opinions
 opinions = [
-    "Try SSRIs, benefits outweigh risks",
-    "I cannot take medication due to my faith",  # Sacred value!
-    "Weigh costs and benefits carefully",
-    "Combine medication with therapy",
-    "Consult your doctor"
+    "I think SSRIs can help with depression and improve quality of life.",
+    "I cannot take medication due to my religious faith. This is non-negotiable.",  # SACRED VALUE!
+    "The patient should weigh the clinical evidence carefully.",
+    "I support trying SSRIs with appropriate medical supervision.",
+    "This is a personal decision requiring professional guidance."
 ]
 
 # Run deliberation
-result = deliberation.run(opinions)
+result = machine.deliberate(question, opinions)
 
 # Access results
-print(result.consensus_statement)
-print(f"Sacred values detected: {result.sacred_values}")
+print(f"Consensus: {result.consensus_statement}")
+print(f"Sacred values detected: {len(result.sacred_values)}")
 print(f"Constraints satisfied: {result.all_constraints_satisfied}")
 
 # View transparency log
-print(result.transparency_log.explanation)
+print("\nTransparency Summary:")
+print(result.transparency_log.generate_summary())
 ```
 
 ### Advanced: Handling Infeasibility
 
 ```python
 # Conflicting sacred values
+question = "Should abortion be legal?"
 opinions = [
-    "Abortion is murder and must be prohibited",  # Sacred value: pro-life
-    "Bodily autonomy is sacred, abortion is a right"  # Sacred value: pro-choice
+    "Abortion is murder and must be prohibited. I cannot compromise on this.",  # Sacred value: pro-life
+    "Bodily autonomy is sacred. Abortion access is a right."  # Sacred value: pro-choice
 ]
 
-result = deliberation.run(opinions)
+result = machine.deliberate(question, opinions)
 
 if result.is_infeasible:
     print(f"Reason: {result.infeasibility_reason}")
