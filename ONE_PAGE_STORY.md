@@ -32,7 +32,7 @@ You noticed that all four candidate statements seemed to agree with each other. 
 
 ## From Theory to Code to Results
 
-Jürgen Habermas argued in 1981 that rational discourse could produce genuine consensus when people participate equally and reason in good faith. The Habermas Machine operationalizes that theory. Your results showed it in action: five diverse opinions about SSRIs became a nuanced consensus statement, then critiques refined it further into something richer that addressed concerns about timelines, drug interactions, and alternative options. The system didn't pick a winner—it synthesized a collective understanding.
+Jürgen Habermas argued in 1981 that rational discourse could produce genuine consensus when people participate equally and reason in good faith. The Habermas Machine operationalizes that theory. our results showed it in action: five diverse opinions about SSRIs became a nuanced consensus statement, then critiques refined it further into something richer that addressed concerns about timelines, drug interactions, and alternative options. The system didn't pick a winner—it synthesized a collective understanding.
 
 ## What We Built Together
 

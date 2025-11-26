@@ -181,7 +181,7 @@ def count_rejected_statements(rankings: np.ndarray, num_candidates: int) -> int:
 class DeliberationRunner:
     """Runs deliberations and tracks metrics."""
 
-    def __init__(self, model: str = 'gemini-1.5-flash', num_candidates: int = 4,
+    def __init__(self, model: str = 'claude-3-haiku-20240307', num_candidates: int = 4,
                  num_citizens: int = 5, verbose: bool = False):
         """Initialize the runner."""
         self.model = model
@@ -190,8 +190,8 @@ class DeliberationRunner:
         self.verbose = verbose
 
         # Initialize components
-        self.statement_client = types.LLMCLient.AISTUDIO.get_client(model)
-        self.reward_client = types.LLMCLient.AISTUDIO.get_client(model)
+        self.statement_client = types.LLMCLient.ANTHROPIC.get_client(self.model)
+        self.reward_client = types.LLMCLient.ANTHROPIC.get_client(self.model)
         self.statement_model = types.StatementModel.CHAIN_OF_THOUGHT.get_model()
         self.reward_model = types.RewardModel.CHAIN_OF_THOUGHT_RANKING.get_model()
         self.social_choice_method = types.RankAggregation.SCHULZE.get_method(
@@ -334,7 +334,7 @@ class DeliberationRunner:
 def run_batch_deliberations(
     vignettes_file: str = "ssri_test_vignettes.json",
     output_csv: str = "deliberation_results.csv",
-    model: str = 'gemini-1.5-flash',
+    model: str = 'claude-3-haiku-20240307',
     num_candidates: int = 4,
     num_citizens: int = 5,
     verbose: bool = True,
@@ -346,7 +346,7 @@ def run_batch_deliberations(
     Args:
         vignettes_file: Input JSON file with vignettes
         output_csv: Output CSV file for results
-        model: Gemini model to use
+        model: Gemini model to use - i changed it to anthropic
         num_candidates: Number of candidate statements per round
         num_citizens: Number of participants
         verbose: Print progress
@@ -578,7 +578,7 @@ This script will:
 
     # For testing, limit to first few vignettes
     # Set to None to process all 50
-    MAX_VIGNETTES = 5  # Change to None for full run
+    MAX_VIGNETTES = None # Change to None for full run
 
     # Check if vignettes file exists
     if not os.path.exists(VIGNETTES_FILE):
@@ -587,17 +587,17 @@ This script will:
         return
 
     # Check for API key
-    if not os.environ.get('GOOGLE_API_KEY'):
-        print(f"❌ Error: GOOGLE_API_KEY environment variable not set!")
+    if not os.environ.get('ANTHROPIC_API_KEY'):
+        print(f"❌ Error: GANTHROPIC_API_KEY environment variable not set!")
         print(f"   Please set your API key:")
-        print(f"   export GOOGLE_API_KEY='your_key_here'")
+        print(f"   export ANTHROPIC_API_KEY='your_key_here'")
         return
 
     # Run batch processing
     metrics = run_batch_deliberations(
         vignettes_file=VIGNETTES_FILE,
         output_csv=RESULTS_CSV,
-        model='gemini-1.5-flash',
+        model='claude-3-haiku-20240307',
         num_candidates=4,
         num_citizens=5,
         verbose=True,
