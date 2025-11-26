@@ -22,3 +22,10 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+# Old result files - ignore
+*.txt
+*.json
+*.csv
+*.png
+visualize_comparison.py
+check_claude_models.py
