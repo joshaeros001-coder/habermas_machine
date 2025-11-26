@@ -36,7 +36,7 @@ and risks (side effects, dependency concerns)?
 # Configuration parameters
 NUM_CITIZENS = 5        # Number of participants in deliberation
 NUM_CANDIDATES = 4      # Number of consensus statements to generate per round
-MODEL = 'gemini-1.5-flash'  # Gemini model to use
+MODEL ='gemini-2.0-flash'  # Gemini model to use
 
 print(f"\n📋 QUESTION: {QUESTION.strip()}")
 print(f"\n⚙️  Configuration:")
