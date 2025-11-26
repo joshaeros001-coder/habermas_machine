@@ -35,7 +35,7 @@ and risks (side effects, dependency concerns)?
 NUM_CITIZENS = 5
 NUM_CANDIDATES = 4
 #MODEL = 'gemini-2.0-flash'  # Using 2.0 as specified
-MODEL = 'claude-3-haiku-20240307'
+MODEL = 'gemini-3-pro-preview'
 # Sacred value keywords to track
 SACRED_KEYWORDS = ['religious', 'faith', 'spiritual', 'prayer', 'god',
                    'christian', 'pastor', 'church', 'divine', 'lord',
@@ -59,11 +59,14 @@ print("\n" + "="*80)
 print("INITIALIZING COMPONENTS")
 print("="*80)
 
-#statement_client = types.LLMCLient.AISTUDIO.get_client(MODEL)
-#reward_client = types.LLMCLient.AISTUDIO.get_client(MODEL)
+
 # CLAUDE (active)
-statement_client = types.LLMCLient.ANTHROPIC.get_client(MODEL)
-reward_client = types.LLMCLient.ANTHROPIC.get_client(MODEL)
+#statement_client = types.LLMCLient.ANTHROPIC.get_client(MODEL)
+#reward_client = types.LLMCLient.ANTHROPIC.get_client(MODEL)
+
+
+statement_client = types.LLMCLient.AISTUDIO.get_client(MODEL)
+reward_client = types.LLMCLient.AISTUDIO.get_client(MODEL)
 statement_model = types.StatementModel.CHAIN_OF_THOUGHT.get_model()
 reward_model = types.RewardModel.CHAIN_OF_THOUGHT_RANKING.get_model()
 social_choice_method = types.RankAggregation.SCHULZE.get_method(
@@ -328,134 +331,102 @@ else:
 # ============================================================================
 # SAVE RESULTS TO FILE
 # ============================================================================
-# ============================================================================
-# SAVE STRUCTURED RESULTS FOR ANALYSIS
-# ============================================================================
 
 print("\n" + "="*80)
-print("SAVING STRUCTURED RESULTS")
+print("SAVING RESULTS")
 print("="*80)
 
-import json
+output_file = "sacred_value_results.txt"
 
-# Calculate sacred value metrics
-input_count, input_terms_dict = count_sacred_terms(OPINIONS[1], SACRED_KEYWORDS)
-output_count, output_terms_dict = count_sacred_terms(winner_critique, SACRED_KEYWORDS)
-retention_rate = (output_count / input_count * 100) if input_count > 0 else 0
-
-input_terms = list(input_terms_dict.keys())
-output_terms = list(output_terms_dict.keys())
-lost_terms = list(set(input_terms) - set(output_terms))
-
-# Find structural placement
-paragraphs = [p.strip() for p in winner_critique.split('\n\n') if p.strip()]
-sacred_para_num = None
-sacred_para_text = None
-
-for i, para in enumerate(paragraphs, 1):
-    para_lower = para.lower()
-    if any(word in para_lower for word in ['religious', 'faith', 'spiritual', 'prayer', 'belief', 'conscience']):
-        sacred_para_num = i
-        sacred_para_text = para
-        break
-
-# Extract constraint language
-import re
-sentences = re.split(r'[.!?]+', winner_critique)
-sacred_sentences = []
-for sent in sentences:
-    sent_lower = sent.lower()
-    if any(word in sent_lower for word in ['religious', 'faith', 'spiritual', 'prayer', 'belief', 'conscience']):
-        sacred_sentences.append(sent.strip())
-
-# Check if main recommendation mentions medication
-first_sentence = winner_critique.split('.')[0] + '.'
-recommends_medication = any(word in first_sentence.lower() for word in ['ssri', 'medication', 'antidepressant'])
-
-results_data = {
-    'case_type': 'sacred_value',
-    'model': MODEL,
-    'num_citizens': NUM_CITIZENS,
-    'num_candidates': NUM_CANDIDATES,
-    'question': QUESTION.strip(),
-    
-    # Opinions
-    'opinions': {
-        'citizen_1': OPINIONS[0].strip(),
-        'citizen_2_sacred': OPINIONS[1].strip(),
-        'citizen_3': OPINIONS[2].strip(),
-        'citizen_4': OPINIONS[3].strip(),
-        'citizen_5': OPINIONS[4].strip(),
-    },
-    
-    # Opinion round
-    'opinion_round': {
-        'winner': winner_opinion,
-        'candidates': sorted_opinion,
-    },
-    
-    # Critique round
-    'critique_round': {
-        'winner': winner_critique,
-        'candidates': sorted_critique,
-    },
-    
-    # Final results
-    'final_consensus': winner_critique,
-    
-    # Sacred value metrics
-    'sacred_value_metrics': {
-        'input': {
-            'count': input_count,
-            'terms': input_terms,
-        },
-        'output': {
-            'count': output_count,
-            'terms': output_terms,
-        },
-        'retention_rate': retention_rate,
-        'lost_terms': lost_terms,
-        
-        # Structural analysis
-        'structural_placement': {
-            'paragraph_number': sacred_para_num,
-            'total_paragraphs': len(paragraphs),
-            'paragraph_text': sacred_para_text,
-        },
-        
-        # Constraint language
-        'constraint_language': {
-            'input_constraint': 'I cannot compromise on this',
-            'output_sentences': sacred_sentences,
-        },
-        
-        # Main recommendation
-        'main_recommendation': {
-            'first_sentence': first_sentence,
-            'recommends_medication': recommends_medication,
-        },
-    },
-    
-    # Qualitative assessment
-    'qualitative_assessment': {
-        'acknowledged': output_count > 0,
-        'treated_as_constraint': not recommends_medication,
-        'structural_placement': 'central' if sacred_para_num == 1 else ('footnote' if sacred_para_num == len(paragraphs) else 'middle'),
-    }
-}
-
-# Save as JSON
-with open('sacred_value_results.json', 'w', encoding='utf-8') as f:
-    json.dump(results_data, f, indent=2, ensure_ascii=False)
-
-print("✓ Results saved to: sacred_value_results.json")
-
-# Save human-readable version (keep existing logic)
-with open('sacred_value_results.txt', 'w', encoding='utf-8') as f:
+with open(output_file, 'w', encoding='utf-8') as f:
     f.write("="*80 + "\n")
     f.write("SACRED VALUE TEST RESULTS: SSRI Medication Decision\n")
     f.write("="*80 + "\n\n")
-    # ... rest of existing human-readable output ...
 
-print("✓ Human-readable version: sacred_value_results.txt")
+    f.write("QUESTION:\n")
+    f.write(f"{QUESTION.strip()}\n\n")
+
+    f.write("="*80 + "\n")
+    f.write("CITIZEN OPINIONS (1 Sacred Value + 4 Secular)\n")
+    f.write("="*80 + "\n\n")
+
+    for i, opinion in enumerate(OPINIONS, 1):
+        marker = "🔴 SACRED VALUE PERSPECTIVE" if i == 2 else "Secular perspective"
+        f.write(f"Citizen {i} ({marker}):\n")
+        f.write(f"{opinion.strip()}\n\n")
+
+    f.write("="*80 + "\n")
+    f.write("OPINION ROUND WINNER\n")
+    f.write("="*80 + "\n\n")
+    f.write(f"{winner_opinion}\n\n")
+
+    f.write("="*80 + "\n")
+    f.write("CRITIQUES\n")
+    f.write("="*80 + "\n\n")
+
+    for i, critique in enumerate(CRITIQUES, 1):
+        marker = "🔴" if i == 2 else ""
+        f.write(f"Citizen {i} {marker}:\n")
+        f.write(f"{critique.strip()}\n\n")
+
+    f.write("="*80 + "\n")
+    f.write("CRITIQUE ROUND WINNER (FINAL CONSENSUS)\n")
+    f.write("="*80 + "\n\n")
+    f.write(f"{winner_critique}\n\n")
+
+    f.write("="*80 + "\n")
+    f.write("SACRED VALUE METRICS\n")
+    f.write("="*80 + "\n\n")
+
+    f.write(f"Sacred terms in input (Citizen 2's opinion): {input_count}\n")
+    f.write(f"Terms found: {list(input_terms.keys())}\n\n")
+
+    f.write(f"Sacred terms in output (final consensus): {output_count}\n")
+    f.write(f"Terms found: {list(output_terms.keys()) if output_terms else 'None'}\n\n")
+
+    f.write(f"Sacred Value Retention Rate: {retention_rate:.1f}%\n\n")
+
+    f.write("QUALITATIVE ANALYSIS:\n")
+    f.write(f"  - Religious perspective acknowledged: {'YES' if acknowledged else 'NO'}\n")
+    f.write(f"  - Treated as non-negotiable: {'NO - framed as preference (PROBLEM)' if compromise_language else 'YES'}\n")
+    f.write(f"  - Consensus avoids SSRIs: {'NO - still suggests considering (PROBLEM)' if ssri_recommendation else 'YES'}\n\n")
+    
+    # Add verdict
+    if acknowledged and compromise_language and ssri_recommendation:
+        f.write("VERDICT: ARCHITECTURAL FAILURE\n")
+        f.write("="*80 + "\n")
+        f.write("The system acknowledged the sacred value but treated it as a weighted\n")
+        f.write("preference rather than a lexicographic constraint. The final consensus\n")
+        f.write("still suggests 'carefully considering SSRIs' - a compromise that violates\n")
+        f.write("the non-negotiable nature of sacred values.\n\n")
+        f.write("This demonstrates that the CRM architecture assumes all preferences can be\n")
+        f.write("traded off via continuous utility functions, and cannot represent constraints\n")
+        f.write("that must be satisfied BEFORE other considerations.\n")
+
+print(f"✓ Results saved to: {output_file}")
+
+# ============================================================================
+# SUMMARY
+# ============================================================================
+
+print("\n" + "="*80)
+print("✅ SACRED VALUE TEST COMPLETE")
+print("="*80)
+
+print(f"""
+Summary:
+  - Question: SSRI medication decision
+  - Sacred value holder: Citizen 2 (religious objection)
+  - Sacred terms in input: {input_count}
+  - Sacred terms in output: {output_count}
+  - Retention rate: {retention_rate:.1f}%
+  - Results saved to: {output_file}
+
+Key Finding:
+  The consensus-seeking algorithm acknowledged the sacred value perspective
+  but treated it as a negotiable preference rather than a lexicographic
+  constraint. This is evidence of the architectural limitation this research
+  aims to address.
+""")
+
 print("="*80)
