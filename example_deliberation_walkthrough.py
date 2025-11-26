@@ -36,8 +36,8 @@ and risks (side effects, dependency concerns)?
 # Configuration parameters
 NUM_CITIZENS = 5        # Number of participants in deliberation
 NUM_CANDIDATES = 4      # Number of consensus statements to generate per round
-MODEL ='gemini-2.0-flash'  # Gemini model to use
-
+#MODEL ='  # Gemini model to use
+MODEL = 'claude-3-haiku-20240307' # Claude model
 print(f"\n📋 QUESTION: {QUESTION.strip()}")
 print(f"\n⚙️  Configuration:")
 print(f"   - Citizens: {NUM_CITIZENS}")
@@ -53,10 +53,13 @@ print("STEP 2: INITIALIZING COMPONENTS")
 print("="*70)
 
 # Create LLM clients (separate clients for statement generation and ranking)
-statement_client = types.LLMCLient.AISTUDIO.get_client(MODEL)
-reward_client = types.LLMCLient.AISTUDIO.get_client(MODEL)
-print("✓ LLM clients initialized (Gemini)")
-
+#statement_client = types.LLMCLient.AISTUDIO.get_client(MODEL)
+#reward_client = types.LLMCLient.AISTUDIO.get_client(MODEL)
+#print("✓ LLM clients initialized (Gemini)")
+ # CLAUDE (active)
+statement_client = types.LLMCLient.ANTHROPIC.get_client(MODEL)
+reward_client = types.LLMCLient.ANTHROPIC.get_client(MODEL)
+print("✓ LLM clients initialized (Claude)")
 # Create statement generation model (uses chain-of-thought reasoning)
 statement_model = types.StatementModel.CHAIN_OF_THOUGHT.get_model()
 print("✓ Statement model: Chain-of-Thought")
@@ -333,3 +336,63 @@ To create 50 test vignettes:
 - Generates JSON file with sacred vs secular cases
 - Ready for batch processing
 """)
+
+# ============================================================================
+# SAVE STRUCTURED RESULTS FOR ANALYSIS
+# ============================================================================
+
+print("\n" + "="*70)
+print("SAVING STRUCTURED RESULTS")
+print("="*70)
+
+import json
+
+results_data = {
+    'case_type': 'secular',
+    'model': MODEL,
+    'num_citizens': NUM_CITIZENS,
+    'num_candidates': NUM_CANDIDATES,
+    'question': QUESTION.strip(),
+    
+    # Opinion round
+    'opinion_round': {
+        'winner': winner_opinion,
+    },
+    
+    # Critique round
+    'critique_round': {
+        'winner': winner_critique,
+    },
+    
+    # Final results
+    'final_consensus': winner_critique,
+    
+    # Sacred value metrics (should be 0 for secular)
+    'sacred_terms': {
+        'count': 0,
+        'terms_found': [],
+        'retention_rate': 0.0
+    }
+}
+
+# Save as JSON
+with open('secular_deliberation_results.json', 'w', encoding='utf-8') as f:
+    json.dump(results_data, f, indent=2, ensure_ascii=False)
+
+print("✓ Results saved to: secular_deliberation_results.json")
+
+# Save human-readable version
+with open('secular_deliberation_results.txt', 'w', encoding='utf-8') as f:
+    f.write("="*70 + "\n")
+    f.write("SECULAR DELIBERATION RESULTS\n")
+    f.write("="*70 + "\n\n")
+    f.write(f"Model: {MODEL}\n")
+    f.write(f"Citizens: {NUM_CITIZENS}\n")
+    f.write(f"Candidates: {NUM_CANDIDATES}\n\n")
+    f.write("="*70 + "\n")
+    f.write("FINAL CONSENSUS:\n")
+    f.write("="*70 + "\n\n")
+    f.write(winner_critique + "\n")
+
+print("✓ Human-readable version: secular_deliberation_results.txt")
+print("="*70)
