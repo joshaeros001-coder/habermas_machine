@@ -55,6 +55,8 @@ class AIStudioClient(base_client.LLMClient):
       *,
       safety_settings: Sequence[Mapping[str, str]] = DEFAULT_SAFETY_SETTINGS,
       sleep_periodically: bool = False,
+      sleep_seconds: float = 5.0,
+      calls_between_sleeping: int = 5,
   ) -> None:
     """Initializes the instance.
 
@@ -64,11 +66,14 @@ class AIStudioClient(base_client.LLMClient):
       safety_settings: Gemini safety settings. For more details, see
         https://ai.google.dev/gemini-api/docs/safety.
       sleep_periodically: sleep between API calls to avoid rate limit.
+      sleep_seconds: how long to sleep (default 5 seconds).
+      calls_between_sleeping: sleep after this many calls (default 5).
     """
     self._api_key = os.environ['GOOGLE_API_KEY']
     self._model_name = model_name
     self._safety_settings = safety_settings
     self._sleep_periodically = sleep_periodically
+    self._sleep_seconds = sleep_seconds
 
     genai.configure(api_key=self._api_key)
     self._model = genai.GenerativeModel(
@@ -76,7 +81,7 @@ class AIStudioClient(base_client.LLMClient):
         safety_settings=safety_settings,
     )
 
-    self._calls_between_sleeping = 10
+    self._calls_between_sleeping = calls_between_sleeping
     self._n_calls = 0
 
   @override
@@ -96,8 +101,8 @@ class AIStudioClient(base_client.LLMClient):
     self._n_calls += 1
     if self._sleep_periodically and (
         self._n_calls % self._calls_between_sleeping == 0):
-      print('Sleeping for 10 seconds...')
-      time.sleep(10)
+      print(f'Rate limit protection: sleeping for {self._sleep_seconds}s...')
+      time.sleep(self._sleep_seconds)
 
     sample = self._model.generate_content(
         prompt,
