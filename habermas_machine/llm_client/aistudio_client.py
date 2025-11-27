@@ -111,10 +111,22 @@ class AIStudioClient(base_client.LLMClient):
     )
     try:
       # AI Studio returns a list of parts, but we only use the first one.
-      response = sample.candidates[0].content.parts[0].text
-    except ValueError as e:
+      if not sample.candidates:
+        print('WARNING: No candidates returned by API')
+        print(f'Prompt feedback: {sample.prompt_feedback}')
+        raise ValueError('No candidates in response')
+
+      candidate = sample.candidates[0]
+      if not candidate.content.parts:
+        print('WARNING: No content parts returned by API')
+        print(f'Finish reason: {candidate.finish_reason}')
+        print(f'Safety ratings: {candidate.safety_ratings}')
+        raise ValueError('No parts in response')
+
+      response = candidate.content.parts[0].text
+    except (ValueError, IndexError) as e:
       print('An error occurred: ', e)
-      print(f'prompt: {prompt}')
+      print(f'prompt: {prompt[:500]}...')  # Truncate long prompts
       print(f'sample: {sample}')
       response = ''
     return utils.truncate(response, delimiters=terminators)
