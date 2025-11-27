@@ -22,10 +22,25 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
-# Old result files - ignore
-*.txt
-*.json
+
+# Test results - ignore all
+results_*.json
+sacred_value_results.txt
 *.csv
 *.png
-visualize_comparison.py
-check_claude_models.py
+
+# Python virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
