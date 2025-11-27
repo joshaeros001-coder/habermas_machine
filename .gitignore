@@ -26,6 +26,7 @@ MANIFEST
 # Test results - ignore all
 results_*.json
 sacred_value_results.txt
+terminal_log_*.txt
 *.csv
 *.png
 

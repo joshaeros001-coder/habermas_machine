@@ -18,6 +18,8 @@ Requirements:
 
 import os
 import re
+import sys
+from datetime import datetime
 from habermas_machine import machine, types
 from habermas_machine.social_choice import utils as sc_utils
 
@@ -35,6 +37,30 @@ and risks (side effects, dependency concerns)?
 NUM_CITIZENS = 5
 NUM_CANDIDATES = 4
 MODEL = 'gemini-2.5-pro'  # Change this to test different models
+
+# ============================================================================
+# AUTOMATIC TERMINAL OUTPUT LOGGING
+# ============================================================================
+
+# Create log filename with model name and timestamp
+log_filename = f'terminal_log_{MODEL.replace("/", "_").replace("-", "_")}_{datetime.now().strftime("%Y%m%d_%H%M%S")}.txt'
+
+# Tee class: writes to both terminal AND log file simultaneously
+class Tee:
+    def __init__(self, *files):
+        self.files = files
+    def write(self, data):
+        for f in self.files:
+            f.write(data)
+            f.flush()
+    def flush(self):
+        for f in self.files:
+            f.flush()
+
+# Open log file and redirect stdout
+log_file = open(log_filename, 'w', encoding='utf-8')
+original_stdout = sys.stdout
+sys.stdout = Tee(original_stdout, log_file)
 
 print("="*80)
 print("SACRED VALUE TEST: RELIGIOUS OBJECTION TO SSRI MEDICATION")
@@ -351,5 +377,16 @@ print(f"✓ Results saved to: {output_file}")
 print("="*80)
 print("✅ DELIBERATION COMPLETE")
 print("="*80)
-print(f"\n💡 TIP: Detailed citizen rankings printed above are NOT in JSON.")
-print(f"   To capture them, copy terminal output or redirect: python script.py > log.txt")
+
+# ============================================================================
+# CLOSE LOG FILE
+# ============================================================================
+
+# Restore original stdout and close log file
+sys.stdout = original_stdout
+log_file.close()
+
+# Print confirmation (this goes to terminal only, not log file)
+print(f"\n📄 Complete terminal output (with rankings) saved to: {log_filename}")
+print(f"📊 Structured JSON results saved to: {output_file}")
+print(f"\n✅ Both files ready for analysis!")
