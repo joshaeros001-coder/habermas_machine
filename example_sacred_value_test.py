@@ -235,35 +235,115 @@ print("="*80)
 
 import json
 
-# Create results data structure
+# Create enhanced results data structure with raw deliberation data
 results_data = {
-    'model': MODEL,
-    'question': QUESTION.strip(),
-    'num_citizens': NUM_CITIZENS,
-    'num_candidates': NUM_CANDIDATES,
+    # Model configuration
+    'model': MODEL,  # The LLM being tested (e.g., 'gemini-2.5-pro')
+    'question': QUESTION.strip(),  # The deliberation question
+    'num_citizens': NUM_CITIZENS,  # Number of simulated citizens (5)
+    'num_candidates': NUM_CANDIDATES,  # Statements generated per round (4)
 
-    # Raw opinions
-    'opinions': [opinion.strip() for opinion in OPINIONS],
+    # INPUT: Citizen opinions with labels
+    'opinions': [
+        {
+            'citizen_id': i + 1,  # Citizen number (1-5)
+            'label': 'SACRED_VALUE' if i == 1 else 'SECULAR',  # Citizen 2 has religious objection
+            'text': opinion.strip()  # Full opinion text
+        }
+        for i, opinion in enumerate(OPINIONS)
+    ],
 
-    # Opinion round results
+    # OPINION ROUND: First deliberation (synthesize diverse opinions → consensus candidates)
     'opinion_round': {
-        'winner': winner_opinion,
-        'all_candidates': sorted_opinion,
+        # Winning statement (ranked #1 by Schulze voting method)
+        'winner': {
+            'rank': 1,  # Winner is always rank 1
+            'statement': winner_opinion  # Full text of winning consensus statement
+        },
+
+        # All 4 generated statements, ranked by social choice (Schulze method)
+        # sorted_opinion[0] = rank 1 (winner), sorted_opinion[1] = rank 2, etc.
+        'all_candidates_ranked': [
+            {
+                'rank': i + 1,  # Ranking position (1=best, 4=worst)
+                'statement': stmt  # Full statement text
+            }
+            for i, stmt in enumerate(sorted_opinion)
+        ],
+
+        # Note about the voting process
+        'note': 'Statements ranked by Schulze method after each citizen ranked all 4 candidates. Individual citizen rankings visible in terminal output (verbose=True).'
     },
 
-    # Critiques
-    'critiques': [critique.strip() for critique in CRITIQUES],
+    # INPUT: Citizen critiques of the winning opinion statement
+    'critiques': [
+        {
+            'citizen_id': i + 1,  # Citizen number (1-5)
+            'label': 'SACRED_VALUE' if i == 1 else 'SECULAR',  # Citizen 2 maintains sacred value
+            'text': critique.strip()  # Full critique text
+        }
+        for i, critique in enumerate(CRITIQUES)
+    ],
 
-    # Critique round results (final consensus)
+    # CRITIQUE ROUND: Second deliberation (incorporate critiques → refined consensus)
     'critique_round': {
-        'winner': winner_critique,
-        'all_candidates': sorted_critique,
+        # Final winning statement after incorporating critiques
+        'winner': {
+            'rank': 1,  # Winner is always rank 1
+            'statement': winner_critique  # Full text of final consensus statement
+        },
+
+        # All 4 refined statements, ranked by social choice
+        'all_candidates_ranked': [
+            {
+                'rank': i + 1,  # Ranking position (1=best, 4=worst)
+                'statement': stmt  # Full statement text
+            }
+            for i, stmt in enumerate(sorted_critique)
+        ],
+
+        # Note about the voting process
+        'note': 'Statements ranked by Schulze method after each citizen ranked all 4 refined candidates. Individual citizen rankings visible in terminal output (verbose=True).'
     },
+
+    # METADATA: Architecture details and important notes
+    'metadata': {
+        'architecture': 'Habermas Machine (Original Google DeepMind implementation)',
+        'deliberation_method': 'Two-round: (1) Opinion synthesis → (2) Critique integration',
+        'voting_method': 'Schulze method with TBRC (Tied at the Top Breaking by Ranked Choice)',
+        'statement_model': 'Chain-of-thought consensus generation',
+        'reward_model': 'Chain-of-thought ranking',
+
+        # SEED: Controls randomization for reproducibility
+        # seed=42 means the same shuffling pattern happens every run
+        # This ensures:
+        #   1. Opinion order during statement generation is consistent
+        #   2. Statement order during ranking is consistent
+        #   3. Results are reproducible for the same model
+        'seed': 42,
+
+        # Shuffle is enabled for bias mitigation (see machine.py ~line 150)
+        'shuffle_enabled': True,
+
+        # IMPORTANT WARNINGS about this architecture
+        'warnings': [
+            'MISATTRIBUTION ISSUE: Opinion citations in statements (e.g., "Opinion 2, 3, 5") refer to SHUFFLED positions during generation, not original citizen IDs. Sacred value opinion may be mislabeled.',
+            'DETAILED RANKINGS: Individual citizen rankings (e.g., "Citizen 1: 2 > 1 > 4 > 3") are printed to terminal (verbose=True) but not captured in this JSON. Check terminal output for complete voting data.',
+            'SHUFFLE BIAS MITIGATION: Opinions are shuffled before each statement generation to prevent position bias, but this causes citation misattribution.'
+        ],
+
+        # Where to find additional data
+        'additional_data_location': 'Terminal output (stdout) contains: individual citizen rankings, untied vs tied social rankings, full Schulze voting details'
+    }
 }
 
 # Save results with model name in filename
+# Example: results_gemini_2_5_pro.json
 output_file = f'results_{MODEL.replace("/", "_").replace("-", "_")}.json'
 
+# Write to JSON file with pretty formatting
+# indent=2 makes it human-readable
+# ensure_ascii=False preserves unicode characters (emojis, special chars)
 with open(output_file, 'w', encoding='utf-8') as f:
     json.dump(results_data, f, indent=2, ensure_ascii=False)
 
@@ -271,3 +351,5 @@ print(f"✓ Results saved to: {output_file}")
 print("="*80)
 print("✅ DELIBERATION COMPLETE")
 print("="*80)
+print(f"\n💡 TIP: Detailed citizen rankings printed above are NOT in JSON.")
+print(f"   To capture them, copy terminal output or redirect: python script.py > log.txt")
