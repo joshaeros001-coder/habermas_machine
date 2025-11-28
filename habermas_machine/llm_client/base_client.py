@@ -23,7 +23,9 @@ DEFAULT_TERMINATORS = ()
 DEFAULT_TIMEOUT_SECONDS = 60
 # We truncate the response if we detect the terminator string before the max
 # tokens so we set a high default value for max tokens.
-DEFAULT_MAX_TOKENS = 4096
+# Note: Increased from 4096 to 8192 for chain-of-thought models that generate
+# longer reasoning before the final answer (Gemini 2.5 Flash supports 65k+)
+DEFAULT_MAX_TOKENS = 8192
 
 
 class LLMClient(abc.ABC):
