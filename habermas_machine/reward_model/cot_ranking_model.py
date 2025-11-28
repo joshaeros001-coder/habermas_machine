@@ -243,8 +243,15 @@ def _check_response_format(response: str) -> bool:
   Returns:
     bool: True if the format is correct, False otherwise
   """
+  # Original strict pattern
   pattern = r'<answer>\s*.*?\s*<sep>\s*.*?\s*</answer>'
-  return bool(re.search(pattern, response, re.DOTALL))
+  if bool(re.search(pattern, response, re.DOTALL)):
+    return True
+
+  # More lenient pattern: just needs <sep> followed by ranking
+  # Some models skip the <answer> tag but still output valid content
+  lenient_pattern = r'<sep>\s*[A-Z]\s*(?:>|=)\s*[A-Z]'
+  return bool(re.search(lenient_pattern, response, re.DOTALL))
 
 
 def _check_arrow_format(arrow_ranking):
@@ -336,9 +343,16 @@ def _process_model_response(
     ranking is incorrect.
   """
   if _check_response_format(response):
+    # Try strict pattern first: <answer>...<sep>...</answer>
     match = re.search(
         r'<answer>\s*(.*?)\s*<sep>\s*(.*?)\s*</answer>', response, re.DOTALL
     )
+    if match is None:
+      # Try lenient pattern: content before <sep>, ranking after <sep>
+      # Some models skip the <answer> tag
+      match = re.search(
+          r'(.*?)\s*<sep>\s*(.*?)(?:</answer>|$)', response, re.DOTALL
+      )
     if match is None:
       return base_model.RankingResult(None, f'INCORRECT_TEMPLATE: {response}')
     else:
