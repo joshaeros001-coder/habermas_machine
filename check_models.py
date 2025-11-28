@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Check available Google Gemini models and their status.
+Check ALL available Google Gemini models from the API.
 
-This script lists all Gemini models and checks which ones are available
-for your API key.
+This script dynamically fetches and displays ALL models available
+for your API key - no hardcoded lists.
 
 Usage:
     python check_models.py
@@ -21,84 +21,64 @@ if not api_key:
 genai.configure(api_key=api_key)
 
 # ============================================================================
-# ALL GOOGLE GEMINI MODELS (as of November 2024)
-# ============================================================================
-# Listed in recommended testing order (newest/best first)
-
-GEMINI_MODELS = [
-    # --- Gemini 2.5 Series (Latest - December 2024) ---
-    ("gemini-2.5-pro-preview-05-06", "2.5 Pro Preview (May 2025) - Latest flagship"),
-    ("gemini-2.5-flash-preview-05-20", "2.5 Flash Preview (May 2025) - Latest fast"),
-    ("gemini-2.5-pro-preview-03-25", "2.5 Pro Preview (March 2025)"),
-    ("gemini-2.5-flash", "2.5 Flash - Fast & efficient"),
-    ("gemini-2.5-pro", "2.5 Pro - Most capable"),
-
-    # --- Gemini 2.0 Series ---
-    ("gemini-2.0-flash", "2.0 Flash - Fast multimodal"),
-    ("gemini-2.0-flash-lite", "2.0 Flash Lite - Lightweight"),
-    ("gemini-2.0-flash-exp", "2.0 Flash Experimental"),
-
-    # --- Gemini 1.5 Series ---
-    ("gemini-1.5-pro", "1.5 Pro - Previous flagship"),
-    ("gemini-1.5-pro-latest", "1.5 Pro Latest"),
-    ("gemini-1.5-flash", "1.5 Flash - Fast"),
-    ("gemini-1.5-flash-latest", "1.5 Flash Latest"),
-    ("gemini-1.5-flash-8b", "1.5 Flash 8B - Smallest"),
-
-    # --- Gemini 1.0 Series (Legacy) ---
-    ("gemini-1.0-pro", "1.0 Pro - Legacy"),
-    ("gemini-pro", "Pro - Alias for 1.0 Pro"),
-]
-
-# ============================================================================
-# CHECK MODEL AVAILABILITY
+# FETCH ALL MODELS FROM API (NO HARDCODING!)
 # ============================================================================
 
-print("=" * 70)
-print("GOOGLE GEMINI MODEL AVAILABILITY CHECK")
-print("=" * 70)
+print("=" * 80)
+print("ALL GOOGLE GEMINI MODELS AVAILABLE FOR YOUR API KEY")
+print("=" * 80)
 print()
 
-available_models = []
-unavailable_models = []
-
-# Get list of available models from API
 try:
-    api_models = {m.name.replace("models/", ""): m for m in genai.list_models()}
+    all_models = list(genai.list_models())
 except Exception as e:
     print(f"ERROR: Could not fetch model list: {e}")
-    api_models = {}
+    exit(1)
 
-print(f"Found {len(api_models)} models available via API\n")
-
-# Check each model
-for model_id, description in GEMINI_MODELS:
-    if model_id in api_models:
-        available_models.append((model_id, description))
-        status = "✅ AVAILABLE"
-    else:
-        unavailable_models.append((model_id, description))
-        status = "❌ Not available"
-
-    print(f"{status:20} | {model_id:40} | {description}")
-
+print(f"Total models found: {len(all_models)}")
 print()
-print("=" * 70)
-print(f"SUMMARY: {len(available_models)} available, {len(unavailable_models)} unavailable")
-print("=" * 70)
 
 # ============================================================================
-# RECOMMENDED TESTING ORDER
+# FILTER AND DISPLAY GEMINI MODELS (text generation capable)
 # ============================================================================
 
+# Filter for models that support text generation
+gemini_models = []
+for model in all_models:
+    model_id = model.name.replace("models/", "")
+    # Check if it supports generateContent (text generation)
+    supported_methods = [m for m in model.supported_generation_methods]
+    if 'generateContent' in supported_methods:
+        gemini_models.append({
+            'id': model_id,
+            'display_name': model.display_name,
+            'description': getattr(model, 'description', ''),
+            'input_token_limit': getattr(model, 'input_token_limit', 'N/A'),
+            'output_token_limit': getattr(model, 'output_token_limit', 'N/A'),
+        })
+
+print(f"Models supporting text generation: {len(gemini_models)}")
 print()
-print("RECOMMENDED TESTING ORDER (copy these model names):")
-print("-" * 70)
-for i, (model_id, description) in enumerate(available_models, 1):
-    print(f"  {i}. {model_id}")
+print("-" * 80)
+
+# Sort by model ID to group versions together
+gemini_models.sort(key=lambda x: x['id'], reverse=True)
+
+# Display all models
+for i, model in enumerate(gemini_models, 1):
+    print(f"\n{i:2}. {model['id']}")
+    print(f"    Display name: {model['display_name']}")
+    print(f"    Input tokens: {model['input_token_limit']:,} | Output tokens: {model['output_token_limit']:,}")
 
 print()
-print("To test a model, edit example_sacred_value_test.py and change:")
-print("  MODEL = 'gemini-2.5-flash'")
-print("to:")
-print("  MODEL = '<model-name-from-above>'")
+print("=" * 80)
+print("QUICK COPY LIST (model IDs only):")
+print("=" * 80)
+for i, model in enumerate(gemini_models, 1):
+    print(f"  {i:2}. {model['id']}")
+
+print()
+print("=" * 80)
+print("To test a model, edit example_sacred_value_test.py line 41:")
+print("  MODEL = '<model-id-from-above>'")
+print("=" * 80)
