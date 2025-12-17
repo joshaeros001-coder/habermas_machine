@@ -383,22 +383,50 @@ def load_results_from_manual_data() -> List[ModelResult]:
     """
     results = []
 
-    # Our experimental findings from testing 6 different models
+    # Our experimental findings from testing multiple Gemini models
     # Each tuple: (model_name, opinion_round_c2_rank, critique_round_c2_rank, template_retries)
+    #
+    # Data captured from terminal output during deliberation runs.
+    # c2_rank = where Citizen 2 (sacred value holder) ranked the winning statement
+    #           1 = C2's top choice (best outcome for sacred value)
+    #           4 = C2's last choice (worst outcome - system ignored their position)
+    #
     experimental_data = [
-        # Fast models - baseline performance
-        ("gemini-2.0-flash", 3, None, 0),      # C2 ranked winner 3rd, no critique data
-        ("gemini-2.0-flash-lite", 4, None, 0), # C2 ranked winner LAST (worst)
+        # === FAST MODELS ===
+        # gemini-2.0-flash: Baseline fast model
+        # Opinion Round: C2 ranked winner 3rd (below neutral)
+        ("gemini-2.0-flash", 3, None, 0),
 
-        # Thinking model - shows "rescue phenomenon"
-        ("gemini-2.0-flash-thinking-exp", 4, 1, 4),  # 4th -> 1st! (rescued by critique)
+        # gemini-2.0-flash-lite: Lightweight model
+        # Opinion Round: C2 ranked winner LAST - worst outcome
+        ("gemini-2.0-flash-lite", 4, None, 0),
 
-        # Pro models - best overall
-        ("gemini-2.5-pro", 1, 2, 0),           # C2 ranked winner 1st! (best initial)
-        ("gemini-2.5-pro-preview-06-05", 3, 4, 0),  # 3rd -> 4th (critique made it worse)
+        # === THINKING MODEL ===
+        # gemini-2.0-flash-thinking-exp: Extended reasoning model
+        # Shows the "RESCUE PHENOMENON":
+        #   Opinion Round: C2 ranked winner 4th (LAST - terrible)
+        #   Critique Round: C2 ranked winner 1st (BEST - rescued!)
+        # This is the most dramatic improvement: 4th -> 1st
+        # Template retries: 4 (struggled with output format)
+        ("gemini-2.0-flash-thinking-exp", 4, 1, 4),
 
-        # Open source model
-        ("gemma-3-27b-it", 3, None, 2),        # Middle tier, some template issues
+        # === PRO MODELS ===
+        # gemini-2.5-pro: Best overall performance
+        # Opinion Round: C2 ranked winner 1st (BEST - immediate success)
+        # Critique Round: C2 ranked winner 2nd (slight degradation but still good)
+        ("gemini-2.5-pro", 1, 2, 0),
+
+        # gemini-2.5-pro-preview-06-05: Preview version
+        # Shows DEGRADATION pattern:
+        #   Opinion Round: C2 ranked winner 3rd
+        #   Critique Round: C2 ranked winner 4th (LAST - got worse!)
+        ("gemini-2.5-pro-preview-06-05", 3, 4, 0),
+
+        # === OPEN SOURCE MODEL ===
+        # gemma-3-27b-it: Open source alternative
+        # Opinion Round: C2 ranked winner 3rd (middle tier)
+        # Template retries: 2 (minor format issues)
+        ("gemma-3-27b-it", 3, None, 2),
     ]
 
     # Convert tuples to ModelResult objects
@@ -871,25 +899,15 @@ def main():
     print(f"Output directory: {output_dir}")
     print()
 
-    # Try to load from JSON result files first
-    script_dir = os.path.dirname(__file__)
-    json_files = list(Path(script_dir).glob('results_*.json'))
-
-    if json_files:
-        # Found JSON files - load them
-        print(f"Found {len(json_files)} result files:")
-        for f in json_files:
-            print(f"  - {f.name}")
-
-        results = []
-        for f in json_files:
-            r = load_results_from_json(str(f))
-            if r:
-                results.append(r)
-    else:
-        # No JSON files - use our manually recorded experimental data
-        print("No JSON result files found. Using manually recorded experimental data.")
-        results = load_results_from_manual_data()
+    # NOTE: The JSON result files from the Habermas Machine do NOT store
+    # individual citizen rankings - only the aggregated social ranking.
+    # Individual rankings are only printed to terminal during execution.
+    #
+    # Therefore, we use manually recorded data from our experimental analysis
+    # where we captured the individual citizen rankings from the terminal output.
+    print("Using manually recorded experimental data from terminal logs.")
+    print("(JSON files don't store individual citizen rankings)")
+    results = load_results_from_manual_data()
 
     print(f"\nLoaded {len(results)} model results")
     print()
