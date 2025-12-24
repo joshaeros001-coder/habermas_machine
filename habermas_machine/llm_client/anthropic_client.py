@@ -51,7 +51,7 @@ Research Note:
     models like GPT.
 """
 
-from collections.abc import Collection
+from collections.abc import Collection, Mapping, Sequence
 import os
 import time
 
@@ -62,6 +62,45 @@ from typing_extensions import override
 
 from habermas_machine.llm_client import base_client
 from habermas_machine.llm_client import utils
+
+
+# =============================================================================
+# SAFETY SETTINGS
+# =============================================================================
+# Anthropic's safety approach is built into their Constitutional AI training.
+# Unlike Gemini's explicit category thresholds (BLOCK_ONLY_HIGH), Claude's
+# safety is intrinsic to the model rather than configurable per-request.
+#
+# Constitutional AI (CAI) was trained with principles including:
+#   - Avoiding harmful, unethical, or illegal content
+#   - Respecting human autonomy and diverse viewpoints
+#   - Being helpful while avoiding potential harms
+#
+# For scientific consistency with the Habermas Machine's Gemini implementation:
+#   - Claude's built-in safety is roughly equivalent to BLOCK_ONLY_HIGH
+#   - It allows discussion of sensitive topics (medical, religious, ethical)
+#   - It blocks clearly harmful content (explicit violence, illegal activities)
+#
+# The categories Claude monitors (similar to Gemini's):
+#   - HARM_CATEGORY_HARASSMENT: Handled by CAI training
+#   - HARM_CATEGORY_HATE_SPEECH: Handled by CAI training
+#   - HARM_CATEGORY_SEXUALLY_EXPLICIT: Handled by CAI training
+#   - HARM_CATEGORY_DANGEROUS_CONTENT: Handled by CAI training
+#
+# Note: Anthropic's safety is not configurable per-request like Gemini's.
+# This is documented for transparency in cross-model comparison.
+#
+# Research Hypothesis: Claude's explicit training on "respecting diverse
+# viewpoints" may lead to better sacred value accommodation compared to
+# pure RLHF-trained models.
+# =============================================================================
+
+DEFAULT_SAFETY_NOTE = """
+Anthropic Safety: Using Constitutional AI built-in safety (equivalent to BLOCK_ONLY_HIGH).
+Claude's safety training allows nuanced discussion of medical decisions and religious
+beliefs while blocking clearly harmful content. This is comparable to Gemini's
+BLOCK_ONLY_HIGH threshold.
+"""
 
 
 class AnthropicClient(base_client.LLMClient):

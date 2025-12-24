@@ -44,7 +44,7 @@ Models to test:
     - gpt-4-turbo (previous generation)
 """
 
-from collections.abc import Collection
+from collections.abc import Collection, Mapping, Sequence
 import os
 import time
 
@@ -55,6 +55,38 @@ from typing_extensions import override
 
 from habermas_machine.llm_client import base_client
 from habermas_machine.llm_client import utils
+
+
+# =============================================================================
+# SAFETY SETTINGS
+# =============================================================================
+# OpenAI's safety approach differs from Gemini's explicit category thresholds.
+# OpenAI uses built-in content moderation that:
+#   1. Automatically filters harmful content during generation
+#   2. Returns finish_reason='content_filter' if blocked
+#   3. Can optionally use the Moderation API for pre/post checking
+#
+# For scientific consistency with the Habermas Machine's Gemini implementation
+# (which uses BLOCK_ONLY_HIGH), we rely on OpenAI's default moderation which
+# is roughly equivalent - it blocks clearly harmful content but allows
+# discussion of sensitive topics like medical decisions and religious beliefs.
+#
+# The categories OpenAI monitors (similar to Gemini's):
+#   - hate: Content expressing hatred toward groups
+#   - harassment: Content attacking individuals
+#   - self-harm: Content promoting self-injury
+#   - sexual: Explicit sexual content
+#   - violence: Content depicting violence
+#
+# Note: OpenAI's safety is not configurable per-request like Gemini's.
+# This is documented for transparency in cross-model comparison.
+# =============================================================================
+
+DEFAULT_SAFETY_NOTE = """
+OpenAI Safety: Using default content moderation (equivalent to BLOCK_ONLY_HIGH).
+OpenAI automatically filters harmful content and returns finish_reason='content_filter'
+if a response is blocked. This is comparable to Gemini's BLOCK_ONLY_HIGH threshold.
+"""
 
 
 class OpenAIClient(base_client.LLMClient):
