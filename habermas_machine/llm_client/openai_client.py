@@ -259,6 +259,10 @@ class OpenAIClient(base_client.LLMClient):
         # =====================================================================
         # MAKE API CALL
         # =====================================================================
+        # Convert seed to Python int (numpy int64 is not JSON serializable)
+        if seed is not None:
+            seed = int(seed)
+
         try:
             response = self._client.chat.completions.create(
                 model=self._model_name,
