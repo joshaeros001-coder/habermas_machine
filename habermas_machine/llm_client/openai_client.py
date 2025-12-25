@@ -264,14 +264,32 @@ class OpenAIClient(base_client.LLMClient):
             seed = int(seed)
 
         try:
-            response = self._client.chat.completions.create(
-                model=self._model_name,
-                messages=messages,
-                max_tokens=max_tokens,
-                temperature=temperature,
-                stop=stop_sequences,
-                seed=seed,  # OpenAI supports seeds natively!
+            # Newer models (o1, o3, gpt-5.x) use max_completion_tokens
+            # Older models (gpt-4o, gpt-3.5) use max_tokens
+            # We detect based on model name prefix
+            is_new_model = any(
+                self._model_name.startswith(prefix)
+                for prefix in ['o1', 'o3', 'gpt-5', 'gpt-4.1']
             )
+
+            if is_new_model:
+                response = self._client.chat.completions.create(
+                    model=self._model_name,
+                    messages=messages,
+                    max_completion_tokens=max_tokens,
+                    temperature=temperature,
+                    stop=stop_sequences,
+                    seed=seed,
+                )
+            else:
+                response = self._client.chat.completions.create(
+                    model=self._model_name,
+                    messages=messages,
+                    max_tokens=max_tokens,
+                    temperature=temperature,
+                    stop=stop_sequences,
+                    seed=seed,
+                )
 
             # =================================================================
             # EXTRACT RESPONSE TEXT
