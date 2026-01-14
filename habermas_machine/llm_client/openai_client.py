@@ -267,18 +267,40 @@ class OpenAIClient(base_client.LLMClient):
             # =================================================================
             # GPT-5.x / O-Series API Compatibility
             # =================================================================
-            # Newer models (o1, o3, gpt-5.x, gpt-4.1) have different API:
+            # Newer models have different API requirements:
+            #
+            # O-Series (o1, o3, o4-mini):
             #   - Use 'max_completion_tokens' instead of 'max_tokens'
-            #   - Do NOT support 'stop' sequences (must truncate manually)
-            #   - Some don't support 'temperature' parameter
+            #   - Do NOT support 'stop' sequences
+            #   - Do NOT support custom 'temperature' (only default=1 allowed)
+            #
+            # GPT-5.x / GPT-4.1:
+            #   - Use 'max_completion_tokens' instead of 'max_tokens'
+            #   - Do NOT support 'stop' sequences
+            #   - DO support 'temperature' parameter
+            #
             # We detect based on model name prefix and adjust accordingly.
-            is_new_model = any(
+            is_o_series = any(
                 self._model_name.startswith(prefix)
-                for prefix in ['o1', 'o3', 'gpt-5', 'gpt-4.1']
+                for prefix in ['o1', 'o3', 'o4']
+            )
+            is_gpt5_series = any(
+                self._model_name.startswith(prefix)
+                for prefix in ['gpt-5', 'gpt-4.1']
             )
 
-            if is_new_model:
-                # GPT-5.x and O-series: no stop sequences, use max_completion_tokens
+            if is_o_series:
+                # O-series: no stop, no temperature, use max_completion_tokens
+                response = self._client.chat.completions.create(
+                    model=self._model_name,
+                    messages=messages,
+                    max_completion_tokens=max_tokens,
+                    seed=seed,
+                    # NOTE: 'temperature' not supported - uses default (1)
+                    # NOTE: 'stop' parameter not supported - we truncate manually below
+                )
+            elif is_gpt5_series:
+                # GPT-5.x: no stop sequences, use max_completion_tokens, temperature OK
                 response = self._client.chat.completions.create(
                     model=self._model_name,
                     messages=messages,
