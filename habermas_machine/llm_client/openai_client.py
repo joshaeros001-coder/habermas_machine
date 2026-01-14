@@ -263,6 +263,29 @@ class OpenAIClient(base_client.LLMClient):
         if seed is not None:
             seed = int(seed)
 
+        # =================================================================
+        # Model-specific max_tokens limits
+        # =================================================================
+        # Some models have lower completion token limits than the default 8192.
+        # We cap max_tokens to avoid API errors.
+        MODEL_TOKEN_LIMITS = {
+            'gpt-3.5-turbo': 4096,
+            'gpt-turbo': 4096,
+            'gpt-5.2-pro': 4096,  # Completion model with lower limit
+            # Add other models with known limits here
+        }
+
+        # Check for exact match or prefix match
+        effective_max_tokens = max_tokens
+        for model_pattern, limit in MODEL_TOKEN_LIMITS.items():
+            if self._model_name == model_pattern or self._model_name.startswith(model_pattern):
+                if max_tokens > limit:
+                    effective_max_tokens = limit
+                break
+
+        # Use effective_max_tokens for API calls
+        max_tokens = effective_max_tokens
+
         try:
             # =================================================================
             # GPT-5.x / O-Series API Compatibility
