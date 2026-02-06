@@ -167,29 +167,30 @@ for i, out in enumerate(outputs):
 # Feedback Loop: Winner₁ → Citizens (Critique) → Back to CRM
 # ============================================================================
 
-# Arrow from CRM down (Winner₁ out)
-ax.plot([52, 52], [35, 25], color=COLORS['feedback'], linewidth=2.5)
-ax.text(54, 30, 'Winner₁', fontsize=9, ha='left', va='center', color=COLORS['feedback'], fontweight='bold')
-
-# Arrow going left to citizens
-ax.plot([52, 13], [25, 25], color=COLORS['feedback'], linewidth=2.5)
-ax.annotate('', xy=(13, 25), xytext=(20, 25),
-            arrowprops=dict(arrowstyle='->', color=COLORS['feedback'], lw=2.5))
-
-# Critique box at citizens
-critique_box = FancyBboxPatch((5, 21), 16, 6, boxstyle="round,pad=0.01,rounding_size=0.4",
+# Critique box at citizens (positioned first so we know where to draw arrows)
+critique_box = FancyBboxPatch((5, 18), 16, 7, boxstyle="round,pad=0.01,rounding_size=0.4",
                                facecolor='white', edgecolor=COLORS['feedback'], linewidth=2)
 ax.add_patch(critique_box)
-ax.text(13, 24, 'Citizens\nCritique', fontsize=9, ha='center', va='center',
+ax.text(13, 21.5, 'Citizens\nCritique', fontsize=9, ha='center', va='center',
         fontweight='bold', color=COLORS['feedback'])
 
-# Arrow from critique back to CRM
-ax.plot([13, 13], [21, 17], color=COLORS['feedback'], linewidth=2.5)
-ax.plot([13, 52], [17, 17], color=COLORS['feedback'], linewidth=2.5)
-ax.plot([52, 52], [17, 35], color=COLORS['feedback'], linewidth=2.5)
-ax.annotate('', xy=(52, 35), xytext=(52, 28),
+# Arrow from CRM down (Winner₁ out)
+ax.plot([52, 52], [35, 28], color=COLORS['feedback'], linewidth=2.5)
+ax.text(54, 31, 'Winner₁', fontsize=9, ha='left', va='center', color=COLORS['feedback'], fontweight='bold')
+
+# Arrow going left to citizens (connects to RIGHT side of critique box)
+ax.plot([52, 21], [28, 28], color=COLORS['feedback'], linewidth=2.5)
+ax.plot([21, 21], [28, 25], color=COLORS['feedback'], linewidth=2.5)
+ax.annotate('', xy=(21, 21.5), xytext=(21, 24),
             arrowprops=dict(arrowstyle='->', color=COLORS['feedback'], lw=2.5))
-ax.text(32, 15, 'Critiques + Opinions → Round 2 → Final Winner', fontsize=9,
+
+# Arrow from critique back to CRM (from bottom of critique box)
+ax.plot([13, 13], [18, 14], color=COLORS['feedback'], linewidth=2.5)
+ax.plot([13, 52], [14, 14], color=COLORS['feedback'], linewidth=2.5)
+ax.plot([52, 52], [14, 35], color=COLORS['feedback'], linewidth=2.5)
+ax.annotate('', xy=(52, 35), xytext=(52, 25),
+            arrowprops=dict(arrowstyle='->', color=COLORS['feedback'], lw=2.5))
+ax.text(32, 12, 'Critiques + Opinions → Round 2 → Final Winner', fontsize=9,
         ha='center', va='center', color=COLORS['feedback'], fontweight='bold')
 
 # Round labels
