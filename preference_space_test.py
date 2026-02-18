@@ -525,13 +525,24 @@ def run_experiment(num_runs: int, provider: str, model: str):
     profile_counts = Counter(all_profiles)
 
     print()
-    print("Profile Distribution:")
-    print("-" * 40)
+    print("=" * 70)
+    print("ALL PROFILE DISTRIBUTION (every profile shown)")
+    print("=" * 70)
+    print(f"Total runs: {successful_runs} | Unique profiles: {unique_profiles} | Collisions: {successful_runs - unique_profiles}")
+    print("-" * 70)
 
     if profile_counts:
-        for i, (profile, count) in enumerate(profile_counts.most_common(10)):
+        # Show ALL profiles, not just top 10
+        for i, (profile, count) in enumerate(profile_counts.most_common(), 1):
             pct = count / successful_runs * 100
-            print(f"  {i+1}. {profile}: {count} times ({pct:.1f}%)")
+            # Mark profiles that appeared more than once (collisions)
+            collision_marker = " ← COLLISION" if count > 1 else ""
+            print(f"  {i:3d}. {profile}: {count:3d} times ({pct:5.1f}%){collision_marker}")
+
+    print("-" * 70)
+    print(f"SUMMARY: {unique_profiles} unique profiles from {successful_runs} runs")
+    print(f"         {successful_runs - unique_profiles} collisions (same profile repeated)")
+    print("=" * 70)
 
     # Entropy calculation
     # Initialize these outside the if block so they're available for results
