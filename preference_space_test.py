@@ -73,7 +73,7 @@ from typing import List, Tuple, Dict
 # CONFIGURATION
 # =============================================================================
 
-DEFAULT_NUM_RUNS = 20
+DEFAULT_NUM_RUNS = 100
 DEFAULT_PROVIDER = "openai"  # Which provider to use by default
 THEORETICAL_SPACE = 24 ** 5  # 7,962,624
 
