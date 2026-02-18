@@ -92,20 +92,51 @@ THEORETICAL_SPACE = 24 ** 5  # 7,962,624
 #   - Google gemini-2.0-flash: Fast, good for large experiments
 # =============================================================================
 PROVIDER_CONFIG = {
+    # =========================================================================
+    # BATCH 1: OpenAI Models (run these first)
+    # =========================================================================
     "openai": {
-        "default_model": "gpt-5.2",
+        "default_model": "gpt-4o",
         "env_var": "OPENAI_API_KEY",
-        "models": ["gpt-5.2", "gpt-5.1", "gpt-4o", "o3", "o1"],
+        "models": [
+            "gpt-4o",           # Current flagship (May 2024)
+            "gpt-4o-mini",      # Smaller, faster, cheaper
+            "gpt-4-turbo",      # Previous flagship
+            "gpt-4",            # Original GPT-4
+            "gpt-3.5-turbo",    # Older but widely used
+            "o1",               # Reasoning model (slower, thinks longer)
+            "o1-mini",          # Smaller reasoning model
+        ],
     },
+    # =========================================================================
+    # BATCH 2: Anthropic Models (run these second)
+    # =========================================================================
     "anthropic": {
         "default_model": "claude-3-5-sonnet-20241022",
         "env_var": "ANTHROPIC_API_KEY",
-        "models": ["claude-3-5-sonnet-20241022", "claude-3-opus-20240229", "claude-3-haiku-20240307"],
+        "models": [
+            "claude-3-5-sonnet-20241022",  # Latest Sonnet (Oct 2024)
+            "claude-3-opus-20240229",       # Most capable Claude 3
+            "claude-3-sonnet-20240229",     # Previous Sonnet
+            "claude-3-haiku-20240307",      # Fastest/cheapest
+            "claude-3-5-haiku-20241022",    # Latest Haiku
+            "claude-sonnet-4-20250514",     # Claude 4 Sonnet (if available)
+        ],
     },
+    # =========================================================================
+    # BATCH 3: Google Models (run these third)
+    # =========================================================================
     "google": {
         "default_model": "gemini-2.0-flash",
         "env_var": "GOOGLE_API_KEY",
-        "models": ["gemini-2.0-flash", "gemini-2.0-pro", "gemini-1.5-pro"],
+        "models": [
+            "gemini-2.0-flash",      # Latest Flash (fast)
+            "gemini-2.0-flash-lite", # Even lighter
+            "gemini-1.5-flash",      # Previous Flash
+            "gemini-1.5-pro",        # Previous Pro
+            "gemini-1.0-pro",        # Original Gemini Pro
+            "gemini-2.5-pro-preview-05-06",  # Latest Pro preview
+        ],
     },
 }
 
@@ -644,10 +675,57 @@ ENVIRONMENT VARIABLES REQUIRED:
 """)
 
 
+def print_models():
+    """Print all available models organized by provider."""
+    print("""
+============================================================
+  AVAILABLE MODELS BY PROVIDER
+============================================================
+
+BATCH 1: OpenAI (run first)
+---------------------------""")
+    for i, m in enumerate(PROVIDER_CONFIG["openai"]["models"], 1):
+        print(f"  {i}. {m}")
+
+    print("""
+BATCH 2: Anthropic (run second)
+-------------------------------""")
+    for i, m in enumerate(PROVIDER_CONFIG["anthropic"]["models"], 1):
+        print(f"  {i}. {m}")
+
+    print("""
+BATCH 3: Google (run third)
+---------------------------""")
+    for i, m in enumerate(PROVIDER_CONFIG["google"]["models"], 1):
+        print(f"  {i}. {m}")
+
+    print("""
+============================================================
+  HOW TO RUN
+============================================================
+
+Step 1: Export your API key
+  export OPENAI_API_KEY='your-key'
+
+Step 2: Run each model (20 runs each)
+  python preference_space_test.py 20 openai gpt-4o
+  python preference_space_test.py 20 openai gpt-4o-mini
+  ... (continue for each model)
+
+Step 3: Compare results
+  python compare_results.py
+""")
+
+
 if __name__ == "__main__":
     # Check for help flag
     if len(sys.argv) >= 2 and sys.argv[1] in ["-h", "--help", "help"]:
         print_usage()
+        sys.exit(0)
+
+    # Check for list flag
+    if len(sys.argv) >= 2 and sys.argv[1] in ["-l", "--list", "list"]:
+        print_models()
         sys.exit(0)
 
     # Parse command line arguments
