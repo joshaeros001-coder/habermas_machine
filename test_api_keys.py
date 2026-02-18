@@ -133,7 +133,7 @@ def test_google():
         genai.configure(api_key=api_key)
 
         # Simple test call
-        model = genai.GenerativeModel("gemini-1.5-flash")  # Cheap model for testing
+        model = genai.GenerativeModel("gemini-2.0-flash")  # Updated model name
         response = model.generate_content("Say 'Hello, API works!' and nothing else.")
 
         result = response.text
