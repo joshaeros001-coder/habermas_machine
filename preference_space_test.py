@@ -407,9 +407,12 @@ def get_ranking_for_citizen(client, opinion: str, seed: int) -> List[int] | None
         statement_d=FIXED_STATEMENTS[3].strip(),
     )
 
+    # Use higher max_tokens for o1-series reasoning models
+    # These models use tokens for internal chain-of-thought before output
+    # 8192 provides enough headroom for complex reasoning
     response = client.sample_text(
         prompt,
-        max_tokens=1024,
+        max_tokens=8192,
         temperature=0.8,
         seed=seed,
     )
