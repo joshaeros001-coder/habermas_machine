@@ -24,7 +24,7 @@ from habermas_machine import machine, types
 from habermas_machine.social_choice import utils as sc_utils
 
 # IMPORTANT: Import the client directly to enable rate limiting
-from habermas_machine.llm_client.aistudio_client import AIStudioClient
+from habermas_machine.llm_client.openai_client import OpenAIClient
 
 # ============================================================================
 # CONFIGURATION
@@ -39,7 +39,7 @@ and risks (side effects, dependency concerns)?
 
 NUM_CITIZENS = 5
 NUM_CANDIDATES = 4
-MODEL = 'gemini-2.5-flash'  # Change this to test different models
+MODEL = 'gpt-4-turbo'  # Change this to test different models
 
 # ============================================================================
 # AUTOMATIC TERMINAL OUTPUT LOGGING
@@ -89,21 +89,20 @@ print("="*80)
 # These settings add a 5-second pause every 5 API calls
 # This keeps you under the rate limit and prevents empty responses
 
-statement_client = AIStudioClient(
+statement_client = OpenAIClient(
     model_name=MODEL,
-    sleep_periodically=True,      # Enable rate limit protection
-    sleep_seconds=5.0,            # Sleep for 5 seconds
-    calls_between_sleeping=5,     # Every 5 API calls
+    sleep_periodically=True,
+    sleep_seconds=2.0,          # OpenAI is faster, less sleep needed
+    calls_between_sleeping=10,  # OpenAI allows more RPM
 )
 
-reward_client = AIStudioClient(
+reward_client = OpenAIClient(
     model_name=MODEL,
-    sleep_periodically=True,      # Enable rate limit protection
-    sleep_seconds=5.0,            # Sleep for 5 seconds
-    calls_between_sleeping=5,     # Every 5 API calls
+    sleep_periodically=True,
+    sleep_seconds=2.0,
+    calls_between_sleeping=10,
 )
-
-print("✓ LLM clients initialized with rate limiting (5s sleep every 5 calls)")
+print("✓ LLM clients initialized with rate limiting (2s sleep every 10 calls)")
 
 statement_model = types.StatementModel.CHAIN_OF_THOUGHT.get_model()
 reward_model = types.RewardModel.CHAIN_OF_THOUGHT_RANKING.get_model()

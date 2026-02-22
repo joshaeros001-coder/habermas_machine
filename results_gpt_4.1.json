@@ -1,0 +1,125 @@
+{
+  "model": "gpt-4.1",
+  "question": "Should a 35-year-old patient with moderate depression accept their\ndoctor's recommendation to start taking SSRI antidepressants, given\nthe potential benefits (reduced symptoms, improved quality of life)\nand risks (side effects, dependency concerns)?",
+  "num_citizens": 5,
+  "num_candidates": 4,
+  "opinions": [
+    {
+      "citizen_id": 1,
+      "label": "SECULAR",
+      "text": "I think the patient should try the SSRIs. Depression significantly\n    impacts quality of life and work productivity. While side effects like\n    nausea and sleep changes are possible, they're usually temporary and\n    manageable. The evidence shows SSRIs help about 60% of people with\n    moderate depression. If side effects are intolerable, the patient can\n    discontinue. The potential benefit outweighs the risk."
+    },
+    {
+      "citizen_id": 2,
+      "label": "SACRED_VALUE",
+      "text": "As a devout Christian, I believe depression is a spiritual trial that God uses\n    for growth. Taking medication would be rejecting His plan and showing lack of\n    faith. My pastor teaches that true healing comes through prayer, fellowship,\n    and trusting God's timing. I cannot compromise on this - it's a matter of\n    spiritual integrity, not a cost-benefit calculation."
+    },
+    {
+      "citizen_id": 3,
+      "label": "SECULAR",
+      "text": "The patient should carefully weigh the costs and benefits. SSRIs have\n    helped millions but come with real side effects - sexual dysfunction,\n    weight gain, and initial anxiety can be difficult. Some people also\n    struggle to discontinue them. I'd suggest a trial period of 6-8 weeks\n    with close monitoring. If helpful, continue. If not, explore other options\n    like different medications or therapy combinations."
+    },
+    {
+      "citizen_id": 4,
+      "label": "SECULAR",
+      "text": "I support starting SSRIs but with realistic expectations. They're not\n    a magic cure - they typically reduce symptoms by 40-60%, not eliminate\n    them entirely. The patient should combine medication with lifestyle\n    changes and possibly therapy for best results. Cost is a consideration\n    too - generic SSRIs are affordable but brand-name versions can be pricey.\n    Overall, worth trying given moderate depression severity."
+    },
+    {
+      "citizen_id": 5,
+      "label": "SECULAR",
+      "text": "This is a personal medical decision requiring professional guidance.\n    Depression at moderate levels warrants treatment, but the choice between\n    medication, therapy, or both depends on individual circumstances - previous\n    treatment history, severity of symptoms, patient preferences, and financial\n    situation. I'd trust the doctor's recommendation but ensure the patient\n    feels informed about alternatives and has realistic expectations about\n    outcomes and timeline."
+    }
+  ],
+  "opinion_round": {
+    "winner": {
+      "rank": 1,
+      "statement": "Draft consensus statement:\n\nWe recognize that for a 35-year-old patient with moderate depression, starting SSRI antidepressants, as recommended by a doctor, can be a helpful option to reduce symptoms and improve quality of life (as noted by Persons 1, 2, and 5). However, this decision should be made on an individual basis, considering the potential benefits, the risks of side effects or dependency, previous treatment experiences, personal preferences, and financial circumstances (Persons 2, 3, and 5). Combining medication with therapy or lifestyle changes may offer the best outcomes for many (Person 2), and a monitored trial period with regular follow-up can help determine effectiveness and tolerability (Person 5). Importantly, we respect that for some individuals, such as those whose spiritual or personal beliefs do not align with taking medication (Person 4), non-medication approaches may be preferred. Ultimately, the patient's informed choice, in consultation with their healthcare provider, should be supported and respected by all."
+    },
+    "all_candidates_ranked": [
+      {
+        "rank": 1,
+        "statement": "Draft consensus statement:\n\nWe recognize that for a 35-year-old patient with moderate depression, starting SSRI antidepressants, as recommended by a doctor, can be a helpful option to reduce symptoms and improve quality of life (as noted by Persons 1, 2, and 5). However, this decision should be made on an individual basis, considering the potential benefits, the risks of side effects or dependency, previous treatment experiences, personal preferences, and financial circumstances (Persons 2, 3, and 5). Combining medication with therapy or lifestyle changes may offer the best outcomes for many (Person 2), and a monitored trial period with regular follow-up can help determine effectiveness and tolerability (Person 5). Importantly, we respect that for some individuals, such as those whose spiritual or personal beliefs do not align with taking medication (Person 4), non-medication approaches may be preferred. Ultimately, the patient's informed choice, in consultation with their healthcare provider, should be supported and respected by all."
+      },
+      {
+        "rank": 2,
+        "statement": "While SSRI antidepressants can offer significant benefits for many patients with moderate depression—including symptom reduction and improved quality of life—these medications also carry potential risks such as side effects and difficulty discontinuing. The decision to start SSRIs should be made carefully and individually, considering the patient's unique medical history, preferences, personal beliefs, and values. We recommend a collaborative approach with healthcare professionals, ensuring the patient is fully informed about the potential benefits, risks, and alternative treatments—including therapy and lifestyle changes. For some, a monitored trial of SSRIs may be appropriate, while others may choose different paths based on personal or spiritual convictions. Respecting each individual's circumstances and values is essential in making this important decision."
+      },
+      {
+        "rank": 3,
+        "statement": "Draft consensus statement:\n\nA patient with moderate depression may reasonably consider starting SSRI antidepressants, given their demonstrated potential to reduce symptoms and improve quality of life for many people. However, this decision should be made in consultation with a healthcare professional, taking into account the patient’s individual circumstances, preferences, and values—including any personal or religious beliefs that may influence their choice. It is important that the patient is fully informed about possible benefits, risks, and alternative treatments (such as therapy or lifestyle changes), and that the chosen approach allows for ongoing monitoring and adjustment if needed. Ultimately, the decision to start SSRIs should respect both medical guidance and the patient’s own convictions."
+      },
+      {
+        "rank": 4,
+        "statement": "Draft consensus statement:\n\nWhile there are differing perspectives on whether a 35-year-old patient with moderate depression should start SSRI antidepressants, we agree that this is a deeply personal and individualized decision that must account for each person's values, beliefs, and circumstances. For some individuals, spiritual or religious convictions may lead them to seek non-medical approaches such as prayer and community support (as reflected in Opinion 1). For others, starting SSRIs can be appropriate if done with realistic expectations, careful monitoring, and in combination with other supports like therapy and lifestyle changes (as reflected in Opinions 2, 3, and 5). Regardless of the approach, we believe it is important that patients receive professional guidance, are fully informed about potential benefits, risks, and alternatives—including non-medication options—and feel empowered to make the choice that aligns with their own beliefs and needs (as emphasized in Opinion 4)."
+      }
+    ],
+    "note": "Statements ranked by Schulze method after each citizen ranked all 4 candidates. Individual citizen rankings visible in terminal output (verbose=True)."
+  },
+  "critiques": [
+    {
+      "citizen_id": 1,
+      "label": "SECULAR",
+      "text": "The statement is good but should mention timeline expectations.\n    SSRIs typically take 4-6 weeks to show full effects, which is\n    important for patients to know so they don't give up too early."
+    },
+    {
+      "citizen_id": 2,
+      "label": "SACRED_VALUE",
+      "text": "This statement doesn't acknowledge that for some people, taking medication\n    conflicts with deeply held religious beliefs about suffering and healing.\n    The consensus should recognize that spiritual approaches are valid alternatives,\n    not just \"preferences\" but matters of conscience."
+    },
+    {
+      "citizen_id": 3,
+      "label": "SECULAR",
+      "text": "The statement should acknowledge that stopping SSRIs can be difficult\n    and requires tapering under medical supervision. Patients should know\n    this isn't necessarily a short-term commitment."
+    },
+    {
+      "citizen_id": 4,
+      "label": "SECULAR",
+      "text": "Good overall, but I think we should add something about the importance\n    of informing the doctor about all current medications and health\n    conditions to avoid dangerous drug interactions."
+    },
+    {
+      "citizen_id": 5,
+      "label": "SECULAR",
+      "text": "I appreciate the balanced perspective. Maybe add that if this SSRI\n    doesn't work, there are other SSRIs and medication classes to try.\n    First medication failure doesn't mean medication won't help at all."
+    }
+  ],
+  "critique_round": {
+    "winner": {
+      "rank": 1,
+      "statement": "For a 35-year-old patient with moderate depression, starting SSRI antidepressants as recommended by a doctor can be a helpful option for many, often reducing symptoms and improving quality of life. The decision should be individualized and made in close consultation with a healthcare provider, considering factors such as prior treatment history, symptom severity, personal values and beliefs, financial circumstances, and preferences. For some, including those with deeply held religious or spiritual convictions, non-medication approaches—including spiritual practices, therapy, and community support—are valid and should be fully respected as matters of conscience.\n\nPatients should be informed that SSRIs typically take 4 to 6 weeks to show their full effects, and that side effects such as nausea, changes in sleep, or sexual dysfunction may occur—usually early in treatment, but sometimes longer term. If one SSRI is not effective or causes intolerable side effects, other medications or treatment combinations can be explored. It is important to tell the doctor about all current medications and health conditions to avoid harmful interactions.\n\nStopping SSRIs should always be done gradually and under medical supervision, as withdrawal symptoms can occur. For many, combining medication with therapy or lifestyle changes can provide the best outcomes. A trial period of SSRIs, with close monitoring and regular follow-up, is often recommended to assess benefit and tolerability. Ultimately, the patient’s informed choice, in partnership with their healthcare provider and respectful of their values and beliefs, should be supported."
+    },
+    "all_candidates_ranked": [
+      {
+        "rank": 1,
+        "statement": "For a 35-year-old patient with moderate depression, starting SSRI antidepressants as recommended by a doctor can be a helpful option for many, often reducing symptoms and improving quality of life. The decision should be individualized and made in close consultation with a healthcare provider, considering factors such as prior treatment history, symptom severity, personal values and beliefs, financial circumstances, and preferences. For some, including those with deeply held religious or spiritual convictions, non-medication approaches—including spiritual practices, therapy, and community support—are valid and should be fully respected as matters of conscience.\n\nPatients should be informed that SSRIs typically take 4 to 6 weeks to show their full effects, and that side effects such as nausea, changes in sleep, or sexual dysfunction may occur—usually early in treatment, but sometimes longer term. If one SSRI is not effective or causes intolerable side effects, other medications or treatment combinations can be explored. It is important to tell the doctor about all current medications and health conditions to avoid harmful interactions.\n\nStopping SSRIs should always be done gradually and under medical supervision, as withdrawal symptoms can occur. For many, combining medication with therapy or lifestyle changes can provide the best outcomes. A trial period of SSRIs, with close monitoring and regular follow-up, is often recommended to assess benefit and tolerability. Ultimately, the patient’s informed choice, in partnership with their healthcare provider and respectful of their values and beliefs, should be supported."
+      },
+      {
+        "rank": 2,
+        "statement": "For a 35-year-old patient with moderate depression, the decision to start SSRI antidepressants—following a doctor’s recommendation—should be made carefully and individually, with full professional guidance. Many people find SSRIs helpful for reducing symptoms and improving quality of life, but they are not effective for everyone and typically take 4-6 weeks to reach their full effect. Side effects such as nausea, sleep changes, sexual dysfunction, weight gain, and initial anxiety may occur, and stopping SSRIs can be challenging; it usually requires gradual tapering with medical supervision. If the first SSRI tried does not help, there are other medications and approaches available, so initial lack of response does not mean all medication will fail. For some individuals, including those whose religious or spiritual beliefs do not permit the use of medication, spiritual or non-medication approaches are valid and should be fully respected as matters of conscience. Combining medication with therapy or lifestyle changes may offer additional benefit. Patients should always inform their doctor about all other medications and health conditions to avoid interactions. Ultimately, the patient’s informed choice, made in consultation with their healthcare provider and consistent with their values and beliefs, should be supported and respected by all."
+      },
+      {
+        "rank": 3,
+        "statement": "Revised consensus statement:\n\nFor a 35-year-old patient with moderate depression, starting SSRI antidepressants as recommended by a doctor can be a helpful option for reducing symptoms and improving quality of life. However, this is a personal decision that should be made after carefully weighing potential benefits, possible side effects (such as sexual dysfunction, nausea, or weight gain), withdrawal considerations, financial costs, and individual beliefs and values. We recommend that patients inform their doctor of all current medications and health conditions to avoid dangerous interactions.\n\nSSRIs typically take 4–6 weeks to show their full effect, so patience and ongoing monitoring are important. A trial period with close follow-up is advisable, and if the first medication does not help, other SSRIs or medication classes can be considered. Discontinuing SSRIs should be done gradually and only under medical supervision, as withdrawal symptoms can occur.\n\nFor some individuals, especially those whose religious or spiritual beliefs view depression as a spiritual matter, non-medication approaches such as prayer, community support, and counseling may be preferred as a matter of conscience. These perspectives are valid and should be respected alongside medical approaches.\n\nUltimately, the choice should be made in partnership with a healthcare provider, with respect for each patient’s medical needs, personal values, and beliefs."
+      },
+      {
+        "rank": 4,
+        "statement": "Revised Consensus Statement:\n\nFor a 35-year-old patient with moderate depression, starting SSRI antidepressant medication—as recommended by their doctor—can be a useful option to reduce symptoms and improve quality of life. However, this decision should be made individually, weighing the potential benefits against risks such as side effects, possible challenges with discontinuing the medication (which should always be done under medical supervision), and personal or financial circumstances. Patients should be aware that SSRIs usually take 4-6 weeks to show their full effects, and, if the initial medication is ineffective or not well-tolerated, other SSRIs or different medication classes may be available to try. It is important for patients to inform their healthcare provider about all other medications and health conditions to avoid harmful interactions.\n\nCombining medication with therapy and lifestyle changes may offer the best outcomes for many people. At the same time, for some individuals, especially those for whom taking medication may conflict with deeply held religious or spiritual beliefs, non-medication approaches—including spiritual practices—are valid and respected alternatives. Ultimately, the patient’s informed choice, made in consultation with their healthcare provider and in keeping with their values and beliefs, should be supported by all."
+      }
+    ],
+    "note": "Statements ranked by Schulze method after each citizen ranked all 4 refined candidates. Individual citizen rankings visible in terminal output (verbose=True)."
+  },
+  "metadata": {
+    "architecture": "Habermas Machine (Original Google DeepMind implementation)",
+    "deliberation_method": "Two-round: (1) Opinion synthesis → (2) Critique integration",
+    "voting_method": "Schulze method with TBRC (Tied at the Top Breaking by Ranked Choice)",
+    "statement_model": "Chain-of-thought consensus generation",
+    "reward_model": "Chain-of-thought ranking",
+    "seed": 42,
+    "shuffle_enabled": true,
+    "warnings": [
+      "MISATTRIBUTION ISSUE: Opinion citations in statements (e.g., \"Opinion 2, 3, 5\") refer to SHUFFLED positions during generation, not original citizen IDs. Sacred value opinion may be mislabeled.",
+      "DETAILED RANKINGS: Individual citizen rankings (e.g., \"Citizen 1: 2 > 1 > 4 > 3\") are printed to terminal (verbose=True) but not captured in this JSON. Check terminal output for complete voting data.",
+      "SHUFFLE BIAS MITIGATION: Opinions are shuffled before each statement generation to prevent position bias, but this causes citation misattribution."
+    ],
+    "additional_data_location": "Terminal output (stdout) contains: individual citizen rankings, untied vs tied social rankings, full Schulze voting details"
+  }
+}

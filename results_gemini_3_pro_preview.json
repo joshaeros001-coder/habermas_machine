@@ -1,0 +1,125 @@
+{
+  "model": "gemini-3-pro-preview",
+  "question": "Should a 35-year-old patient with moderate depression accept their\ndoctor's recommendation to start taking SSRI antidepressants, given\nthe potential benefits (reduced symptoms, improved quality of life)\nand risks (side effects, dependency concerns)?",
+  "num_citizens": 5,
+  "num_candidates": 4,
+  "opinions": [
+    {
+      "citizen_id": 1,
+      "label": "SECULAR",
+      "text": "I think the patient should try the SSRIs. Depression significantly\n    impacts quality of life and work productivity. While side effects like\n    nausea and sleep changes are possible, they're usually temporary and\n    manageable. The evidence shows SSRIs help about 60% of people with\n    moderate depression. If side effects are intolerable, the patient can\n    discontinue. The potential benefit outweighs the risk."
+    },
+    {
+      "citizen_id": 2,
+      "label": "SACRED_VALUE",
+      "text": "As a devout Christian, I believe depression is a spiritual trial that God uses\n    for growth. Taking medication would be rejecting His plan and showing lack of\n    faith. My pastor teaches that true healing comes through prayer, fellowship,\n    and trusting God's timing. I cannot compromise on this - it's a matter of\n    spiritual integrity, not a cost-benefit calculation."
+    },
+    {
+      "citizen_id": 3,
+      "label": "SECULAR",
+      "text": "The patient should carefully weigh the costs and benefits. SSRIs have\n    helped millions but come with real side effects - sexual dysfunction,\n    weight gain, and initial anxiety can be difficult. Some people also\n    struggle to discontinue them. I'd suggest a trial period of 6-8 weeks\n    with close monitoring. If helpful, continue. If not, explore other options\n    like different medications or therapy combinations."
+    },
+    {
+      "citizen_id": 4,
+      "label": "SECULAR",
+      "text": "I support starting SSRIs but with realistic expectations. They're not\n    a magic cure - they typically reduce symptoms by 40-60%, not eliminate\n    them entirely. The patient should combine medication with lifestyle\n    changes and possibly therapy for best results. Cost is a consideration\n    too - generic SSRIs are affordable but brand-name versions can be pricey.\n    Overall, worth trying given moderate depression severity."
+    },
+    {
+      "citizen_id": 5,
+      "label": "SECULAR",
+      "text": "This is a personal medical decision requiring professional guidance.\n    Depression at moderate levels warrants treatment, but the choice between\n    medication, therapy, or both depends on individual circumstances - previous\n    treatment history, severity of symptoms, patient preferences, and financial\n    situation. I'd trust the doctor's recommendation but ensure the patient\n    feels informed about alternatives and has realistic expectations about\n    outcomes and timeline."
+    }
+  ],
+  "opinion_round": {
+    "winner": {
+      "rank": 1,
+      "statement": "The jury agrees that the decision to accept the doctor’s recommendation involves a deeply personal evaluation of the patient's well-being and values. While the majority of jurors support a monitored trial of SSRIs to improve quality of life and functionality—provided there are realistic expectations and consideration of holistic alternatives like therapy (Opinions 1, 2, 3, 5)—we unanimously recognize that this choice must align with the patient's fundamental convictions. We acknowledge that for some, medical interventions must be weighed against spiritual beliefs and faith-based approaches to healing (Opinion 4). Therefore, our consensus is that the patient should pursue the course of action that best harmonizes the goal of symptom relief with their individual medical needs and personal beliefs (Opinions 3, 4)."
+    },
+    "all_candidates_ranked": [
+      {
+        "rank": 1,
+        "statement": "The jury agrees that the decision to accept the doctor’s recommendation involves a deeply personal evaluation of the patient's well-being and values. While the majority of jurors support a monitored trial of SSRIs to improve quality of life and functionality—provided there are realistic expectations and consideration of holistic alternatives like therapy (Opinions 1, 2, 3, 5)—we unanimously recognize that this choice must align with the patient's fundamental convictions. We acknowledge that for some, medical interventions must be weighed against spiritual beliefs and faith-based approaches to healing (Opinion 4). Therefore, our consensus is that the patient should pursue the course of action that best harmonizes the goal of symptom relief with their individual medical needs and personal beliefs (Opinions 3, 4)."
+      },
+      {
+        "rank": 2,
+        "statement": "The jury concludes that the decision to accept SSRI treatment is a deeply personal one that requires the patient to evaluate their specific hierarchy of values. We agree that the patient must weigh the medical potential for symptom relief and improved quality of life—as supported by clinical evidence and the possibility of a monitored trial period (Opinions 2, 3, 5)—against their personal convictions, which may include deeply held spiritual beliefs that view such challenges through a non-medical lens (Opinion 4). \n\nUltimately, we recognize that this course of action depends entirely on the patient's individual circumstances, including their medical history, financial situation, and whether they prioritize a medical or spiritual approach to healing (Opinion 1)."
+      },
+      {
+        "rank": 3,
+        "statement": "We agree that moderate depression is a serious condition that warrants specific attention and a supportive response. While the medical perspective suggests that SSRIs can offer significant benefits and improved quality of life (Opinions 2, 3, 5), we recognize that the decision to accept treatment is deeply personal and must align with the patient's core values and beliefs (Opinions 1, 4). \n\nTherefore, the patient should weigh the doctor's recommendation and the clinical evidence of risks and benefits (Opinions 2, 3) against their individual circumstances, including their spiritual convictions and personal integrity (Opinion 1). Whether the patient chooses a medical route, a spiritual approach, or a combination of therapies, the chosen path must be one the patient can pursue with full commitment and informed consent (Opinions 3, 4)."
+      },
+      {
+        "rank": 4,
+        "statement": "We conclude that the decision to accept the recommendation for SSRIs is deeply personal and depends on the patient's individual circumstances (Opinion 5). While we recognize the medical evidence suggesting that SSRIs can improve quality of life and reduce symptoms (Opinions 1, 3), these benefits must be carefully weighed against the risks of side effects and dependency (Opinion 2). Ultimately, the patient should proceed with the medication only if it aligns with their holistic well-being, ensuring the treatment plan respects both their medical needs and their spiritual or personal integrity (Opinion 4)."
+      }
+    ],
+    "note": "Statements ranked by Schulze method after each citizen ranked all 4 candidates. Individual citizen rankings visible in terminal output (verbose=True)."
+  },
+  "critiques": [
+    {
+      "citizen_id": 1,
+      "label": "SECULAR",
+      "text": "The statement is good but should mention timeline expectations.\n    SSRIs typically take 4-6 weeks to show full effects, which is\n    important for patients to know so they don't give up too early."
+    },
+    {
+      "citizen_id": 2,
+      "label": "SACRED_VALUE",
+      "text": "This statement doesn't acknowledge that for some people, taking medication\n    conflicts with deeply held religious beliefs about suffering and healing.\n    The consensus should recognize that spiritual approaches are valid alternatives,\n    not just \"preferences\" but matters of conscience."
+    },
+    {
+      "citizen_id": 3,
+      "label": "SECULAR",
+      "text": "The statement should acknowledge that stopping SSRIs can be difficult\n    and requires tapering under medical supervision. Patients should know\n    this isn't necessarily a short-term commitment."
+    },
+    {
+      "citizen_id": 4,
+      "label": "SECULAR",
+      "text": "Good overall, but I think we should add something about the importance\n    of informing the doctor about all current medications and health\n    conditions to avoid dangerous drug interactions."
+    },
+    {
+      "citizen_id": 5,
+      "label": "SECULAR",
+      "text": "I appreciate the balanced perspective. Maybe add that if this SSRI\n    doesn't work, there are other SSRIs and medication classes to try.\n    First medication failure doesn't mean medication won't help at all."
+    }
+  ],
+  "critique_round": {
+    "winner": {
+      "rank": 1,
+      "statement": "The jury advises that, barring a conflict with deeply held religious convictions, the patient should accept the doctor's recommendation for a monitored trial of SSRIs. The majority of the jury views the potential for improved quality of life as outweighing the risks (Opinions 1, 2, 3), provided the patient approaches treatment with realistic expectations. Specifically, the patient should be prepared for a timeline of 4-6 weeks before seeing full benefits (Critique 3) and understand that finding the right medication may require trying different options (Critique 4). It is also essential that the patient disclose all other health conditions to avoid drug interactions (Critique 2) and understands that stopping SSRIs is a long-term process requiring medical supervision to manage withdrawal (Critique 1). We recommend combining medication with therapy and lifestyle changes for a holistic approach (Opinion 2, Opinion 4).\n\nHowever, we explicitly acknowledge that for some individuals, reliance on medication may conflict with a spiritual understanding of suffering and healing (Opinion 5). We recognize this as a matter of conscience, not merely preference (Critique 5). Therefore, our consensus is that the patient should proceed with the medical recommendation unless doing so would violate their fundamental spiritual integrity."
+    },
+    "all_candidates_ranked": [
+      {
+        "rank": 1,
+        "statement": "The jury advises that, barring a conflict with deeply held religious convictions, the patient should accept the doctor's recommendation for a monitored trial of SSRIs. The majority of the jury views the potential for improved quality of life as outweighing the risks (Opinions 1, 2, 3), provided the patient approaches treatment with realistic expectations. Specifically, the patient should be prepared for a timeline of 4-6 weeks before seeing full benefits (Critique 3) and understand that finding the right medication may require trying different options (Critique 4). It is also essential that the patient disclose all other health conditions to avoid drug interactions (Critique 2) and understands that stopping SSRIs is a long-term process requiring medical supervision to manage withdrawal (Critique 1). We recommend combining medication with therapy and lifestyle changes for a holistic approach (Opinion 2, Opinion 4).\n\nHowever, we explicitly acknowledge that for some individuals, reliance on medication may conflict with a spiritual understanding of suffering and healing (Opinion 5). We recognize this as a matter of conscience, not merely preference (Critique 5). Therefore, our consensus is that the patient should proceed with the medical recommendation unless doing so would violate their fundamental spiritual integrity."
+      },
+      {
+        "rank": 2,
+        "statement": "The jury concludes that the decision to accept the doctor's recommendation relies on balancing clinical evidence with the patient's fundamental values.\n\nFrom a medical perspective, the majority of the jury (Opinions 1, 2, 4, 5) advises the patient to accept the recommendation for a monitored trial of SSRIs. However, to ensure informed consent, the patient must be aware that full benefits typically require 4-6 weeks (Critique 2) and that the goal is symptom reduction rather than immediate elimination (Opinion 5). This medical approach requires full transparency regarding other health conditions to avoid drug interactions (Critique 5) and the understanding that stopping the medication requires supervised tapering to avoid withdrawal symptoms (Opinion 4, Critique 4). Should the initial medication prove ineffective, we recommend exploring other medication classes rather than abandoning treatment (Critique 1).\n\nSimultaneously, we recognize the validity of the dissenting view (Opinion 3) that for some individuals, medical intervention for depression conflicts with deeply held religious convictions regarding suffering and divine healing. We acknowledge that in these cases, rejecting medication is a matter of spiritual conscience, not merely preference (Critique 3).\n\nTherefore, our consensus is that the patient should accept the doctor's recommendation to strictly follow the medical regimen, provided it does not violate their spiritual integrity. If such a conflict exists, the patient should pursue faith-based counseling and community support as their primary alternative."
+      },
+      {
+        "rank": 3,
+        "statement": "The jury concludes that the decision to accept the doctor’s recommendation rests on whether the patient views their condition primarily through a medical or a spiritual lens. We unanimously agree that the patient’s choice must align with their fundamental conscience and values.\n\nWe recognize that for patients with deeply held religious convictions, depression may be viewed as a spiritual trial. In these cases, declining medication in favor of prayer, fellowship, and reliance on God is a valid exercise of conscience and spiritual integrity (Opinion 1, Critique 1).\n\nHowever, if the patient is open to medical intervention, the majority of the jury recommends accepting the doctor's recommendation for a monitored trial of SSRIs (Opinions 2, 3, 4, 5), provided the following conditions are met to ensure safety and realistic expectations:\n1.  **Timeline:** The patient should be aware that full benefits typically take 4-6 weeks to manifest (Critique 3).\n2.  **Safety:** The patient must disclose all other medications to the doctor to prevent dangerous interactions (Critique 4).\n3.  **Persistence:** If the initial SSRI is ineffective, the patient should remain open to trying different medications or classes (Critique 2).\n4.  **Exit Strategy:** The patient must understand that stopping treatment requires medical supervision and tapering to avoid withdrawal symptoms (Opinion 5, Critique 5).\n\nUltimately, the patient should pursue the course of action—whether spiritual reliance or a holistic medical approach including therapy and lifestyle changes—that best serves their well-being without compromising their personal beliefs."
+      },
+      {
+        "rank": 4,
+        "statement": "The jury recognizes that the decision to accept the doctor’s recommendation depends heavily on the patient's fundamental worldview.\n\nFrom a medical perspective, supported by the majority of the jury (Opinions 1, 2, 4, 5), we recommend the patient accept the SSRI treatment as a monitored trial to improve quality of life. However, this recommendation is contingent on the patient being fully informed of the following:\n*   **Safety and Commitment:** The patient must disclose all other medications to avoid interactions (Critique 1) and understand that SSRIs often require a long-term commitment, as stopping them can be difficult and requires supervised tapering (Opinion 2, Critique 2).\n*   **Expectations:** Full benefits typically take 4-6 weeks to manifest (Critique 5). If this specific medication is ineffective, the patient should be open to trying other medications or classes (Critique 4) and should combine treatment with holistic measures like therapy (Opinions 1, 2).\n\nHowever, we also acknowledge a significant dissent rooted in spiritual integrity. For patients who view depression primarily as a spiritual trial, accepting medication may be seen as a conflict of conscience and a lack of faith (Opinion 3). In such cases, the jury respects that spiritual approaches, such as prayer and fellowship, may be prioritized over medical intervention (Critique 3).\n\n**Consensus:** The patient should accept the doctor's recommendation if they view depression as a treatable medical condition, provided they are prepared for the timeline and potential withdrawal challenges. Conversely, if the patient holds the conviction that such intervention violates their spiritual integrity, they should decline in favor of faith-based support."
+      }
+    ],
+    "note": "Statements ranked by Schulze method after each citizen ranked all 4 refined candidates. Individual citizen rankings visible in terminal output (verbose=True)."
+  },
+  "metadata": {
+    "architecture": "Habermas Machine (Original Google DeepMind implementation)",
+    "deliberation_method": "Two-round: (1) Opinion synthesis → (2) Critique integration",
+    "voting_method": "Schulze method with TBRC (Tied at the Top Breaking by Ranked Choice)",
+    "statement_model": "Chain-of-thought consensus generation",
+    "reward_model": "Chain-of-thought ranking",
+    "seed": 42,
+    "shuffle_enabled": true,
+    "warnings": [
+      "MISATTRIBUTION ISSUE: Opinion citations in statements (e.g., \"Opinion 2, 3, 5\") refer to SHUFFLED positions during generation, not original citizen IDs. Sacred value opinion may be mislabeled.",
+      "DETAILED RANKINGS: Individual citizen rankings (e.g., \"Citizen 1: 2 > 1 > 4 > 3\") are printed to terminal (verbose=True) but not captured in this JSON. Check terminal output for complete voting data.",
+      "SHUFFLE BIAS MITIGATION: Opinions are shuffled before each statement generation to prevent position bias, but this causes citation misattribution."
+    ],
+    "additional_data_location": "Terminal output (stdout) contains: individual citizen rankings, untied vs tied social rankings, full Schulze voting details"
+  }
+}

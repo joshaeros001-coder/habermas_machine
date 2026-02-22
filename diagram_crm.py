@@ -44,10 +44,7 @@ COLORS = {
 # Title
 ax.text(55, 78, 'CRM: Collective Rational Model', fontsize=20, fontweight='bold',
         ha='center', va='center', color=COLORS['text'])
-ax.text(55, 74, 'Our Adaptation for Sacred Value Research', fontsize=14,
-        ha='center', va='center', color='#757575')
-ax.text(55, 71, 'Prompted Version with Multiple LLM Backends', fontsize=11,
-        ha='center', va='center', color='#9E9E9E', style='italic')
+
 
 # ============================================================================
 # Simulated Opinions Box (Left)
@@ -207,7 +204,7 @@ diff_box = FancyBboxPatch((10, 2), 90, 7, boxstyle="round,pad=0.02,rounding_size
 ax.add_patch(diff_box)
 ax.text(55, 6.5, 'Key Differences from Original Habermas Machine:', fontsize=10,
         ha='center', va='center', fontweight='bold')
-ax.text(55, 3.5, 'Prompted LLMs (not fine-tuned Chinchilla)  |  Multiple backends (GPT, Claude, Gemini, o3)  |  Sacred value testing  |  Entropy analysis',
+ax.text(55, 3.5, 'Prompted LLMs (not fine-tuned Chinchilla)  |  Multiple backends (GPT, Claude, Gemini, o3)  |  Sacred value testing',
         fontsize=9, ha='center', va='center', color='#616161')
 
 # ============================================================================

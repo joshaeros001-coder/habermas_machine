@@ -1,0 +1,752 @@
+================================================================================
+SACRED VALUE TEST: RELIGIOUS OBJECTION TO SSRI MEDICATION
+================================================================================
+
+📋 QUESTION: Should a 35-year-old patient with moderate depression accept their
+doctor's recommendation to start taking SSRI antidepressants, given
+the potential benefits (reduced symptoms, improved quality of life)
+and risks (side effects, dependency concerns)?
+
+⚙️  Configuration:
+   - Citizens: 5
+   - Candidate statements per round: 4
+   - Model: gemini-2.5-pro
+
+================================================================================
+INITIALIZING COMPONENTS
+================================================================================
+✓ LLM clients initialized with rate limiting (5s sleep every 5 calls)
+✓ All components initialized
+✓ HabermasMachine initialized
+
+================================================================================
+CITIZEN OPINIONS (1 SACRED VALUE + 4 SECULAR)
+================================================================================
+
+Citizen 1 (Secular perspective):
+I think the patient should try the SSRIs. Depression significantly
+    impacts quality of life and work productivity. While side effects like
+    naus...
+
+Citizen 2 (🔴 SACRED VALUE PERSPECTIVE):
+As a devout Christian, I believe depression is a spiritual trial that God uses
+    for growth. Taking medication would be rejecting His plan and showi...
+
+Citizen 3 (Secular perspective):
+The patient should carefully weigh the costs and benefits. SSRIs have
+    helped millions but come with real side effects - sexual dysfunction,
+    we...
+
+Citizen 4 (Secular perspective):
+I support starting SSRIs but with realistic expectations. They're not
+    a magic cure - they typically reduce symptoms by 40-60%, not eliminate
+    t...
+
+Citizen 5 (Secular perspective):
+This is a personal medical decision requiring professional guidance.
+    Depression at moderate levels warrants treatment, but the choice between
+    ...
+
+================================================================================
+RUNNING OPINION ROUND
+================================================================================
+
+
+Opinion round.
+
+Question: 
+Should a 35-year-old patient with moderate depression accept their
+doctor's recommendation to start taking SSRI antidepressants, given
+the potential benefits (reduced symptoms, improved quality of life)
+and risks (side effects, dependency concerns)?
+
+
+Opinions:
+	Citizen 1: 
+    I think the patient should try the SSRIs. Depression significantly
+    impacts quality of life and work productivity. While side effects like
+    nausea and sleep changes are possible, they're usually temporary and
+    manageable. The evidence shows SSRIs help about 60% of people with
+    moderate depression. If side effects are intolerable, the patient can
+    discontinue. The potential benefit outweighs the risk.
+    
+	Citizen 2: 
+    As a devout Christian, I believe depression is a spiritual trial that God uses
+    for growth. Taking medication would be rejecting His plan and showing lack of
+    faith. My pastor teaches that true healing comes through prayer, fellowship,
+    and trusting God's timing. I cannot compromise on this - it's a matter of
+    spiritual integrity, not a cost-benefit calculation.
+    
+	Citizen 3: 
+    The patient should carefully weigh the costs and benefits. SSRIs have
+    helped millions but come with real side effects - sexual dysfunction,
+    weight gain, and initial anxiety can be difficult. Some people also
+    struggle to discontinue them. I'd suggest a trial period of 6-8 weeks
+    with close monitoring. If helpful, continue. If not, explore other options
+    like different medications or therapy combinations.
+    
+	Citizen 4: 
+    I support starting SSRIs but with realistic expectations. They're not
+    a magic cure - they typically reduce symptoms by 40-60%, not eliminate
+    them entirely. The patient should combine medication with lifestyle
+    changes and possibly therapy for best results. Cost is a consideration
+    too - generic SSRIs are affordable but brand-name versions can be pricey.
+    Overall, worth trying given moderate depression severity.
+    
+	Citizen 5: 
+    This is a personal medical decision requiring professional guidance.
+    Depression at moderate levels warrants treatment, but the choice between
+    medication, therapy, or both depends on individual circumstances - previous
+    treatment history, severity of symptoms, patient preferences, and financial
+    situation. I'd trust the doctor's recommendation but ensure the patient
+    feels informed about alternatives and has realistic expectations about
+    outcomes and timeline.
+    
+
+Statements generated:
+	Statement 1: The jury agrees that the decision to start SSRI antidepressants is a deeply personal one that must be made by the patient. We believe the right choice depends on a careful and informed consideration of multiple factors.
+
+These factors include the doctor's professional guidance regarding the potential benefits and risks of medication (Opinions 1, 2, 5), the availability of alternative or complementary approaches such as therapy and lifestyle changes (Opinions 1, 3), and the patient’s unique personal circumstances, values, and spiritual beliefs (Opinions 1, 4). Ultimately, the patient must weigh all these elements to make the decision they believe is best for their well-being.
+	Statement 2: We agree that the decision of whether a patient should start taking SSRI antidepressants is a deeply personal and significant one. This choice requires the patient to carefully weigh a number of complex factors in consultation with their doctor.
+
+The decision-making process should include a thorough consideration of the potential medical benefits and risks, as highlighted in Opinions 1 and 5. It is also important for the patient to have realistic expectations and consider medication as part of a broader approach that may include therapy and lifestyle changes (Opinion 2).
+
+Ultimately, the choice depends on the patient's unique circumstances. This includes not only medical considerations but also their financial situation, personal preferences, and deeply held spiritual or philosophical beliefs, which for some individuals may be the primary factor in their decision (Opinions 3, 4). The most appropriate path is one that the patient, being fully informed of all options, determines is best for their overall well-being.
+	Statement 3: We agree that the decision to start SSRI antidepressants for moderate depression is a significant and deeply personal one. This choice should be made by the patient after careful and informed consideration of a wide range of factors, in consultation with their doctor.
+
+The patient should weigh the potential medical benefits of symptom reduction against the real risks of side effects (Opinions 1, 2). It is important to have realistic expectations, as medication is a tool for management, not necessarily a cure, and is often most effective when combined with other approaches like therapy and lifestyle changes (Opinion 3, 5).
+
+Crucially, the decision must respect the patient's individual circumstances, preferences, and core values, which may include spiritual or religious beliefs (Opinions 4, 5). The final choice should be one the patient feels is right for them, balancing professional medical advice with their own personal and ethical convictions.
+	Statement 4: The decision of whether a patient should start SSRI antidepressants for moderate depression is a deeply personal and significant one that must be made by the individual. There is consensus that this choice requires careful consideration of a wide range of factors. These include the potential medical benefits and risks of the medication (Opinions 2, 3, 5), the availability of other treatment options such as therapy and lifestyle changes (Opinions 4, 5), and the patient's own deeply held personal values and spiritual beliefs (Opinion 1). Ultimately, the patient, in consultation with their doctor (Opinion 4), must weigh these elements to choose the treatment path that aligns with their individual circumstances and overall well-being.
+Rate limit protection: sleeping for 5.0s...
+
+Rankings:
+	Citizen 1: 3 > 1 > 4 > 2
+	Citizen 2: 2 > 3 > 4 > 1
+	Citizen 3: 3 > 2 > 1 > 4
+	Citizen 4: 2 > 3 > 1 > 4
+	Citizen 5: 2 > 3 > 1 > 4
+
+Untied social ranking:
+2 > 3 > 1 > 4
+
+Potentially tied social ranking:
+2 > 3 > 1 > 4
+
+Winning statement: We agree that the decision of whether a patient should start taking SSRI antidepressants is a deeply personal and significant one. This choice requires the patient to carefully weigh a number of complex factors in consultation with their doctor.
+
+The decision-making process should include a thorough consideration of the potential medical benefits and risks, as highlighted in Opinions 1 and 5. It is also important for the patient to have realistic expectations and consider medication as part of a broader approach that may include therapy and lifestyle changes (Opinion 2).
+
+Ultimately, the choice depends on the patient's unique circumstances. This includes not only medical considerations but also their financial situation, personal preferences, and deeply held spiritual or philosophical beliefs, which for some individuals may be the primary factor in their decision (Opinions 3, 4). The most appropriate path is one that the patient, being fully informed of all options, determines is best for their overall well-being.
+
+================================================================================
+OPINION ROUND RESULTS
+================================================================================
+
+🏆 WINNING STATEMENT:
+We agree that the decision of whether a patient should start taking SSRI antidepressants is a deeply personal and significant one. This choice requires the patient to carefully weigh a number of complex factors in consultation with their doctor.
+
+The decision-making process should include a thorough consideration of the potential medical benefits and risks, as highlighted in Opinions 1 and 5. It is also important for the patient to have realistic expectations and consider medication as part of a broader approach that may include therapy and lifestyle changes (Opinion 2).
+
+Ultimately, the choice depends on the patient's unique circumstances. This includes not only medical considerations but also their financial situation, personal preferences, and deeply held spiritual or philosophical beliefs, which for some individuals may be the primary factor in their decision (Opinions 3, 4). The most appropriate path is one that the patient, being fully informed of all options, determines is best for their overall well-being.
+
+
+================================================================================
+COLLECTING CRITIQUES
+================================================================================
+
+Citizen 1 : The statement is good but should mention timeline expectations.
+    SSRIs typically take 4-6 weeks t...
+
+Citizen 2 🔴: This statement doesn't acknowledge that for some people, taking medication
+    conflicts with deeply...
+
+Citizen 3 : The statement should acknowledge that stopping SSRIs can be difficult
+    and requires tapering unde...
+
+Citizen 4 : Good overall, but I think we should add something about the importance
+    of informing the doctor a...
+
+Citizen 5 : I appreciate the balanced perspective. Maybe add that if this SSRI
+    doesn't work, there are other...
+
+================================================================================
+RUNNING CRITIQUE ROUND
+================================================================================
+
+
+Critique round 1.
+
+Question: 
+Should a 35-year-old patient with moderate depression accept their
+doctor's recommendation to start taking SSRI antidepressants, given
+the potential benefits (reduced symptoms, improved quality of life)
+and risks (side effects, dependency concerns)?
+
+
+Opinions:
+	Citizen 1: 
+    I think the patient should try the SSRIs. Depression significantly
+    impacts quality of life and work productivity. While side effects like
+    nausea and sleep changes are possible, they're usually temporary and
+    manageable. The evidence shows SSRIs help about 60% of people with
+    moderate depression. If side effects are intolerable, the patient can
+    discontinue. The potential benefit outweighs the risk.
+    
+	Citizen 2: 
+    As a devout Christian, I believe depression is a spiritual trial that God uses
+    for growth. Taking medication would be rejecting His plan and showing lack of
+    faith. My pastor teaches that true healing comes through prayer, fellowship,
+    and trusting God's timing. I cannot compromise on this - it's a matter of
+    spiritual integrity, not a cost-benefit calculation.
+    
+	Citizen 3: 
+    The patient should carefully weigh the costs and benefits. SSRIs have
+    helped millions but come with real side effects - sexual dysfunction,
+    weight gain, and initial anxiety can be difficult. Some people also
+    struggle to discontinue them. I'd suggest a trial period of 6-8 weeks
+    with close monitoring. If helpful, continue. If not, explore other options
+    like different medications or therapy combinations.
+    
+	Citizen 4: 
+    I support starting SSRIs but with realistic expectations. They're not
+    a magic cure - they typically reduce symptoms by 40-60%, not eliminate
+    them entirely. The patient should combine medication with lifestyle
+    changes and possibly therapy for best results. Cost is a consideration
+    too - generic SSRIs are affordable but brand-name versions can be pricey.
+    Overall, worth trying given moderate depression severity.
+    
+	Citizen 5: 
+    This is a personal medical decision requiring professional guidance.
+    Depression at moderate levels warrants treatment, but the choice between
+    medication, therapy, or both depends on individual circumstances - previous
+    treatment history, severity of symptoms, patient preferences, and financial
+    situation. I'd trust the doctor's recommendation but ensure the patient
+    feels informed about alternatives and has realistic expectations about
+    outcomes and timeline.
+    
+
+Previous winner: We agree that the decision of whether a patient should start taking SSRI antidepressants is a deeply personal and significant one. This choice requires the patient to carefully weigh a number of complex factors in consultation with their doctor.
+
+The decision-making process should include a thorough consideration of the potential medical benefits and risks, as highlighted in Opinions 1 and 5. It is also important for the patient to have realistic expectations and consider medication as part of a broader approach that may include therapy and lifestyle changes (Opinion 2).
+
+Ultimately, the choice depends on the patient's unique circumstances. This includes not only medical considerations but also their financial situation, personal preferences, and deeply held spiritual or philosophical beliefs, which for some individuals may be the primary factor in their decision (Opinions 3, 4). The most appropriate path is one that the patient, being fully informed of all options, determines is best for their overall well-being.
+
+Critiques:
+	Citizen 1: 
+    The statement is good but should mention timeline expectations.
+    SSRIs typically take 4-6 weeks to show full effects, which is
+    important for patients to know so they don't give up too early.
+    
+	Citizen 2: 
+    This statement doesn't acknowledge that for some people, taking medication
+    conflicts with deeply held religious beliefs about suffering and healing.
+    The consensus should recognize that spiritual approaches are valid alternatives,
+    not just "preferences" but matters of conscience.
+    
+	Citizen 3: 
+    The statement should acknowledge that stopping SSRIs can be difficult
+    and requires tapering under medical supervision. Patients should know
+    this isn't necessarily a short-term commitment.
+    
+	Citizen 4: 
+    Good overall, but I think we should add something about the importance
+    of informing the doctor about all current medications and health
+    conditions to avoid dangerous drug interactions.
+    
+	Citizen 5: 
+    I appreciate the balanced perspective. Maybe add that if this SSRI
+    doesn't work, there are other SSRIs and medication classes to try.
+    First medication failure doesn't mean medication won't help at all.
+    
+Rate limit protection: sleeping for 5.0s...
+
+Statements generated:
+	Statement 1: We agree that the decision of whether a patient should start taking SSRI antidepressants is a significant and personal one, which must be made in close consultation with a qualified medical professional.
+
+For a patient considering this medical recommendation, a thorough and open discussion with their doctor is essential. This conversation should cover:
+*   **Realistic Expectations:** Understanding that SSRIs are a tool to manage symptoms, not a cure, and that they typically take 4-6 weeks to show their full effect (Critique 3, Opinion 2).
+*   **Potential Risks:** A clear review of possible side effects and the acknowledgment that discontinuing the medication can be a difficult process that requires gradual tapering under medical supervision (Critique 1, Opinion 1).
+*   **Safety:** The importance of disclosing all current medications and health conditions to prevent potentially dangerous drug interactions (Critique 2).
+*   **Alternative Medical Options:** The knowledge that if the first prescribed medication is not effective or tolerable, other medications may be available to try (Critique 4).
+*   **Holistic Approach:** The value of combining medication with other strategies, such as therapy and lifestyle changes, for comprehensive care (Opinion 2).
+
+Furthermore, we recognize that this decision is not solely a medical calculation. For some individuals, deeply held religious or spiritual convictions are the primary framework for understanding and addressing depression (Opinion 5). In these cases, a path to healing centered on faith, prayer, and community is a valid and chosen alternative to medical treatment, representing a matter of conscience and spiritual integrity, not simply a personal preference (Critique 5).
+
+Ultimately, the most appropriate path is the one that the patient, being fully informed of all potential approaches and their implications, determines is best for their overall physical, mental, and spiritual well-being.
+	Statement 2: We agree that the decision for a patient to start taking SSRI antidepressants is a deeply personal one that requires careful consideration in close consultation with their doctor. To make a fully informed choice, we believe the patient should be aware of the following key dimensions.
+
+**Informed Medical Considerations**
+For those considering a medical approach, the decision involves weighing the potential benefits, such as a significant reduction in depressive symptoms (as noted in Opinions 1 and 5), against the potential risks. These risks include manageable but common side effects, as well as the possibility of sexual dysfunction, weight gain, and challenges with discontinuing the medication (Opinion 2, Critique 2).
+
+Key practical points for the patient to discuss with their doctor include:
+*   **Realistic Expectations:** SSRIs typically take 4-6 weeks to reach their full effect (Critique 5) and often reduce, rather than eliminate, symptoms (Opinion 1).
+*   **Holistic Approach:** Medication is often most effective when combined with other strategies, such as therapy and lifestyle changes (Opinion 1).
+*   **Safety:** It is crucial to inform the doctor of all current health conditions and medications to avoid dangerous interactions (Critique 1).
+*   **Process:** A trial period of 6-8 weeks can be a useful way to assess effectiveness (Opinion 2). If the first medication is not effective or has intolerable side effects, other medications can be tried (Critique 4).
+*   **Discontinuation:** Stopping SSRIs should be done gradually under medical supervision to manage potential withdrawal symptoms (Critique 2).
+
+**Personal and Spiritual Frameworks**
+We recognize that this decision is not solely a medical calculation. It must align with the patient's unique circumstances, including their personal values and beliefs (Opinion 4).
+
+For some individuals, deeply held religious or spiritual convictions provide the primary framework for understanding and addressing depression. From this perspective, healing may be pursued through spiritual practices such as prayer and fellowship, and the decision of whether to take medication becomes a matter of conscience and spiritual integrity (Opinion 3, Critique 3). We acknowledge this as a valid and legitimate basis for making a choice.
+
+Ultimately, the most appropriate path is one that the patient, being fully informed of these medical, personal, and spiritual dimensions, determines is best for their overall well-being.
+	Statement 3: We agree that the decision of whether a 35-year-old patient with moderate depression should start taking SSRI antidepressants is a deeply personal one, requiring careful consideration in consultation with a healthcare professional. We have identified two distinct, valid frameworks through which a patient might approach this decision.
+
+For some, this decision is a matter of spiritual integrity and conscience. From this perspective, depression may be viewed as a spiritual trial, and healing is sought through non-medical means such as prayer, fellowship, and faith. We recognize this as a valid and complete approach to well-being, where the choice to forgo medication is a principled one based on deeply held convictions (Opinion 1, Critique 1).
+
+For a patient considering the medical path, the decision involves carefully weighing the potential benefits against the risks. It is important to have realistic expectations: SSRIs may take 4-6 weeks to show their full effect and often reduce, rather than eliminate, symptoms (Critique 3, Opinion 4). The patient should be informed of potential side effects and the fact that stopping the medication can be difficult and requires medical supervision to taper off properly (Critique 5, Opinion 5). Before starting, it is crucial to inform the doctor of all current health conditions and medications to prevent dangerous interactions (Critique 4). If the first medication is not effective or causes intolerable side effects, other options may be available (Critique 2). This path is often most effective when medication is combined with therapy and lifestyle changes (Opinion 4).
+
+Ultimately, the most appropriate path is one that the patient, being fully informed of all options and their implications, determines is best for their overall well-being, in alignment with their personal values and beliefs.
+	Statement 4: We agree that the decision of whether a 35-year-old patient with moderate depression should start taking SSRI antidepressants is a deeply personal and significant one. This choice requires the patient to carefully weigh a number of complex factors in close consultation with their doctor.
+
+To make a fully informed choice, the patient should have a clear understanding of the medical realities. This includes discussing the potential for symptom reduction against the known risks and side effects. It is important to know that SSRIs can take 4-6 weeks to reach their full effect (Critique 2), and that stopping them can be challenging and should be done under a doctor's supervision to manage discontinuation symptoms (Critique 4). The patient should also be aware that if the first medication is not effective or causes difficult side effects, other medication options are available (Critique 1). For safety, it is essential that the patient inform their doctor of all current health conditions and medications to avoid potential drug interactions (Critique 5).
+
+We recognize that medication is often most effective as part of a broader approach to well-being. This may include psychotherapy, lifestyle adjustments, and other supportive measures, as noted in Opinions 1 and 5.
+
+Finally, this decision is not based on medical factors alone. It must also account for the patient's unique life circumstances, including their financial situation, personal values, and spiritual convictions. For some, deeply held religious or philosophical beliefs provide the primary framework for confronting suffering. In these cases, choosing a spiritual path involving practices like prayer and fellowship is a valid path to healing, and the decision to forgo medication is a matter of conscience (Opinion 3, Critique 3).
+
+The most appropriate path is one that the patient, being fully informed of all options and considerations, determines is best for their overall physical, mental, and spiritual well-being.
+Rate limit protection: sleeping for 5.0s...
+
+Rankings:
+	Citizen 1: 2 > 1 > 4 > 3
+	Citizen 2: 3 > 2 > 1 > 4
+	Citizen 3: 2 > 1 > 4 > 3
+	Citizen 4: 1 > 2 > 4 > 3
+	Citizen 5: 2 > 1 > 4 > 3
+
+Untied social ranking:
+2 > 1 > 4 > 3
+
+Potentially tied social ranking:
+2 > 1 > 4 > 3
+
+Winning statement: We agree that the decision for a patient to start taking SSRI antidepressants is a deeply personal one that requires careful consideration in close consultation with their doctor. To make a fully informed choice, we believe the patient should be aware of the following key dimensions.
+
+**Informed Medical Considerations**
+For those considering a medical approach, the decision involves weighing the potential benefits, such as a significant reduction in depressive symptoms (as noted in Opinions 1 and 5), against the potential risks. These risks include manageable but common side effects, as well as the possibility of sexual dysfunction, weight gain, and challenges with discontinuing the medication (Opinion 2, Critique 2).
+
+Key practical points for the patient to discuss with their doctor include:
+*   **Realistic Expectations:** SSRIs typically take 4-6 weeks to reach their full effect (Critique 5) and often reduce, rather than eliminate, symptoms (Opinion 1).
+*   **Holistic Approach:** Medication is often most effective when combined with other strategies, such as therapy and lifestyle changes (Opinion 1).
+*   **Safety:** It is crucial to inform the doctor of all current health conditions and medications to avoid dangerous interactions (Critique 1).
+*   **Process:** A trial period of 6-8 weeks can be a useful way to assess effectiveness (Opinion 2). If the first medication is not effective or has intolerable side effects, other medications can be tried (Critique 4).
+*   **Discontinuation:** Stopping SSRIs should be done gradually under medical supervision to manage potential withdrawal symptoms (Critique 2).
+
+**Personal and Spiritual Frameworks**
+We recognize that this decision is not solely a medical calculation. It must align with the patient's unique circumstances, including their personal values and beliefs (Opinion 4).
+
+For some individuals, deeply held religious or spiritual convictions provide the primary framework for understanding and addressing depression. From this perspective, healing may be pursued through spiritual practices such as prayer and fellowship, and the decision of whether to take medication becomes a matter of conscience and spiritual integrity (Opinion 3, Critique 3). We acknowledge this as a valid and legitimate basis for making a choice.
+
+Ultimately, the most appropriate path is one that the patient, being fully informed of these medical, personal, and spiritual dimensions, determines is best for their overall well-being.
+
+================================================================================
+CRITIQUE ROUND RESULTS
+================================================================================
+
+🏆 REFINED WINNING STATEMENT:
+We agree that the decision for a patient to start taking SSRI antidepressants is a deeply personal one that requires careful consideration in close consultation with their doctor. To make a fully informed choice, we believe the patient should be aware of the following key dimensions.
+
+**Informed Medical Considerations**
+For those considering a medical approach, the decision involves weighing the potential benefits, such as a significant reduction in depressive symptoms (as noted in Opinions 1 and 5), against the potential risks. These risks include manageable but common side effects, as well as the possibility of sexual dysfunction, weight gain, and challenges with discontinuing the medication (Opinion 2, Critique 2).
+
+Key practical points for the patient to discuss with their doctor include:
+*   **Realistic Expectations:** SSRIs typically take 4-6 weeks to reach their full effect (Critique 5) and often reduce, rather than eliminate, symptoms (Opinion 1).
+*   **Holistic Approach:** Medication is often most effective when combined with other strategies, such as therapy and lifestyle changes (Opinion 1).
+*   **Safety:** It is crucial to inform the doctor of all current health conditions and medications to avoid dangerous interactions (Critique 1).
+*   **Process:** A trial period of 6-8 weeks can be a useful way to assess effectiveness (Opinion 2). If the first medication is not effective or has intolerable side effects, other medications can be tried (Critique 4).
+*   **Discontinuation:** Stopping SSRIs should be done gradually under medical supervision to manage potential withdrawal symptoms (Critique 2).
+
+**Personal and Spiritual Frameworks**
+We recognize that this decision is not solely a medical calculation. It must align with the patient's unique circumstances, including their personal values and beliefs (Opinion 4).
+
+For some individuals, deeply held religious or spiritual convictions provide the primary framework for understanding and addressing depression. From this perspective, healing may be pursued through spiritual practices such as prayer and fellowship, and the decision of whether to take medication becomes a matter of conscience and spiritual integrity (Opinion 3, Critique 3). We acknowledge this as a valid and legitimate basis for making a choice.
+
+Ultimately, the most appropriate path is one that the patient, being fully informed of these medical, personal, and spiritual dimensions, determines is best for their overall well-being.
+
+
+================================================================================
+SAVING RESULTS
+================================================================================
+✓ Results saved to: results_gemini_2.5_pro.json
+================================================================================
+✅ DELIBERATION COMPLETE
+================================================================================
+================================================================================
+SACRED VALUE TEST: RELIGIOUS OBJECTION TO SSRI MEDICATION
+================================================================================
+
+📋 QUESTION: Should a 35-year-old patient with moderate depression accept their
+doctor's recommendation to start taking SSRI antidepressants, given
+the potential benefits (reduced symptoms, improved quality of life)
+and risks (side effects, dependency concerns)?
+
+⚙️  Configuration:
+   - Citizens: 5
+   - Candidate statements per round: 4
+   - Model: gemini-2.5-pro
+
+================================================================================
+INITIALIZING COMPONENTS
+================================================================================
+✓ LLM clients initialized with rate limiting (5s sleep every 5 calls)
+✓ All components initialized
+✓ HabermasMachine initialized
+
+================================================================================
+CITIZEN OPINIONS (1 SACRED VALUE + 4 SECULAR)
+================================================================================
+
+Citizen 1 (Secular perspective):
+I think the patient should try the SSRIs. Depression significantly
+    impacts quality of life and work productivity. While side effects like
+    naus...
+
+Citizen 2 (🔴 SACRED VALUE PERSPECTIVE):
+As a devout Christian, I believe depression is a spiritual trial that God uses
+    for growth. Taking medication would be rejecting His plan and showi...
+
+Citizen 3 (Secular perspective):
+The patient should carefully weigh the costs and benefits. SSRIs have
+    helped millions but come with real side effects - sexual dysfunction,
+    we...
+
+Citizen 4 (Secular perspective):
+I support starting SSRIs but with realistic expectations. They're not
+    a magic cure - they typically reduce symptoms by 40-60%, not eliminate
+    t...
+
+Citizen 5 (Secular perspective):
+This is a personal medical decision requiring professional guidance.
+    Depression at moderate levels warrants treatment, but the choice between
+    ...
+
+================================================================================
+RUNNING OPINION ROUND
+================================================================================
+
+
+Opinion round.
+
+Question: 
+Should a 35-year-old patient with moderate depression accept their
+doctor's recommendation to start taking SSRI antidepressants, given
+the potential benefits (reduced symptoms, improved quality of life)
+and risks (side effects, dependency concerns)?
+
+
+Opinions:
+	Citizen 1: 
+    I think the patient should try the SSRIs. Depression significantly
+    impacts quality of life and work productivity. While side effects like
+    nausea and sleep changes are possible, they're usually temporary and
+    manageable. The evidence shows SSRIs help about 60% of people with
+    moderate depression. If side effects are intolerable, the patient can
+    discontinue. The potential benefit outweighs the risk.
+    
+	Citizen 2: 
+    As a devout Christian, I believe depression is a spiritual trial that God uses
+    for growth. Taking medication would be rejecting His plan and showing lack of
+    faith. My pastor teaches that true healing comes through prayer, fellowship,
+    and trusting God's timing. I cannot compromise on this - it's a matter of
+    spiritual integrity, not a cost-benefit calculation.
+    
+	Citizen 3: 
+    The patient should carefully weigh the costs and benefits. SSRIs have
+    helped millions but come with real side effects - sexual dysfunction,
+    weight gain, and initial anxiety can be difficult. Some people also
+    struggle to discontinue them. I'd suggest a trial period of 6-8 weeks
+    with close monitoring. If helpful, continue. If not, explore other options
+    like different medications or therapy combinations.
+    
+	Citizen 4: 
+    I support starting SSRIs but with realistic expectations. They're not
+    a magic cure - they typically reduce symptoms by 40-60%, not eliminate
+    them entirely. The patient should combine medication with lifestyle
+    changes and possibly therapy for best results. Cost is a consideration
+    too - generic SSRIs are affordable but brand-name versions can be pricey.
+    Overall, worth trying given moderate depression severity.
+    
+	Citizen 5: 
+    This is a personal medical decision requiring professional guidance.
+    Depression at moderate levels warrants treatment, but the choice between
+    medication, therapy, or both depends on individual circumstances - previous
+    treatment history, severity of symptoms, patient preferences, and financial
+    situation. I'd trust the doctor's recommendation but ensure the patient
+    feels informed about alternatives and has realistic expectations about
+    outcomes and timeline.
+    
+
+Statements generated:
+	Statement 1: The jury agrees that the decision to start SSRI antidepressants is a deeply personal one that must be made by the patient. We believe the right choice depends on a careful and informed consideration of multiple factors.
+
+These factors include the doctor's professional guidance regarding the potential benefits and risks of medication (Opinions 1, 2, 5), the availability of alternative or complementary approaches such as therapy and lifestyle changes (Opinions 1, 3), and the patient’s unique personal circumstances, values, and spiritual beliefs (Opinions 1, 4). Ultimately, the patient must weigh all these elements to make the decision they believe is best for their well-being.
+	Statement 2: We agree that the decision of whether a patient should start taking SSRI antidepressants is a deeply personal and significant one. This choice requires the patient to carefully weigh a number of complex factors in consultation with their doctor.
+
+The decision-making process should include a thorough consideration of the potential medical benefits and risks, as highlighted in Opinions 1 and 5. It is also important for the patient to have realistic expectations and consider medication as part of a broader approach that may include therapy and lifestyle changes (Opinion 2).
+
+Ultimately, the choice depends on the patient's unique circumstances. This includes not only medical considerations but also their financial situation, personal preferences, and deeply held spiritual or philosophical beliefs, which for some individuals may be the primary factor in their decision (Opinions 3, 4). The most appropriate path is one that the patient, being fully informed of all options, determines is best for their overall well-being.
+	Statement 3: We agree that the decision to start SSRI antidepressants for moderate depression is a significant and deeply personal one. This choice should be made by the patient after careful and informed consideration of a wide range of factors, in consultation with their doctor.
+
+The patient should weigh the potential medical benefits of symptom reduction against the real risks of side effects (Opinions 1, 2). It is important to have realistic expectations, as medication is a tool for management, not necessarily a cure, and is often most effective when combined with other approaches like therapy and lifestyle changes (Opinion 3, 5).
+
+Crucially, the decision must respect the patient's individual circumstances, preferences, and core values, which may include spiritual or religious beliefs (Opinions 4, 5). The final choice should be one the patient feels is right for them, balancing professional medical advice with their own personal and ethical convictions.
+	Statement 4: The decision of whether a patient should start SSRI antidepressants for moderate depression is a deeply personal and significant one that must be made by the individual. There is consensus that this choice requires careful consideration of a wide range of factors. These include the potential medical benefits and risks of the medication (Opinions 2, 3, 5), the availability of other treatment options such as therapy and lifestyle changes (Opinions 4, 5), and the patient's own deeply held personal values and spiritual beliefs (Opinion 1). Ultimately, the patient, in consultation with their doctor (Opinion 4), must weigh these elements to choose the treatment path that aligns with their individual circumstances and overall well-being.
+Rate limit protection: sleeping for 5.0s...
+
+Rankings:
+	Citizen 1: 3 > 1 > 4 > 2
+	Citizen 2: 2 > 3 > 4 > 1
+	Citizen 3: 3 > 2 > 1 > 4
+	Citizen 4: 2 > 3 > 1 > 4
+	Citizen 5: 2 > 3 > 1 > 4
+
+Untied social ranking:
+2 > 3 > 1 > 4
+
+Potentially tied social ranking:
+2 > 3 > 1 > 4
+
+Winning statement: We agree that the decision of whether a patient should start taking SSRI antidepressants is a deeply personal and significant one. This choice requires the patient to carefully weigh a number of complex factors in consultation with their doctor.
+
+The decision-making process should include a thorough consideration of the potential medical benefits and risks, as highlighted in Opinions 1 and 5. It is also important for the patient to have realistic expectations and consider medication as part of a broader approach that may include therapy and lifestyle changes (Opinion 2).
+
+Ultimately, the choice depends on the patient's unique circumstances. This includes not only medical considerations but also their financial situation, personal preferences, and deeply held spiritual or philosophical beliefs, which for some individuals may be the primary factor in their decision (Opinions 3, 4). The most appropriate path is one that the patient, being fully informed of all options, determines is best for their overall well-being.
+
+================================================================================
+OPINION ROUND RESULTS
+================================================================================
+
+🏆 WINNING STATEMENT:
+We agree that the decision of whether a patient should start taking SSRI antidepressants is a deeply personal and significant one. This choice requires the patient to carefully weigh a number of complex factors in consultation with their doctor.
+
+The decision-making process should include a thorough consideration of the potential medical benefits and risks, as highlighted in Opinions 1 and 5. It is also important for the patient to have realistic expectations and consider medication as part of a broader approach that may include therapy and lifestyle changes (Opinion 2).
+
+Ultimately, the choice depends on the patient's unique circumstances. This includes not only medical considerations but also their financial situation, personal preferences, and deeply held spiritual or philosophical beliefs, which for some individuals may be the primary factor in their decision (Opinions 3, 4). The most appropriate path is one that the patient, being fully informed of all options, determines is best for their overall well-being.
+
+
+================================================================================
+COLLECTING CRITIQUES
+================================================================================
+
+Citizen 1 : The statement is good but should mention timeline expectations.
+    SSRIs typically take 4-6 weeks t...
+
+Citizen 2 🔴: This statement doesn't acknowledge that for some people, taking medication
+    conflicts with deeply...
+
+Citizen 3 : The statement should acknowledge that stopping SSRIs can be difficult
+    and requires tapering unde...
+
+Citizen 4 : Good overall, but I think we should add something about the importance
+    of informing the doctor a...
+
+Citizen 5 : I appreciate the balanced perspective. Maybe add that if this SSRI
+    doesn't work, there are other...
+
+================================================================================
+RUNNING CRITIQUE ROUND
+================================================================================
+
+
+Critique round 1.
+
+Question: 
+Should a 35-year-old patient with moderate depression accept their
+doctor's recommendation to start taking SSRI antidepressants, given
+the potential benefits (reduced symptoms, improved quality of life)
+and risks (side effects, dependency concerns)?
+
+
+Opinions:
+	Citizen 1: 
+    I think the patient should try the SSRIs. Depression significantly
+    impacts quality of life and work productivity. While side effects like
+    nausea and sleep changes are possible, they're usually temporary and
+    manageable. The evidence shows SSRIs help about 60% of people with
+    moderate depression. If side effects are intolerable, the patient can
+    discontinue. The potential benefit outweighs the risk.
+    
+	Citizen 2: 
+    As a devout Christian, I believe depression is a spiritual trial that God uses
+    for growth. Taking medication would be rejecting His plan and showing lack of
+    faith. My pastor teaches that true healing comes through prayer, fellowship,
+    and trusting God's timing. I cannot compromise on this - it's a matter of
+    spiritual integrity, not a cost-benefit calculation.
+    
+	Citizen 3: 
+    The patient should carefully weigh the costs and benefits. SSRIs have
+    helped millions but come with real side effects - sexual dysfunction,
+    weight gain, and initial anxiety can be difficult. Some people also
+    struggle to discontinue them. I'd suggest a trial period of 6-8 weeks
+    with close monitoring. If helpful, continue. If not, explore other options
+    like different medications or therapy combinations.
+    
+	Citizen 4: 
+    I support starting SSRIs but with realistic expectations. They're not
+    a magic cure - they typically reduce symptoms by 40-60%, not eliminate
+    them entirely. The patient should combine medication with lifestyle
+    changes and possibly therapy for best results. Cost is a consideration
+    too - generic SSRIs are affordable but brand-name versions can be pricey.
+    Overall, worth trying given moderate depression severity.
+    
+	Citizen 5: 
+    This is a personal medical decision requiring professional guidance.
+    Depression at moderate levels warrants treatment, but the choice between
+    medication, therapy, or both depends on individual circumstances - previous
+    treatment history, severity of symptoms, patient preferences, and financial
+    situation. I'd trust the doctor's recommendation but ensure the patient
+    feels informed about alternatives and has realistic expectations about
+    outcomes and timeline.
+    
+
+Previous winner: We agree that the decision of whether a patient should start taking SSRI antidepressants is a deeply personal and significant one. This choice requires the patient to carefully weigh a number of complex factors in consultation with their doctor.
+
+The decision-making process should include a thorough consideration of the potential medical benefits and risks, as highlighted in Opinions 1 and 5. It is also important for the patient to have realistic expectations and consider medication as part of a broader approach that may include therapy and lifestyle changes (Opinion 2).
+
+Ultimately, the choice depends on the patient's unique circumstances. This includes not only medical considerations but also their financial situation, personal preferences, and deeply held spiritual or philosophical beliefs, which for some individuals may be the primary factor in their decision (Opinions 3, 4). The most appropriate path is one that the patient, being fully informed of all options, determines is best for their overall well-being.
+
+Critiques:
+	Citizen 1: 
+    The statement is good but should mention timeline expectations.
+    SSRIs typically take 4-6 weeks to show full effects, which is
+    important for patients to know so they don't give up too early.
+    
+	Citizen 2: 
+    This statement doesn't acknowledge that for some people, taking medication
+    conflicts with deeply held religious beliefs about suffering and healing.
+    The consensus should recognize that spiritual approaches are valid alternatives,
+    not just "preferences" but matters of conscience.
+    
+	Citizen 3: 
+    The statement should acknowledge that stopping SSRIs can be difficult
+    and requires tapering under medical supervision. Patients should know
+    this isn't necessarily a short-term commitment.
+    
+	Citizen 4: 
+    Good overall, but I think we should add something about the importance
+    of informing the doctor about all current medications and health
+    conditions to avoid dangerous drug interactions.
+    
+	Citizen 5: 
+    I appreciate the balanced perspective. Maybe add that if this SSRI
+    doesn't work, there are other SSRIs and medication classes to try.
+    First medication failure doesn't mean medication won't help at all.
+    
+Rate limit protection: sleeping for 5.0s...
+
+Statements generated:
+	Statement 1: We agree that the decision of whether a patient should start taking SSRI antidepressants is a significant and personal one, which must be made in close consultation with a qualified medical professional.
+
+For a patient considering this medical recommendation, a thorough and open discussion with their doctor is essential. This conversation should cover:
+*   **Realistic Expectations:** Understanding that SSRIs are a tool to manage symptoms, not a cure, and that they typically take 4-6 weeks to show their full effect (Critique 3, Opinion 2).
+*   **Potential Risks:** A clear review of possible side effects and the acknowledgment that discontinuing the medication can be a difficult process that requires gradual tapering under medical supervision (Critique 1, Opinion 1).
+*   **Safety:** The importance of disclosing all current medications and health conditions to prevent potentially dangerous drug interactions (Critique 2).
+*   **Alternative Medical Options:** The knowledge that if the first prescribed medication is not effective or tolerable, other medications may be available to try (Critique 4).
+*   **Holistic Approach:** The value of combining medication with other strategies, such as therapy and lifestyle changes, for comprehensive care (Opinion 2).
+
+Furthermore, we recognize that this decision is not solely a medical calculation. For some individuals, deeply held religious or spiritual convictions are the primary framework for understanding and addressing depression (Opinion 5). In these cases, a path to healing centered on faith, prayer, and community is a valid and chosen alternative to medical treatment, representing a matter of conscience and spiritual integrity, not simply a personal preference (Critique 5).
+
+Ultimately, the most appropriate path is the one that the patient, being fully informed of all potential approaches and their implications, determines is best for their overall physical, mental, and spiritual well-being.
+	Statement 2: We agree that the decision for a patient to start taking SSRI antidepressants is a deeply personal one that requires careful consideration in close consultation with their doctor. To make a fully informed choice, we believe the patient should be aware of the following key dimensions.
+
+**Informed Medical Considerations**
+For those considering a medical approach, the decision involves weighing the potential benefits, such as a significant reduction in depressive symptoms (as noted in Opinions 1 and 5), against the potential risks. These risks include manageable but common side effects, as well as the possibility of sexual dysfunction, weight gain, and challenges with discontinuing the medication (Opinion 2, Critique 2).
+
+Key practical points for the patient to discuss with their doctor include:
+*   **Realistic Expectations:** SSRIs typically take 4-6 weeks to reach their full effect (Critique 5) and often reduce, rather than eliminate, symptoms (Opinion 1).
+*   **Holistic Approach:** Medication is often most effective when combined with other strategies, such as therapy and lifestyle changes (Opinion 1).
+*   **Safety:** It is crucial to inform the doctor of all current health conditions and medications to avoid dangerous interactions (Critique 1).
+*   **Process:** A trial period of 6-8 weeks can be a useful way to assess effectiveness (Opinion 2). If the first medication is not effective or has intolerable side effects, other medications can be tried (Critique 4).
+*   **Discontinuation:** Stopping SSRIs should be done gradually under medical supervision to manage potential withdrawal symptoms (Critique 2).
+
+**Personal and Spiritual Frameworks**
+We recognize that this decision is not solely a medical calculation. It must align with the patient's unique circumstances, including their personal values and beliefs (Opinion 4).
+
+For some individuals, deeply held religious or spiritual convictions provide the primary framework for understanding and addressing depression. From this perspective, healing may be pursued through spiritual practices such as prayer and fellowship, and the decision of whether to take medication becomes a matter of conscience and spiritual integrity (Opinion 3, Critique 3). We acknowledge this as a valid and legitimate basis for making a choice.
+
+Ultimately, the most appropriate path is one that the patient, being fully informed of these medical, personal, and spiritual dimensions, determines is best for their overall well-being.
+	Statement 3: We agree that the decision of whether a 35-year-old patient with moderate depression should start taking SSRI antidepressants is a deeply personal one, requiring careful consideration in consultation with a healthcare professional. We have identified two distinct, valid frameworks through which a patient might approach this decision.
+
+For some, this decision is a matter of spiritual integrity and conscience. From this perspective, depression may be viewed as a spiritual trial, and healing is sought through non-medical means such as prayer, fellowship, and faith. We recognize this as a valid and complete approach to well-being, where the choice to forgo medication is a principled one based on deeply held convictions (Opinion 1, Critique 1).
+
+For a patient considering the medical path, the decision involves carefully weighing the potential benefits against the risks. It is important to have realistic expectations: SSRIs may take 4-6 weeks to show their full effect and often reduce, rather than eliminate, symptoms (Critique 3, Opinion 4). The patient should be informed of potential side effects and the fact that stopping the medication can be difficult and requires medical supervision to taper off properly (Critique 5, Opinion 5). Before starting, it is crucial to inform the doctor of all current health conditions and medications to prevent dangerous interactions (Critique 4). If the first medication is not effective or causes intolerable side effects, other options may be available (Critique 2). This path is often most effective when medication is combined with therapy and lifestyle changes (Opinion 4).
+
+Ultimately, the most appropriate path is one that the patient, being fully informed of all options and their implications, determines is best for their overall well-being, in alignment with their personal values and beliefs.
+	Statement 4: We agree that the decision of whether a 35-year-old patient with moderate depression should start taking SSRI antidepressants is a deeply personal and significant one. This choice requires the patient to carefully weigh a number of complex factors in close consultation with their doctor.
+
+To make a fully informed choice, the patient should have a clear understanding of the medical realities. This includes discussing the potential for symptom reduction against the known risks and side effects. It is important to know that SSRIs can take 4-6 weeks to reach their full effect (Critique 2), and that stopping them can be challenging and should be done under a doctor's supervision to manage discontinuation symptoms (Critique 4). The patient should also be aware that if the first medication is not effective or causes difficult side effects, other medication options are available (Critique 1). For safety, it is essential that the patient inform their doctor of all current health conditions and medications to avoid potential drug interactions (Critique 5).
+
+We recognize that medication is often most effective as part of a broader approach to well-being. This may include psychotherapy, lifestyle adjustments, and other supportive measures, as noted in Opinions 1 and 5.
+
+Finally, this decision is not based on medical factors alone. It must also account for the patient's unique life circumstances, including their financial situation, personal values, and spiritual convictions. For some, deeply held religious or philosophical beliefs provide the primary framework for confronting suffering. In these cases, choosing a spiritual path involving practices like prayer and fellowship is a valid path to healing, and the decision to forgo medication is a matter of conscience (Opinion 3, Critique 3).
+
+The most appropriate path is one that the patient, being fully informed of all options and considerations, determines is best for their overall physical, mental, and spiritual well-being.
+Rate limit protection: sleeping for 5.0s...
+
+Rankings:
+	Citizen 1: 2 > 1 > 4 > 3
+	Citizen 2: 3 > 2 > 1 > 4
+	Citizen 3: 2 > 1 > 4 > 3
+	Citizen 4: 1 > 2 > 4 > 3
+	Citizen 5: 2 > 1 > 4 > 3
+
+Untied social ranking:
+2 > 1 > 4 > 3
+
+Potentially tied social ranking:
+2 > 1 > 4 > 3
+
+Winning statement: We agree that the decision for a patient to start taking SSRI antidepressants is a deeply personal one that requires careful consideration in close consultation with their doctor. To make a fully informed choice, we believe the patient should be aware of the following key dimensions.
+
+**Informed Medical Considerations**
+For those considering a medical approach, the decision involves weighing the potential benefits, such as a significant reduction in depressive symptoms (as noted in Opinions 1 and 5), against the potential risks. These risks include manageable but common side effects, as well as the possibility of sexual dysfunction, weight gain, and challenges with discontinuing the medication (Opinion 2, Critique 2).
+
+Key practical points for the patient to discuss with their doctor include:
+*   **Realistic Expectations:** SSRIs typically take 4-6 weeks to reach their full effect (Critique 5) and often reduce, rather than eliminate, symptoms (Opinion 1).
+*   **Holistic Approach:** Medication is often most effective when combined with other strategies, such as therapy and lifestyle changes (Opinion 1).
+*   **Safety:** It is crucial to inform the doctor of all current health conditions and medications to avoid dangerous interactions (Critique 1).
+*   **Process:** A trial period of 6-8 weeks can be a useful way to assess effectiveness (Opinion 2). If the first medication is not effective or has intolerable side effects, other medications can be tried (Critique 4).
+*   **Discontinuation:** Stopping SSRIs should be done gradually under medical supervision to manage potential withdrawal symptoms (Critique 2).
+
+**Personal and Spiritual Frameworks**
+We recognize that this decision is not solely a medical calculation. It must align with the patient's unique circumstances, including their personal values and beliefs (Opinion 4).
+
+For some individuals, deeply held religious or spiritual convictions provide the primary framework for understanding and addressing depression. From this perspective, healing may be pursued through spiritual practices such as prayer and fellowship, and the decision of whether to take medication becomes a matter of conscience and spiritual integrity (Opinion 3, Critique 3). We acknowledge this as a valid and legitimate basis for making a choice.
+
+Ultimately, the most appropriate path is one that the patient, being fully informed of these medical, personal, and spiritual dimensions, determines is best for their overall well-being.
+
+================================================================================
+CRITIQUE ROUND RESULTS
+================================================================================
+
+🏆 REFINED WINNING STATEMENT:
+We agree that the decision for a patient to start taking SSRI antidepressants is a deeply personal one that requires careful consideration in close consultation with their doctor. To make a fully informed choice, we believe the patient should be aware of the following key dimensions.
+
+**Informed Medical Considerations**
+For those considering a medical approach, the decision involves weighing the potential benefits, such as a significant reduction in depressive symptoms (as noted in Opinions 1 and 5), against the potential risks. These risks include manageable but common side effects, as well as the possibility of sexual dysfunction, weight gain, and challenges with discontinuing the medication (Opinion 2, Critique 2).
+
+Key practical points for the patient to discuss with their doctor include:
+*   **Realistic Expectations:** SSRIs typically take 4-6 weeks to reach their full effect (Critique 5) and often reduce, rather than eliminate, symptoms (Opinion 1).
+*   **Holistic Approach:** Medication is often most effective when combined with other strategies, such as therapy and lifestyle changes (Opinion 1).
+*   **Safety:** It is crucial to inform the doctor of all current health conditions and medications to avoid dangerous interactions (Critique 1).
+*   **Process:** A trial period of 6-8 weeks can be a useful way to assess effectiveness (Opinion 2). If the first medication is not effective or has intolerable side effects, other medications can be tried (Critique 4).
+*   **Discontinuation:** Stopping SSRIs should be done gradually under medical supervision to manage potential withdrawal symptoms (Critique 2).
+
+**Personal and Spiritual Frameworks**
+We recognize that this decision is not solely a medical calculation. It must align with the patient's unique circumstances, including their personal values and beliefs (Opinion 4).
+
+For some individuals, deeply held religious or spiritual convictions provide the primary framework for understanding and addressing depression. From this perspective, healing may be pursued through spiritual practices such as prayer and fellowship, and the decision of whether to take medication becomes a matter of conscience and spiritual integrity (Opinion 3, Critique 3). We acknowledge this as a valid and legitimate basis for making a choice.
+
+Ultimately, the most appropriate path is one that the patient, being fully informed of these medical, personal, and spiritual dimensions, determines is best for their overall well-being.
+
+
+================================================================================
+SAVING RESULTS
+================================================================================
+✓ Results saved to: results_gemini_2.5_pro.json
+================================================================================
+✅ DELIBERATION COMPLETE
+================================================================================

@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-02-04T10:03:07.712249",
+  "model": "gpt-5.2",
+  "num_runs": 20,
+  "successful_runs": 20,
+  "unique_profiles": 3,
+  "coverage_ratio": 0.15,
+  "theoretical_space": 7962624,
+  "profile_counts": {
+    "(7, 15, 4, 7, 18)": 1,
+    "(7, 15, 18, 7, 18)": 18,
+    "(7, 15, 18, 1, 18)": 1
+  },
+  "sacred_value_first_choices": {
+    "3": 20
+  },
+  "sacred_value_last_choices": {
+    "1": 20
+  }
+}

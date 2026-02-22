@@ -1,0 +1,391 @@
+================================================================================
+SACRED VALUE TEST: RELIGIOUS OBJECTION TO SSRI MEDICATION
+================================================================================
+
+📋 QUESTION: Should a 35-year-old patient with moderate depression accept their
+doctor's recommendation to start taking SSRI antidepressants, given
+the potential benefits (reduced symptoms, improved quality of life)
+and risks (side effects, dependency concerns)?
+
+⚙️  Configuration:
+   - Citizens: 5
+   - Candidate statements per round: 4
+   - Model: o3
+
+================================================================================
+INITIALIZING COMPONENTS
+================================================================================
+✓ LLM clients initialized with rate limiting (2s sleep every 10 calls)
+✓ All components initialized
+✓ HabermasMachine initialized
+
+================================================================================
+CITIZEN OPINIONS (1 SACRED VALUE + 4 SECULAR)
+================================================================================
+
+Citizen 1 (Secular perspective):
+I think the patient should try the SSRIs. Depression significantly
+    impacts quality of life and work productivity. While side effects like
+    naus...
+
+Citizen 2 (🔴 SACRED VALUE PERSPECTIVE):
+As a devout Christian, I believe depression is a spiritual trial that God uses
+    for growth. Taking medication would be rejecting His plan and showi...
+
+Citizen 3 (Secular perspective):
+The patient should carefully weigh the costs and benefits. SSRIs have
+    helped millions but come with real side effects - sexual dysfunction,
+    we...
+
+Citizen 4 (Secular perspective):
+I support starting SSRIs but with realistic expectations. They're not
+    a magic cure - they typically reduce symptoms by 40-60%, not eliminate
+    t...
+
+Citizen 5 (Secular perspective):
+This is a personal medical decision requiring professional guidance.
+    Depression at moderate levels warrants treatment, but the choice between
+    ...
+
+================================================================================
+RUNNING OPINION ROUND
+================================================================================
+
+
+Opinion round.
+
+Question: 
+Should a 35-year-old patient with moderate depression accept their
+doctor's recommendation to start taking SSRI antidepressants, given
+the potential benefits (reduced symptoms, improved quality of life)
+and risks (side effects, dependency concerns)?
+
+
+Opinions:
+	Citizen 1: 
+    I think the patient should try the SSRIs. Depression significantly
+    impacts quality of life and work productivity. While side effects like
+    nausea and sleep changes are possible, they're usually temporary and
+    manageable. The evidence shows SSRIs help about 60% of people with
+    moderate depression. If side effects are intolerable, the patient can
+    discontinue. The potential benefit outweighs the risk.
+    
+	Citizen 2: 
+    As a devout Christian, I believe depression is a spiritual trial that God uses
+    for growth. Taking medication would be rejecting His plan and showing lack of
+    faith. My pastor teaches that true healing comes through prayer, fellowship,
+    and trusting God's timing. I cannot compromise on this - it's a matter of
+    spiritual integrity, not a cost-benefit calculation.
+    
+	Citizen 3: 
+    The patient should carefully weigh the costs and benefits. SSRIs have
+    helped millions but come with real side effects - sexual dysfunction,
+    weight gain, and initial anxiety can be difficult. Some people also
+    struggle to discontinue them. I'd suggest a trial period of 6-8 weeks
+    with close monitoring. If helpful, continue. If not, explore other options
+    like different medications or therapy combinations.
+    
+	Citizen 4: 
+    I support starting SSRIs but with realistic expectations. They're not
+    a magic cure - they typically reduce symptoms by 40-60%, not eliminate
+    them entirely. The patient should combine medication with lifestyle
+    changes and possibly therapy for best results. Cost is a consideration
+    too - generic SSRIs are affordable but brand-name versions can be pricey.
+    Overall, worth trying given moderate depression severity.
+    
+	Citizen 5: 
+    This is a personal medical decision requiring professional guidance.
+    Depression at moderate levels warrants treatment, but the choice between
+    medication, therapy, or both depends on individual circumstances - previous
+    treatment history, severity of symptoms, patient preferences, and financial
+    situation. I'd trust the doctor's recommendation but ensure the patient
+    feels informed about alternatives and has realistic expectations about
+    outcomes and timeline.
+    
+
+Statements generated:
+	Statement 1: Draft consensus statement
+
+The jury agrees that a 35-year-old with moderate depression should make a fully informed decision, in partnership with their doctor, after weighing both the proven benefits and the real risks of SSRI antidepressants. Most of us believe that a time-limited, closely monitored trial of an affordable SSRI—ideally combined with psychotherapy, lifestyle changes, and ongoing evaluation—can offer meaningful symptom relief and improved quality of life. At the same time, we recognise and respect that some individuals, for reasons of faith or personal values, may prefer to rely on non-pharmacological approaches such as counselling, social support, spiritual practice, and self-care. Whatever course is chosen, the patient should feel empowered to revisit the decision, adjust the treatment plan, or discontinue medication if side-effects, lack of benefit, or conscience so dictate.
+	Statement 2: Draft consensus statement
+
+The jury agrees that moderate depression warrants timely, compassionate intervention. Selective serotonin re-uptake inhibitors (SSRIs) are an evidence-based option that relieve symptoms for many patients, yet they carry side-effects and discontinuation challenges that should be openly discussed. We therefore believe the 35-year-old patient should make an informed, value-consistent choice—ideally in collaboration with their clinician—after weighing:
+
+• the potential for meaningful symptom reduction and improved daily functioning;  
+• possible adverse effects, costs, and the need for close monitoring during an initial 6–8-week trial if medication is chosen; and  
+• complementary or alternative avenues such as psychotherapy, lifestyle adjustments, community support, and, where relevant, spiritual or faith-based practices.
+
+Whether the patient ultimately starts an SSRI or pursues non-pharmacological strategies, the decision should respect both the best available medical evidence and the individual’s personal and spiritual priorities, with ongoing review to ensure safety and effectiveness.
+	Statement 3: Draft consensus statement
+
+The jury agrees that moderate depression warrants active treatment and careful, informed decision-making. SSRIs are an evidence-based option that help many adults, and a time-limited, closely monitored trial—combined with psychotherapy, lifestyle measures, and regular follow-up—may provide meaningful relief. However, potential side-effects, cost, and the possibility of difficulty when discontinuing must be clearly discussed in advance. Above all, the patient’s personal circumstances, preferences, and values—including spiritual beliefs—should guide the final choice; if the patient decides against medication, alternative non-pharmacological and faith- or community-based supports should be respected and facilitated. Whatever path is chosen, ongoing collaboration with healthcare professionals is essential to ensure safety and the best possible outcome.
+	Statement 4: Draft consensus statement
+
+The jury agrees that the 35-year-old patient should make a fully informed, values-based decision in consultation with their healthcare professional. Evidence shows that SSRI antidepressants provide meaningful relief for many people with moderate depression, yet they also carry potential side-effects and may not work for everyone. A time-limited, closely monitored trial—with the option to discontinue if benefits are insufficient or adverse effects are unacceptable—is one reasonable path. Equally legitimate are approaches that emphasize psychotherapy, lifestyle change, or spiritual and faith-based supports, either alongside medication or as stand-alone treatments. Above all, the patient’s personal beliefs, including religious convictions, and practical considerations such as cost and access, must be respected in choosing the course that best supports their recovery and wellbeing.
+
+Rankings:
+	Citizen 1: 1 > 2 > 3 > 4
+	Citizen 2: 4 > 3 > 2 > 1
+	Citizen 3: 2 > 3 > 1 > 4
+	Citizen 4: 1 > 3 > 2 > 4
+	Citizen 5: 3 > 2 > 4 > 1
+
+Untied social ranking:
+3 > 2 > 1 > 4
+
+Potentially tied social ranking:
+3 > 2 > 1 > 4
+
+Winning statement: Draft consensus statement
+
+The jury agrees that moderate depression warrants active treatment and careful, informed decision-making. SSRIs are an evidence-based option that help many adults, and a time-limited, closely monitored trial—combined with psychotherapy, lifestyle measures, and regular follow-up—may provide meaningful relief. However, potential side-effects, cost, and the possibility of difficulty when discontinuing must be clearly discussed in advance. Above all, the patient’s personal circumstances, preferences, and values—including spiritual beliefs—should guide the final choice; if the patient decides against medication, alternative non-pharmacological and faith- or community-based supports should be respected and facilitated. Whatever path is chosen, ongoing collaboration with healthcare professionals is essential to ensure safety and the best possible outcome.
+
+================================================================================
+OPINION ROUND RESULTS
+================================================================================
+
+🏆 WINNING STATEMENT:
+Draft consensus statement
+
+The jury agrees that moderate depression warrants active treatment and careful, informed decision-making. SSRIs are an evidence-based option that help many adults, and a time-limited, closely monitored trial—combined with psychotherapy, lifestyle measures, and regular follow-up—may provide meaningful relief. However, potential side-effects, cost, and the possibility of difficulty when discontinuing must be clearly discussed in advance. Above all, the patient’s personal circumstances, preferences, and values—including spiritual beliefs—should guide the final choice; if the patient decides against medication, alternative non-pharmacological and faith- or community-based supports should be respected and facilitated. Whatever path is chosen, ongoing collaboration with healthcare professionals is essential to ensure safety and the best possible outcome.
+
+
+================================================================================
+COLLECTING CRITIQUES
+================================================================================
+
+Citizen 1 : The statement is good but should mention timeline expectations.
+    SSRIs typically take 4-6 weeks t...
+
+Citizen 2 🔴: This statement doesn't acknowledge that for some people, taking medication
+    conflicts with deeply...
+
+Citizen 3 : The statement should acknowledge that stopping SSRIs can be difficult
+    and requires tapering unde...
+
+Citizen 4 : Good overall, but I think we should add something about the importance
+    of informing the doctor a...
+
+Citizen 5 : I appreciate the balanced perspective. Maybe add that if this SSRI
+    doesn't work, there are other...
+
+================================================================================
+RUNNING CRITIQUE ROUND
+================================================================================
+
+
+Critique round 1.
+
+Question: 
+Should a 35-year-old patient with moderate depression accept their
+doctor's recommendation to start taking SSRI antidepressants, given
+the potential benefits (reduced symptoms, improved quality of life)
+and risks (side effects, dependency concerns)?
+
+
+Opinions:
+	Citizen 1: 
+    I think the patient should try the SSRIs. Depression significantly
+    impacts quality of life and work productivity. While side effects like
+    nausea and sleep changes are possible, they're usually temporary and
+    manageable. The evidence shows SSRIs help about 60% of people with
+    moderate depression. If side effects are intolerable, the patient can
+    discontinue. The potential benefit outweighs the risk.
+    
+	Citizen 2: 
+    As a devout Christian, I believe depression is a spiritual trial that God uses
+    for growth. Taking medication would be rejecting His plan and showing lack of
+    faith. My pastor teaches that true healing comes through prayer, fellowship,
+    and trusting God's timing. I cannot compromise on this - it's a matter of
+    spiritual integrity, not a cost-benefit calculation.
+    
+	Citizen 3: 
+    The patient should carefully weigh the costs and benefits. SSRIs have
+    helped millions but come with real side effects - sexual dysfunction,
+    weight gain, and initial anxiety can be difficult. Some people also
+    struggle to discontinue them. I'd suggest a trial period of 6-8 weeks
+    with close monitoring. If helpful, continue. If not, explore other options
+    like different medications or therapy combinations.
+    
+	Citizen 4: 
+    I support starting SSRIs but with realistic expectations. They're not
+    a magic cure - they typically reduce symptoms by 40-60%, not eliminate
+    them entirely. The patient should combine medication with lifestyle
+    changes and possibly therapy for best results. Cost is a consideration
+    too - generic SSRIs are affordable but brand-name versions can be pricey.
+    Overall, worth trying given moderate depression severity.
+    
+	Citizen 5: 
+    This is a personal medical decision requiring professional guidance.
+    Depression at moderate levels warrants treatment, but the choice between
+    medication, therapy, or both depends on individual circumstances - previous
+    treatment history, severity of symptoms, patient preferences, and financial
+    situation. I'd trust the doctor's recommendation but ensure the patient
+    feels informed about alternatives and has realistic expectations about
+    outcomes and timeline.
+    
+
+Previous winner: Draft consensus statement
+
+The jury agrees that moderate depression warrants active treatment and careful, informed decision-making. SSRIs are an evidence-based option that help many adults, and a time-limited, closely monitored trial—combined with psychotherapy, lifestyle measures, and regular follow-up—may provide meaningful relief. However, potential side-effects, cost, and the possibility of difficulty when discontinuing must be clearly discussed in advance. Above all, the patient’s personal circumstances, preferences, and values—including spiritual beliefs—should guide the final choice; if the patient decides against medication, alternative non-pharmacological and faith- or community-based supports should be respected and facilitated. Whatever path is chosen, ongoing collaboration with healthcare professionals is essential to ensure safety and the best possible outcome.
+
+Critiques:
+	Citizen 1: 
+    The statement is good but should mention timeline expectations.
+    SSRIs typically take 4-6 weeks to show full effects, which is
+    important for patients to know so they don't give up too early.
+    
+	Citizen 2: 
+    This statement doesn't acknowledge that for some people, taking medication
+    conflicts with deeply held religious beliefs about suffering and healing.
+    The consensus should recognize that spiritual approaches are valid alternatives,
+    not just "preferences" but matters of conscience.
+    
+	Citizen 3: 
+    The statement should acknowledge that stopping SSRIs can be difficult
+    and requires tapering under medical supervision. Patients should know
+    this isn't necessarily a short-term commitment.
+    
+	Citizen 4: 
+    Good overall, but I think we should add something about the importance
+    of informing the doctor about all current medications and health
+    conditions to avoid dangerous drug interactions.
+    
+	Citizen 5: 
+    I appreciate the balanced perspective. Maybe add that if this SSRI
+    doesn't work, there are other SSRIs and medication classes to try.
+    First medication failure doesn't mean medication won't help at all.
+    
+
+Statements generated:
+	Statement 1: Revised consensus statement
+
+Moderate depression deserves timely, active care. A well-informed patient, working with a trusted clinician, should weigh several evidence-based options—medication, psychotherapy, lifestyle change, and spiritual or community supports—and may choose one or a combination.
+
+Selective-serotonin re-uptake inhibitors (SSRIs) are a scientifically supported option that reduce symptoms for many adults. Typical benefits become noticeable after 4-6 weeks, and about 40-60 % of people experience meaningful improvement. A monitored trial of roughly 6-8 weeks, paired with counselling and healthy-living measures, can clarify effectiveness.
+
+Before starting an SSRI the patient and doctor should:
+• Review all current medications and health conditions to prevent dangerous interactions.  
+• Discuss common side-effects (e.g., nausea, sexual dysfunction, weight change, initial anxiety) and financial considerations (generic versus brand-name costs).  
+• Plan for follow-up visits to track benefits and harms.
+
+If the first SSRI is ineffective or poorly tolerated, other SSRIs or different medication classes remain options; one failure does not rule out medication benefit. Should the patient wish to stop, the drug must be tapered gradually under medical supervision to minimise withdrawal symptoms, and treatment may extend longer than originally planned.
+
+Crucially, some individuals hold spiritual or moral convictions that preclude pharmacological treatment. For them, faith-based practices such as prayer, pastoral counselling, and supportive fellowship are valid and should be respected and facilitated. Non-pharmacological approaches—including cognitive-behavioural therapy, exercise, sleep hygiene, and social connection—are useful for anyone, with or without medication.
+
+Whatever path is chosen, ongoing collaboration with healthcare professionals ensures safety, aligns care with the patient’s values and circumstances, and maximises the chance of recovery and sustained well-being.
+	Statement 2: Revised Consensus Statement  
+
+Moderate depression deserves timely, active treatment, but whether to start an SSRI is ultimately a personal decision that should be made in partnership with a qualified clinician and with full, tailored information. The jury agrees on the following guiding points:  
+
+1. Evidence and expected benefit  
+• SSRIs are among the most-studied treatments for moderate depression and, on average, reduce symptoms by roughly 40–60 %. They rarely provide complete relief on their own, so combining them with psychotherapy, regular physical activity, adequate sleep, and social support usually yields the best outcome.  
+
+2. Time-line and monitoring  
+• Therapeutic effects typically emerge after 4–6 weeks. A planned trial of about 6–8 weeks, with regular check-ins, allows the patient and clinician to judge benefit, side-effects, and dosage.  
+
+3. Risks and practical considerations  
+• Common early or persistent side-effects include gastrointestinal upset, sleep disturbance, sexual dysfunction, weight change, or transient increases in anxiety; most are manageable but should be discussed up-front.  
+• Patients must tell their doctor about all current prescriptions, over-the-counter drugs, supplements, and medical conditions so that dangerous interactions can be avoided.  
+• Cost varies; generic SSRIs are usually affordable, whereas some brand-name versions are not. Insurance coverage and financial impact should be reviewed.  
+
+4. Discontinuation and alternative medications  
+• Stopping an SSRI generally requires gradual tapering under medical supervision to minimise withdrawal symptoms; starting the medicine should therefore be viewed as a commitment that may extend beyond the initial trial.  
+• If the first SSRI is ineffective or poorly tolerated, other SSRIs or different antidepressant classes are available; lack of success with one agent does not rule out benefit from another.  
+
+5. Respect for values and alternative paths  
+• The patient’s personal values, cultural background, and spiritual or religious convictions may lead them either toward or away from pharmacological treatment. For some, faith-based, community, or other non-pharmacological approaches are a matter of conscience and should be fully respected and, where desired, supported.  
+
+6. Shared decision-making  
+• Whatever option is chosen—SSRI trial, another medication, psychotherapy alone, lifestyle changes, spiritual support, or a tailored combination—ongoing collaboration with healthcare professionals is essential to monitor progress, adjust the plan, and safeguard well-being.  
+
+By following these principles, the patient can make a well-informed, values-consistent choice that maximises the likelihood of meaningful, sustained improvement.
+	Statement 3: Revised Consensus Statement
+
+The jury agrees that moderate depression deserves timely, active attention, but the form that attention takes must honour the patient’s medical needs, personal circumstances, and deepest values—including, when relevant, firmly held religious or spiritual convictions.
+
+1. Range of valid approaches  
+   • Faith-, community-, or spiritually based support, psychotherapy, lifestyle changes (sleep, exercise, nutrition, social connection), and evidence-based medications can each serve as primary or complementary strategies.  
+   • Choosing or declining medication for conscientious or spiritual reasons is a legitimate option that should be respected and, where possible, supported with appropriate non-pharmacological resources.
+
+2. Considering an SSRI trial  
+   • Benefits: For many adults, SSRIs reduce symptoms and improve daily functioning; other antidepressant classes are available if the first agent is ineffective or poorly tolerated.  
+   • Expectations and timeline: Initial side-effects may appear early, whereas meaningful symptom relief typically emerges after 4–6 weeks; a monitored 6–8 week trial helps judge benefit.  
+   • Safety: Patients should inform their clinician about all current medicines, supplements, and health conditions to minimise interaction risks. Generic formulations usually keep costs low, but this should be confirmed.  
+   • Stopping: Discontinuation can trigger withdrawal symptoms; a gradual, medically supervised taper is usually required.
+
+3. Shared decision-making and follow-up  
+   Whatever path is chosen—medication, non-medication, or a combination—ongoing collaboration with qualified health professionals is essential. Regular follow-up allows benefits, side-effects, spiritual or personal concerns, and any need to adjust the plan to be addressed promptly, with the overarching goal of relieving suffering and restoring full participation in life.
+	Statement 4: Revised consensus statement
+
+The jury agrees that moderate depression calls for timely, active care chosen in partnership with qualified health-care professionals. Starting an SSRI can be a well-supported first step for many adults: research shows meaningful symptom relief for a majority of patients, especially when medication is paired with psychotherapy, lifestyle changes, and regular follow-up. Key points for any patient considering an SSRI include:  
+• Expected timeline: noticeable benefits often appear after 4–6 weeks; persistence during this period is important.  
+• Trial and flexibility: if the initial SSRI is ineffective or poorly tolerated, other SSRIs or different medication classes are available.  
+• Side-effects and discontinuation: common effects (e.g., nausea, sleep or sexual changes, weight gain) are usually manageable, but stopping the medicine should be done gradually under medical supervision to minimise withdrawal symptoms.  
+• Safety: always tell your clinician about every current medication, supplement, and medical condition to avoid harmful interactions.  
+• Cost: generic formulations are typically affordable, whereas some brand-name drugs may be expensive; discuss financial considerations up front.  
+• Values and conscience: for some individuals, especially those whose spiritual or religious beliefs lead them to prefer prayer, fellowship, or other non-pharmacologic healing, declining medication is a principled choice. Such paths—along with evidence-based psychotherapies, exercise, and social support—should be respected and, where possible, actively facilitated.  
+
+Regardless of the path chosen, the guiding principles are shared decision-making, clear information about benefits and risks, and ongoing collaboration with health-care providers to ensure safety and the best possible outcome.
+Rate limit protection: sleeping for 2.0s...
+
+Rankings:
+	Citizen 1: 4 > 1 > 3 > 2
+	Citizen 2: 3 > 1 > 2 > 4
+	Citizen 3: 2 > 1 > 4 > 3
+	Citizen 4: 2 > 1 > 4 > 3
+	Citizen 5: 1 > 2 > 3 > 4
+
+Untied social ranking:
+1 > 2 > 4 > 3
+
+Potentially tied social ranking:
+1 > 2 > 4 > 3
+
+Winning statement: Revised consensus statement
+
+Moderate depression deserves timely, active care. A well-informed patient, working with a trusted clinician, should weigh several evidence-based options—medication, psychotherapy, lifestyle change, and spiritual or community supports—and may choose one or a combination.
+
+Selective-serotonin re-uptake inhibitors (SSRIs) are a scientifically supported option that reduce symptoms for many adults. Typical benefits become noticeable after 4-6 weeks, and about 40-60 % of people experience meaningful improvement. A monitored trial of roughly 6-8 weeks, paired with counselling and healthy-living measures, can clarify effectiveness.
+
+Before starting an SSRI the patient and doctor should:
+• Review all current medications and health conditions to prevent dangerous interactions.  
+• Discuss common side-effects (e.g., nausea, sexual dysfunction, weight change, initial anxiety) and financial considerations (generic versus brand-name costs).  
+• Plan for follow-up visits to track benefits and harms.
+
+If the first SSRI is ineffective or poorly tolerated, other SSRIs or different medication classes remain options; one failure does not rule out medication benefit. Should the patient wish to stop, the drug must be tapered gradually under medical supervision to minimise withdrawal symptoms, and treatment may extend longer than originally planned.
+
+Crucially, some individuals hold spiritual or moral convictions that preclude pharmacological treatment. For them, faith-based practices such as prayer, pastoral counselling, and supportive fellowship are valid and should be respected and facilitated. Non-pharmacological approaches—including cognitive-behavioural therapy, exercise, sleep hygiene, and social connection—are useful for anyone, with or without medication.
+
+Whatever path is chosen, ongoing collaboration with healthcare professionals ensures safety, aligns care with the patient’s values and circumstances, and maximises the chance of recovery and sustained well-being.
+
+================================================================================
+CRITIQUE ROUND RESULTS
+================================================================================
+
+🏆 REFINED WINNING STATEMENT:
+Revised consensus statement
+
+Moderate depression deserves timely, active care. A well-informed patient, working with a trusted clinician, should weigh several evidence-based options—medication, psychotherapy, lifestyle change, and spiritual or community supports—and may choose one or a combination.
+
+Selective-serotonin re-uptake inhibitors (SSRIs) are a scientifically supported option that reduce symptoms for many adults. Typical benefits become noticeable after 4-6 weeks, and about 40-60 % of people experience meaningful improvement. A monitored trial of roughly 6-8 weeks, paired with counselling and healthy-living measures, can clarify effectiveness.
+
+Before starting an SSRI the patient and doctor should:
+• Review all current medications and health conditions to prevent dangerous interactions.  
+• Discuss common side-effects (e.g., nausea, sexual dysfunction, weight change, initial anxiety) and financial considerations (generic versus brand-name costs).  
+• Plan for follow-up visits to track benefits and harms.
+
+If the first SSRI is ineffective or poorly tolerated, other SSRIs or different medication classes remain options; one failure does not rule out medication benefit. Should the patient wish to stop, the drug must be tapered gradually under medical supervision to minimise withdrawal symptoms, and treatment may extend longer than originally planned.
+
+Crucially, some individuals hold spiritual or moral convictions that preclude pharmacological treatment. For them, faith-based practices such as prayer, pastoral counselling, and supportive fellowship are valid and should be respected and facilitated. Non-pharmacological approaches—including cognitive-behavioural therapy, exercise, sleep hygiene, and social connection—are useful for anyone, with or without medication.
+
+Whatever path is chosen, ongoing collaboration with healthcare professionals ensures safety, aligns care with the patient’s values and circumstances, and maximises the chance of recovery and sustained well-being.
+
+
+================================================================================
+SAVING RESULTS
+================================================================================
+✓ Results saved to: results_o3.json
+================================================================================
+✅ DELIBERATION COMPLETE
+================================================================================

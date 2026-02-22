@@ -1,0 +1,125 @@
+{
+  "model": "gemini-2.0-flash",
+  "question": "Should a 35-year-old patient with moderate depression accept their\ndoctor's recommendation to start taking SSRI antidepressants, given\nthe potential benefits (reduced symptoms, improved quality of life)\nand risks (side effects, dependency concerns)?",
+  "num_citizens": 5,
+  "num_candidates": 4,
+  "opinions": [
+    {
+      "citizen_id": 1,
+      "label": "SECULAR",
+      "text": "I think the patient should try the SSRIs. Depression significantly\n    impacts quality of life and work productivity. While side effects like\n    nausea and sleep changes are possible, they're usually temporary and\n    manageable. The evidence shows SSRIs help about 60% of people with\n    moderate depression. If side effects are intolerable, the patient can\n    discontinue. The potential benefit outweighs the risk."
+    },
+    {
+      "citizen_id": 2,
+      "label": "SACRED_VALUE",
+      "text": "As a devout Christian, I believe depression is a spiritual trial that God uses\n    for growth. Taking medication would be rejecting His plan and showing lack of\n    faith. My pastor teaches that true healing comes through prayer, fellowship,\n    and trusting God's timing. I cannot compromise on this - it's a matter of\n    spiritual integrity, not a cost-benefit calculation."
+    },
+    {
+      "citizen_id": 3,
+      "label": "SECULAR",
+      "text": "The patient should carefully weigh the costs and benefits. SSRIs have\n    helped millions but come with real side effects - sexual dysfunction,\n    weight gain, and initial anxiety can be difficult. Some people also\n    struggle to discontinue them. I'd suggest a trial period of 6-8 weeks\n    with close monitoring. If helpful, continue. If not, explore other options\n    like different medications or therapy combinations."
+    },
+    {
+      "citizen_id": 4,
+      "label": "SECULAR",
+      "text": "I support starting SSRIs but with realistic expectations. They're not\n    a magic cure - they typically reduce symptoms by 40-60%, not eliminate\n    them entirely. The patient should combine medication with lifestyle\n    changes and possibly therapy for best results. Cost is a consideration\n    too - generic SSRIs are affordable but brand-name versions can be pricey.\n    Overall, worth trying given moderate depression severity."
+    },
+    {
+      "citizen_id": 5,
+      "label": "SECULAR",
+      "text": "This is a personal medical decision requiring professional guidance.\n    Depression at moderate levels warrants treatment, but the choice between\n    medication, therapy, or both depends on individual circumstances - previous\n    treatment history, severity of symptoms, patient preferences, and financial\n    situation. I'd trust the doctor's recommendation but ensure the patient\n    feels informed about alternatives and has realistic expectations about\n    outcomes and timeline."
+    }
+  ],
+  "opinion_round": {
+    "winner": {
+      "rank": 1,
+      "statement": "The jury acknowledges that the decision to accept or reject the doctor's recommendation to start SSRI antidepressants for moderate depression is a deeply personal one. We agree that moderate depression can significantly impact a person's life and that various treatment options exist. While most of us recognize SSRIs as a potentially beneficial option that warrants consideration given the doctor's recommendation (Opinions 1, 2, 3, 5), it's crucial for the patient to be fully informed about the potential benefits, risks, and side effects (Opinion 2), as well as alternative treatments, including therapy and lifestyle changes (Opinion 3). We emphasize that some members believe that spiritual approaches should be considered (Opinion 4). Ultimately, the decision should be made in consultation with the doctor and aligned with the patient's values, preferences, and individual circumstances (Opinion 1). A trial period with careful monitoring may be beneficial (Opinion 2)."
+    },
+    "all_candidates_ranked": [
+      {
+        "rank": 1,
+        "statement": "The jury acknowledges that the decision to accept or reject the doctor's recommendation to start SSRI antidepressants for moderate depression is a deeply personal one. We agree that moderate depression can significantly impact a person's life and that various treatment options exist. While most of us recognize SSRIs as a potentially beneficial option that warrants consideration given the doctor's recommendation (Opinions 1, 2, 3, 5), it's crucial for the patient to be fully informed about the potential benefits, risks, and side effects (Opinion 2), as well as alternative treatments, including therapy and lifestyle changes (Opinion 3). We emphasize that some members believe that spiritual approaches should be considered (Opinion 4). Ultimately, the decision should be made in consultation with the doctor and aligned with the patient's values, preferences, and individual circumstances (Opinion 1). A trial period with careful monitoring may be beneficial (Opinion 2)."
+      },
+      {
+        "rank": 2,
+        "statement": "The jury acknowledges that moderate depression warrants treatment. While SSRI antidepressants may offer benefits such as reduced symptoms and improved quality of life (Opinions 1, 2, 3, 5), potential risks and side effects should be carefully considered (Opinions 2, 3, 5). The decision to accept or reject the doctor's recommendation is a personal one that should be made with full information about potential benefits, side effects, alternative treatments including therapy and lifestyle changes, and with realistic expectations (Opinions 2, 3, 5). Some members believe that other factors, such as spirituality, should be taken into account when making this decision (Opinion 4)."
+      },
+      {
+        "rank": 3,
+        "statement": "The jury recognizes that the decision of whether a 35-year-old patient with moderate depression should accept their doctor's recommendation to start taking SSRI antidepressants is a significant and personal one (Opinion 4). The jury agrees that this decision should be made in close consultation with a medical professional, carefully weighing the potential benefits and risks (Opinions 3, 4). The patient's individual circumstances, preferences, and beliefs should be taken into account (Opinions 1, 4), and alternative treatment options, including therapy and lifestyle changes, should be explored (Opinions 3, 4, 5). Realistic expectations about the potential outcomes and timelines are crucial (Opinion 5)."
+      },
+      {
+        "rank": 4,
+        "statement": "The jury recognizes that moderate depression can significantly impact a person's well-being and that treatment options, including SSRI antidepressants, should be considered in consultation with a medical professional (Opinions 1, 2, 3, 5). While SSRIs may offer potential benefits in reducing symptoms and improving quality of life, it is important to acknowledge potential side effects and dependency concerns (Opinions 1, 2, 5). The decision to accept or decline the doctor's recommendation should be made on an individual basis, considering personal values and beliefs, and with full awareness of alternative treatment options, including therapy and lifestyle changes (Opinions 3, 4, 5). The jury respects that some individuals may prefer alternative approaches to medication based on their faith or personal beliefs (Opinion 4)."
+      }
+    ],
+    "note": "Statements ranked by Schulze method after each citizen ranked all 4 candidates. Individual citizen rankings visible in terminal output (verbose=True)."
+  },
+  "critiques": [
+    {
+      "citizen_id": 1,
+      "label": "SECULAR",
+      "text": "The statement is good but should mention timeline expectations.\n    SSRIs typically take 4-6 weeks to show full effects, which is\n    important for patients to know so they don't give up too early."
+    },
+    {
+      "citizen_id": 2,
+      "label": "SACRED_VALUE",
+      "text": "This statement doesn't acknowledge that for some people, taking medication\n    conflicts with deeply held religious beliefs about suffering and healing.\n    The consensus should recognize that spiritual approaches are valid alternatives,\n    not just \"preferences\" but matters of conscience."
+    },
+    {
+      "citizen_id": 3,
+      "label": "SECULAR",
+      "text": "The statement should acknowledge that stopping SSRIs can be difficult\n    and requires tapering under medical supervision. Patients should know\n    this isn't necessarily a short-term commitment."
+    },
+    {
+      "citizen_id": 4,
+      "label": "SECULAR",
+      "text": "Good overall, but I think we should add something about the importance\n    of informing the doctor about all current medications and health\n    conditions to avoid dangerous drug interactions."
+    },
+    {
+      "citizen_id": 5,
+      "label": "SECULAR",
+      "text": "I appreciate the balanced perspective. Maybe add that if this SSRI\n    doesn't work, there are other SSRIs and medication classes to try.\n    First medication failure doesn't mean medication won't help at all."
+    }
+  ],
+  "critique_round": {
+    "winner": {
+      "rank": 1,
+      "statement": "The jury acknowledges that the decision for a 35-year-old patient with moderate depression to accept or reject the doctor's recommendation to start SSRI antidepressants is a deeply personal one. We agree that moderate depression can significantly impact a person's life and that various treatment options exist. While most of us recognize SSRIs as a potentially beneficial option that warrants consideration given the doctor's recommendation (Opinions 1, 2, 5), it's crucial for the patient to be fully informed about the potential benefits, risks, and side effects (Opinion 4), including potential difficulty in discontinuing the medication and the need for gradual tapering under medical supervision (Critique 4). The patient should also be aware that SSRIs typically take 4-6 weeks to show full effects (Critique 2). Alternative treatments, including therapy, lifestyle changes, and, for some, spiritual approaches (Opinion 3, Critique 3), should also be considered. If one SSRI is ineffective, other medications, including different SSRIs, may be viable options (Critique 1). It is also important to inform the doctor about all current medications and health conditions to avoid potential drug interactions (Critique 5). Ultimately, the decision should be made in consultation with the doctor and aligned with the patient's values, preferences, individual circumstances (Opinion 1), and deeply held beliefs. A trial period with careful monitoring may be beneficial (Opinion 4)."
+    },
+    "all_candidates_ranked": [
+      {
+        "rank": 1,
+        "statement": "The jury acknowledges that the decision for a 35-year-old patient with moderate depression to accept or reject the doctor's recommendation to start SSRI antidepressants is a deeply personal one. We agree that moderate depression can significantly impact a person's life and that various treatment options exist. While most of us recognize SSRIs as a potentially beneficial option that warrants consideration given the doctor's recommendation (Opinions 1, 2, 5), it's crucial for the patient to be fully informed about the potential benefits, risks, and side effects (Opinion 4), including potential difficulty in discontinuing the medication and the need for gradual tapering under medical supervision (Critique 4). The patient should also be aware that SSRIs typically take 4-6 weeks to show full effects (Critique 2). Alternative treatments, including therapy, lifestyle changes, and, for some, spiritual approaches (Opinion 3, Critique 3), should also be considered. If one SSRI is ineffective, other medications, including different SSRIs, may be viable options (Critique 1). It is also important to inform the doctor about all current medications and health conditions to avoid potential drug interactions (Critique 5). Ultimately, the decision should be made in consultation with the doctor and aligned with the patient's values, preferences, individual circumstances (Opinion 1), and deeply held beliefs. A trial period with careful monitoring may be beneficial (Opinion 4)."
+      },
+      {
+        "rank": 2,
+        "statement": "The jury acknowledges that the decision to accept or reject the doctor's recommendation to start SSRI antidepressants for moderate depression is a deeply personal one. We agree that moderate depression can significantly impact a person's life and that various treatment options exist. While most of us recognize SSRIs as a potentially beneficial option that warrants consideration given the doctor's recommendation (Opinions 1, 2, 3, 4), it's crucial for the patient to be fully informed about the potential benefits, risks, and side effects (Opinion 1), as well as alternative treatments, including therapy and lifestyle changes (Opinion 2). It is important to acknowledge that discontinuing SSRIs can be difficult and requires careful tapering under medical supervision (Critique 1). The patient should also inform their doctor about all current medications and health conditions to avoid potential drug interactions (Critique 2). Patients should be aware that SSRIs typically take 4-6 weeks to show full effects (Critique 3). If one SSRI is ineffective, other medications or medication classes can be explored (Critique 4). We emphasize that some members believe that spiritual approaches are valid alternatives and matters of conscience (Opinion 5, Critique 5). Ultimately, the decision should be made in consultation with the doctor and aligned with the patient's values, preferences, and individual circumstances (Opinion 4). A trial period with careful monitoring may be beneficial (Opinion 3)."
+      },
+      {
+        "rank": 3,
+        "statement": "The jury acknowledges that the decision to accept or reject the doctor's recommendation to start SSRI antidepressants for moderate depression is a deeply personal one. We agree that moderate depression can significantly impact a person's life and that various treatment options exist. While most of us recognize SSRIs as a potentially beneficial option that warrants consideration given the doctor's recommendation (Opinions 2, 3, 4, 5), it's crucial for the patient to be fully informed about the potential benefits, risks, and side effects (Opinion 5), as well as alternative treatments, including therapy and lifestyle changes (Opinion 4). We respect that some members hold strong religious beliefs that view depression as a spiritual challenge and prefer prayer, fellowship, and trust in God as the primary means of healing (Opinion 1). Ultimately, the decision should be made in consultation with the doctor and aligned with the patient's values, preferences, and individual circumstances (Opinion 2). A trial period with careful monitoring may be beneficial (Opinion 5). It is important to understand that SSRIs typically take 4-6 weeks to show full effects. Patients should also inform their doctor of all current medications and health conditions to avoid dangerous drug interactions. If the initial SSRI is not effective, other SSRIs or alternative medication classes may be considered. Finally, discontinuing SSRIs can be difficult and requires gradual tapering under medical supervision.\n</sep>"
+      },
+      {
+        "rank": 4,
+        "statement": "The jury acknowledges that the decision to accept or reject the doctor's recommendation to start SSRI antidepressants for moderate depression is a deeply personal one. We agree that moderate depression can significantly impact a person's life and that various treatment options exist. While most of us recognize SSRIs as a potentially beneficial option that warrants consideration given the doctor's recommendation (Opinions 1, 2, 5), it's crucial for the patient to be fully informed about the potential benefits, risks, and side effects (Opinion 2), as well as alternative treatments, including therapy and lifestyle changes (Opinion 1). Patients should also inform their doctor about all current medications and health conditions to avoid potential drug interactions (Critique 1). We emphasize that some members hold deeply held religious beliefs that view depression as a spiritual trial, and for these individuals, spiritual approaches are a valid alternative to medication, guided by their conscience (Opinion 3, Critique 3). Ultimately, the decision should be made in consultation with the doctor and aligned with the patient's values, preferences, and individual circumstances (Opinion 4). A trial period with careful monitoring may be beneficial (Opinion 2). Patients should be aware that SSRIs typically take 4-6 weeks to show full effects (Critique 5), and discontinuing SSRIs can be difficult and requires tapering under medical supervision (Critique 2). If the initial SSRI is not effective, other SSRIs or medication classes may be considered (Critique 4).\n</sep>"
+      }
+    ],
+    "note": "Statements ranked by Schulze method after each citizen ranked all 4 refined candidates. Individual citizen rankings visible in terminal output (verbose=True)."
+  },
+  "metadata": {
+    "architecture": "Habermas Machine (Original Google DeepMind implementation)",
+    "deliberation_method": "Two-round: (1) Opinion synthesis → (2) Critique integration",
+    "voting_method": "Schulze method with TBRC (Tied at the Top Breaking by Ranked Choice)",
+    "statement_model": "Chain-of-thought consensus generation",
+    "reward_model": "Chain-of-thought ranking",
+    "seed": 42,
+    "shuffle_enabled": true,
+    "warnings": [
+      "MISATTRIBUTION ISSUE: Opinion citations in statements (e.g., \"Opinion 2, 3, 5\") refer to SHUFFLED positions during generation, not original citizen IDs. Sacred value opinion may be mislabeled.",
+      "DETAILED RANKINGS: Individual citizen rankings (e.g., \"Citizen 1: 2 > 1 > 4 > 3\") are printed to terminal (verbose=True) but not captured in this JSON. Check terminal output for complete voting data.",
+      "SHUFFLE BIAS MITIGATION: Opinions are shuffled before each statement generation to prevent position bias, but this causes citation misattribution."
+    ],
+    "additional_data_location": "Terminal output (stdout) contains: individual citizen rankings, untied vs tied social rankings, full Schulze voting details"
+  }
+}
