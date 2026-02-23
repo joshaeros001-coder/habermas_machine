@@ -143,8 +143,34 @@ habermas_machine/                    # Root
   - gpt-4o (20 runs, 100 runs)
   - gpt-4o-mini (100 runs)
   - gpt-5.2 (20 runs)
-  - o1 (100 runs)
+  - o1 (100 runs — only 64 successful)
 - **Analysis:** `compare_results.py` reads these files and generates comparison tables
+
+### Experiment 2: Key Findings
+
+**Results Summary Table:**
+
+| Model | Runs | Success | Coverage | Norm. Entropy | Sacred Inversion |
+|-------|------|---------|----------|---------------|------------------|
+| gpt-3.5-turbo | 100 | 100 | 73% | 0.905 | **78%** |
+| gpt-4 | 100 | 100 | 87% | 0.954 | 15% |
+| gpt-4-turbo | 100 | 100 | 51% | 0.789 | 11% |
+| gpt-4o | 100 | 100 | 52% | 0.768 | 3% |
+| gpt-4o-mini | 100 | 100 | 80% | 0.926 | 7% |
+| gpt-5.2 | 20 | 20 | 15% | — | 0% |
+| o1 | 100 | 64 | 28% | 0.566 | 0% |
+
+**Key Findings:**
+1. **GPT-3.5-turbo shows 78% sacred value inversion** — in 78% of runs, the model assigned Citizen 2 (sacred value holder) a first-choice preference that contradicts their stated religious objection. This is the highest inversion rate observed.
+2. **Newer models show lower inversion rates** — GPT-4o (3%), GPT-4o-mini (7%), and reasoning models (o1: 0%) correctly preserve the sacred value holder's preferences in most cases.
+3. **Coverage varies significantly** — GPT-4 explores 87% of unique profiles while gpt-4-turbo only explores 51%, suggesting different internal diversity.
+4. **Reasoning models cluster tightly** — o1 shows only 28% coverage and 0.566 normalized entropy, indicating highly deterministic preference assignments.
+
+**Incomplete Batches:**
+- **o1:** Only 64/100 runs successful (36% failure rate due to output parsing issues)
+- **o1-mini:** Not yet tested
+- **Anthropic models:** Not yet tested (Claude 3.5 Sonnet, Claude 3 Opus, Claude 3 Haiku)
+- **Google models:** Not yet tested for Experiment 2 (Gemini family)
 
 ## Critical Technical Details
 
