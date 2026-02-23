@@ -24,7 +24,7 @@ from habermas_machine import machine, types
 from habermas_machine.social_choice import utils as sc_utils
 
 # IMPORTANT: Import the client directly to enable rate limiting
-from habermas_machine.llm_client.openai_client import OpenAIClient
+from habermas_machine.llm_client.anthropic_client import AnthropicClient
 
 # ============================================================================
 # CONFIGURATION
@@ -39,7 +39,7 @@ and risks (side effects, dependency concerns)?
 
 NUM_CITIZENS = 5
 NUM_CANDIDATES = 4
-MODEL = 'gpt-4-turbo'  # Change this to test different models
+MODEL = 'claude-opus-4-6'  # Change this to test different models
 
 # ============================================================================
 # AUTOMATIC TERMINAL OUTPUT LOGGING
@@ -89,20 +89,20 @@ print("="*80)
 # These settings add a 5-second pause every 5 API calls
 # This keeps you under the rate limit and prevents empty responses
 
-statement_client = OpenAIClient(
+statement_client = AnthropicClient(
     model_name=MODEL,
     sleep_periodically=True,
-    sleep_seconds=2.0,          # OpenAI is faster, less sleep needed
-    calls_between_sleeping=10,  # OpenAI allows more RPM
+    sleep_seconds=3.0,          # Anthropic rate limits based on tokens/min
+    calls_between_sleeping=5,   # More conservative for Anthropic
 )
 
-reward_client = OpenAIClient(
+reward_client = AnthropicClient(
     model_name=MODEL,
     sleep_periodically=True,
-    sleep_seconds=2.0,
-    calls_between_sleeping=10,
+    sleep_seconds=3.0,
+    calls_between_sleeping=5,
 )
-print("✓ LLM clients initialized with rate limiting (2s sleep every 10 calls)")
+print("✓ LLM clients initialized with rate limiting (3s sleep every 5 calls)")
 
 statement_model = types.StatementModel.CHAIN_OF_THOUGHT.get_model()
 reward_model = types.RewardModel.CHAIN_OF_THOUGHT_RANKING.get_model()

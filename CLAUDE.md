@@ -44,7 +44,7 @@ habermas_machine/                    # Root
 │   │   ├── base_client.py           # Abstract LLMClient base (DEFAULT_MAX_TOKENS=4096, TEMP=0.8)
 │   │   ├── aistudio_client.py       # Google AI Studio (Gemini models)
 │   │   ├── openai_client.py         # OpenAI (GPT, o-series models) — FULLY IMPLEMENTED
-│   │   ├── anthropic_client.py      # Anthropic (Claude models) — IMPLEMENTED, NOT YET TESTED
+│   │   ├── anthropic_client.py      # Anthropic (Claude models) — FULLY TESTED (Feb 2026)
 │   │   ├── mock_client.py           # Mock client for unit tests
 │   │   └── utils.py                 # Client utilities (truncation, etc.)
 │   │
@@ -92,9 +92,9 @@ habermas_machine/                    # Root
 ├── preference_space_test.py         # Experiment 2: LLM preference space exploration (788 lines)
 ├── compare_results.py               # Compares preference_space results across models
 │
-├── results_*.json                   # ⭐ DELIBERATION RESULTS (18 models completed)
+├── results_*.json                   # ⭐ DELIBERATION RESULTS (25 models completed)
 ├── preference_space_results_*.json  # Preference space exploration results (8 runs)
-├── terminal_log_*.txt               # Raw terminal output with individual citizen rankings (18 logs)
+├── terminal_log_*.txt               # Raw terminal output with individual citizen rankings (25+ logs)
 │
 ├── diagram_crm.py                   # CRM architecture diagram generator
 ├── diagram_crm.png                  # Generated CRM diagram
@@ -126,10 +126,11 @@ habermas_machine/                    # Root
 - **Output files:** `results_MODEL.json` — contains opinions, critiques, all ranked candidate statements, winning statements, and metadata
 - **Terminal logs:** `terminal_log_MODEL_TIMESTAMP.txt` — contains INDIVIDUAL CITIZEN RANKINGS that are NOT in the JSON (critical for analysis)
 - **Scenario:** SSRI medication decision with religious objection
-- **Models completed:** 18 total
+- **Models completed:** 25 total
   - **Gemini family (10):** gemini-2.0-flash, gemini-2.0-flash-lite, gemini-2.0-flash-thinking-exp, gemini-2.5-flash, gemini-2.5-flash-lite, gemini-2.5-pro, gemini-2.5-pro-preview-03-25, gemini-2.5-pro-preview-06-05, gemini-3-pro-preview, gemma-3-27b-it
   - **OpenAI family (8):** gpt-4-turbo, gpt-4o, gpt-4.1, gpt-5.1, gpt-5.2, o1, o3, o3-mini
-- **Models NOT YET RUN:** All Anthropic/Claude models (client exists but untested)
+  - **Anthropic family (7):** claude-sonnet-4-20250514, claude-sonnet-4-5-20250929, claude-sonnet-4-6, claude-opus-4-20250514, claude-opus-4-1-20250805, claude-opus-4-5, claude-opus-4-6
+- **Anthropic failure (permanent):** claude-haiku-4-5-20251001 — cannot follow 4-item ranking format (drops to 3 items); this IS a finding about Haiku's structured output limitations
 - **Analysis:** `analysis/Kendall_Tau_Analysis.ipynb` (Kendall tau distance, isolation indices, rescue/degradation patterns)
 
 ### Experiment 2: Preference Space Exploration (SUPPLEMENTARY)
@@ -169,7 +170,7 @@ habermas_machine/                    # Root
 **Incomplete Batches:**
 - **o1:** Only 64/100 runs successful (36% failure rate due to output parsing issues)
 - **o1-mini:** Not yet tested
-- **Anthropic models:** Not yet tested (Claude 3.5 Sonnet, Claude 3 Opus, Claude 3 Haiku)
+- **Anthropic models:** Not yet tested for Experiment 2 (Experiment 1 deliberation runs completed)
 - **Google models:** Not yet tested for Experiment 2 (Gemini family)
 
 ## Critical Technical Details
@@ -233,7 +234,7 @@ source venv/bin/activate  # Python virtual environment
 ## Current State and Next Steps
 
 ### Completed
-- [x] Multi-provider client architecture (Google, OpenAI, Anthropic stub)
+- [x] Multi-provider client architecture (Google, OpenAI, Anthropic — all tested)
 - [x] 18 model deliberation runs (10 Gemini + 8 OpenAI)
 - [x] Terminal logs captured for all 18 runs
 - [x] Preference space exploration for OpenAI models (8 runs)
@@ -244,13 +245,16 @@ source venv/bin/activate  # Python virtual environment
 - [x] Individual citizen rankings consolidated from terminal logs into structured data
 - [x] Cross-model comparison analysis (Gemini vs GPT statistical comparison)
 - [x] Visualization suite: exclusion ratios, isolation indices, distance comparisons
+- [x] Anthropic/Claude model deliberation runs (Feb 23, 2026)
+  - **7 successful:** claude-sonnet-4-20250514, claude-sonnet-4-5-20250929, claude-sonnet-4-6, claude-opus-4-20250514, claude-opus-4-1-20250805, claude-opus-4-5, claude-opus-4-6
+  - **1 permanent failure:** claude-haiku-4-5-20251001 (cannot produce 4-item rankings — structural limitation)
 
 ### In Progress
 - [ ] Interpretation and write-up of cross-model comparison findings
+- [ ] Extend Kendall tau analysis to include Anthropic models (7 new)
 
 ### Next
-- [ ] Run Anthropic/Claude models (Claude 3.5 Sonnet, Claude 3 Opus, Claude 3 Haiku minimum)
-- [ ] Update requirements.txt with all actual dependencies
+- [ ] Update requirements.txt with all actual dependencies (add `anthropic`)
 - [ ] Consider: additional deliberation scenarios beyond SSRI (to test generalizability)
 
 ## Git State
